@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Playing the Game - Dungeoneers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Playing the Game";
+    var mkdocs_page_input_path = "4-Playing the Game.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Dungeoneers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introduction</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1-Rules%20Summary/">Rules Summary for the Grognards</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../2-Design%20Principles/">Design Principles</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Rules</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../3-Making%20a%20Character/">Making Your Character</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Playing the Game</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#actions-and-ability-saves">Actions and Ability Saves</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ability-saves">Ability Saves</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advantage-and-disadvantage">Advantage and Disadvantage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#opposed-actions">Opposed Actions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aiding-and-interfering">Aiding and Interfering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#group-saves">Group Saves</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#time-and-distance">Time and Distance</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#time">Time</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#distance">Distance</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#combat">Combat</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#initiative">Initiative</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attacks">Attacks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#armour">Armour</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sundered-shields">Sundered Shields</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multiple-attacks">Multiple Attacks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dual-weapons">Dual Weapons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blast">Blast</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#heroic-deeds">Heroic Deeds</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#resolving-deeds">Resolving Deeds</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#critical-deed-saves">Critical Deed Saves</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#retreat">Retreat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#warband">Warband</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#damage-death-and-debilities">Damage, Death, and Debilities</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ability-loss">Ability Loss</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scars">Scars</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deprivation-and-fatigue">Deprivation and Fatigue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#healing">Healing</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../5-Equipment/">Equipment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../6-Sorcery/">Sorcery</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tables</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3e-Archetypes/">Archetypes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../3c-Backgrounds/">Backgrounds</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../6b-Corruption/">Corruption</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../3d-Gear/">Starting Equipment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../5a-Misfires/">Gunne Misfires</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../3a-Names/">Names</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../4a-Scars/">Scars</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../6a-Spells/">Spells</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../3b-Traits/">Traits</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Dungeoneers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Rules &raquo;</li>
+        
+      
+    
+    <li>Playing the Game</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="playing-the-game">Playing the Game</h1>
+<p>The core of this game is a conversation between the players and the GM. The GM describes the players’ current situation. The players then ask questions and tell what their characters do. The GM explains the results of the players’ actions; the players react and describe more activities, and so on.</p>
+<p>Suppose the outcome of your character’s actions is not immediately apparent, or the activity is risky. In that case, the GM may ask that you roll dice to determine the results.</p>
+<p>The GM will answer your questions and will always respect your freedom of choice. The GM will certainly provide challenges, obstacles, and situations to solve and overcome. Still, the game is not just a story narrated by the GM. Instead, it’s an interactive fiction built upon your and your fellow players’ decisions.</p>
+<h2 id="actions-and-ability-saves">Actions and Ability Saves</h2>
+<p><strong>Actions</strong> are anything your character does when interacting with the world, whether it’s haggling with an innkeeper, avoiding a trap, crossing swords with a villain, or invoking the powers of an elder god.</p>
+<p>Your description of what your character is doing determines the outcome of their Actions. Your character's Actions always succeed as you describe unless there's potential for risk or consequence to the narrative.</p>
+<h3 id="ability-saves">Ability Saves</h3>
+<p>When your character's Action is risky or could change the narrative, your GM may call for an <strong>Ability Save</strong>. Your GM tells you what Ability is relevant, and you then roll <strong>1d20</strong>. If the roll’s result is <strong>less than</strong> your character’s Ability score, the Action <strong>succeeds</strong>. Otherwise, it <strong>fails</strong>. </p>
+<h3 id="advantage-and-disadvantage">Advantage and Disadvantage</h3>
+<p>Suppose careful preparation reduces the risk of an Action or other situational factors. In that case, your GM may grant an <strong>Advantage</strong> on your Ability Save. If so, you roll an extra d20 and use the <strong>lowest</strong> single result of the two dice.</p>
+<p>If an Action has multiple advantages, it may no longer be considered risky and therefore might not require an Ability Save.</p>
+<p>Conversely, suppose the Action is made riskier by great haste, lack of appropriate gear, or other factors. In that case, your GM may require a <strong>Disadvantage</strong> on your Ability Save. If so, you roll an extra d20 and use the <strong>highest</strong> single result of the two dice.</p>
+<p>Ability Saves with both Advantages and Disadvantages are rolled as usual with one d20.</p>
+<h3 id="opposed-actions">Opposed Actions</h3>
+<p>If opponents are attempting the same Action, the Action is <strong>Opposed</strong>. For example, your character is holding a door closed while an enemy is forcing it open. To determine an outcome, <strong>both opponents</strong> make Ability Saves, and the <strong>lowest</strong> roll succeeds. </p>
+<h3 id="aiding-and-interfering">Aiding and Interfering</h3>
+<p>Player characters can come to the <strong>Aid</strong> of their companions to help make an Action succeed. Everyone involved makes separate Abilities Saves, and the best result decides the outcome. All characters aiding with the Action potentially share any adverse consequences of a failed Save.</p>
+<p>Conversely, player characters can <strong>Interfere</strong> with another player character’s actions and prevent them from succeeding. Everyone involved makes an Ability Save, and the worst roll decides the outcome. </p>
+<h3 id="group-saves">Group Saves</h3>
+<p>An adventuring group of player characters will sometimes need to make an Ability Save as a whole to accomplish a collective Action. In these cases, one player rolls the Ability Save for the group.</p>
+<p>If it’s evident in the narrative which player character best determines the outcome, that character rolls the Ability Save. For example, if the group is petitioning a clan chieftain for a favour, the spokesperson makes a Wit Save. </p>
+<p>If a group Ability Save doesn't have a delineated character to decide an outcome, the roll then falls to the player character in the group who is most likely to cause the Save to <strong>fail</strong>. For example, the player character with the lowest Dexterity would roll a Save if the party were sneaking past a sleeping ogre. This particular Group Save would be a good time for friends to come to their Aid.</p>
+<h2 id="time-and-distance">Time and Distance</h2>
+<p>Time and distance are abstracted and flexible, depending on the current narrative. </p>
+<h3 id="time">Time</h3>
+<p>The game measures time in three durations: Round, Turn, and Watch.</p>
+<ul>
+<li><strong>Round</strong> is the time scale for combat. Each Round is less than a minute.</li>
+<li><strong>Turn</strong> is the time scale for exploration. Each Turn is around 10 minutes, enough time to explore a room and perform an Action or two.</li>
+<li><strong>Watch</strong> is the time scale used when travelling. Each Watch is 36 Turns or about 6 hours.</li>
+</ul>
+<h3 id="distance">Distance</h3>
+<p>The game measures distance with five zones or bands: Close, Near, Far, and Distant. Your character can move between adjacent zones in one Round. </p>
+<ul>
+<li><strong>Hand</strong> means the opponents are in physical contact, grappling.</li>
+<li><strong>Close</strong> means that the opponents are within striking distance of hand-held melee weapons.</li>
+<li><strong>Near</strong> means that the opponents are out of striking distance for hand-held melee weapons but within range of weapons with a long reach, such as polearms, thrown weapons, ranged weapons, and spells.</li>
+<li><strong>Far</strong> means the opponents are even further apart, out of range for melee and thrown weapons, but within range of ranged weapons and spells.</li>
+<li><strong>Distant</strong> means the opponents are within sight but entirely out of reach of any weapon or spell.</li>
+</ul>
+<h2 id="combat">Combat</h2>
+<p>In each Round of combat, your character can move and take one Action or forgo taking Action and move twice.</p>
+<h3 id="initiative">Initiative</h3>
+<p>All players first <strong>declare their actions</strong> for the round and then determine who goes first as follows:</p>
+<ul>
+<li>If your opponent is surprised, your character acts before them.</li>
+<li>If an opponent is not surprised, make a Dexterity Save to go before them.</li>
+</ul>
+<p>Afterwards, declare your actions and roll a Dexterity Save at the beginning of each new Round to see who goes first. The lowest roll goes first, and then in order of increasing results. Characters who failed the Dexterity Save go after the opponents. Continue doing so until the encounter is over. The subsequent roll may result in one side taking two consecutive actions.</p>
+<h3 id="attacks">Attacks</h3>
+<p>Attacks always hit. The attacker rolls their weapon’s damage die and deals that much damage to their opponent.</p>
+<p>In situations that make an attack either more or less deadly, the GM may decide that your character’s damage is <strong>Enhanced</strong> or <strong>Impaired</strong>.</p>
+<ul>
+<li>If an attack is Enhanced, such as attacking an unaware target, roll your damage die and an extra <strong>d12</strong>. Take the single highest result.</li>
+<li>If the attack is Impaired, such as firing through cover, roll your damage die and an extra <strong>d4</strong>. Take the single lowest result.</li>
+</ul>
+<h3 id="armour">Armour</h3>
+<p>Before dealing damage, subtract the target's <strong>Armor</strong> rating from the result of the damage roll. Some weapons and types of attacks can <em>pierce</em> armour, reducing its rating to determine damage, or ignore armour entirely. </p>
+<h3 id="sundered-shields">Sundered Shields</h3>
+<p>If your character has a shield equipped, you could choose to ignore all damage in a Round by sundering their shield. A sundered shield is destroyed.</p>
+<h3 id="multiple-attacks">Multiple Attacks</h3>
+<p>If multiple allies in the same zone attack the same opponent, roll each damage separately, but deal the single highest result.</p>
+<h3 id="dual-weapons">Dual Weapons</h3>
+<p>If your character uses multiple weapons, roll damage for each, but deal the single highest result.</p>
+<h3 id="blast">Blast</h3>
+<p>Attacks with a <strong>blast</strong> quality affect all targets in a zone, rolling damage separately for each affected character. Blast refers to anything from explosions to massive cleaving onslaughts to the impact of a meteorite. If unsure how many targets can be affected in the zone, roll the related damage die for the number.</p>
+<h3 id="heroic-deeds">Heroic Deeds</h3>
+<p><strong>Deeds</strong> are ad-hoc heroic manoeuvres your character might attempt during combat. Examples include:</p>
+<ul>
+<li>Disarming an opponent</li>
+<li>Swinging from a chandelier to knock a target over</li>
+<li>Leaping onto the back of a giant</li>
+<li>Shouting a ferocious battle cry to unnerve the enemy</li>
+</ul>
+<p>Most any deed you can describe within the fiction of the narrative is possible, per GM ruling.</p>
+<h4 id="resolving-deeds">Resolving Deeds</h4>
+<p>You declare your character’s deed and do not roll damage. Instead, you make an Ability Save that determines whether your character accomplishes their heroic deed. </p>
+<p>Deeds are crucial to surviving battle. Standing toe-to-toe with an enemy and trading blows might work, but you’ll be taking a considerable risk. Remember that all attacks hit, and you always roll damage—this applies to your opponent’s attacks as well. Coordinate your party’s actions and deeds. Fight dirty. Don’t give an opponent a chance to defeat you. With a crafty deed, the fight might be over before it starts.</p>
+<h4 id="critical-deed-saves">Critical Deed Saves</h4>
+<p>If you roll a 1 or a 20 on your Ability Save for completing a deed, see the following outcomes.</p>
+<ul>
+<li>If you roll a 1, the deed succeeds without any chance for your opponent to avoid it, and you also roll weapon damage, if applicable.</li>
+<li>If you roll a 20, the deed fails, and the intended result happens to your character instead. You might be able to make an Ability Save and avoid the deed’s effect.</li>
+</ul>
+<h3 id="retreat">Retreat</h3>
+<p>Running away from a dire situation always requires a successful Dexterity save, as well as a safe destination to run to.</p>
+<h3 id="warband">Warband</h3>
+<p>Large groups of similar combatants fighting together are treated as a single unit.</p>
+<ul>
+<li>When a Warband takes critical damage, it is routed. When it reaches zero Strength, it is destroyed.</li>
+<li>Attacks against Warbands by individuals are <strong>impaired</strong> unless they deal blast damage.</li>
+<li>Attacks against individuals by Warbands are <strong>enhanced</strong> and always deal <strong>blast</strong> damage.</li>
+</ul>
+<h2 id="damage-death-and-debilities">Damage, Death, and Debilities</h2>
+<p>Damage first reduces your character’s HP. After HP is zero, damage reduces your Strength ability score. </p>
+<h3 id="ability-loss">Ability Loss</h3>
+<p>After taking damage to Strength, you roll a Strength Save. If your Save fails, the damage inflicted is a <strong>Critical Injury</strong>. Your character adds a <strong>Fatigue</strong> debility to their inventory and is knocked unconscious and out of the fight until revived. </p>
+<p>Losing HP represents general wear and tear that’s quickly restored and not life-threatening. Damage to Strength means more grievous harm. Some creatures, poisons, diseases, or spells can potentially damage your character’s other Abilities.</p>
+<p>Damage to any Ability score is potentially grave.</p>
+<ul>
+<li>If <strong>Strength</strong> is reduced to zero, your character dies. It’s time to roll a new character. </li>
+<li>If <strong>Dexterity</strong> is reduced to zero, your character can no longer make use of their limbs.</li>
+<li>If <strong>Wit</strong> is reduced to zero, your character is stricken with madness. The GM might determine their actions until the character's Wit is restored.</li>
+</ul>
+<h3 id="scars">Scars</h3>
+<p>When damage to your character reduces their HP to <em>exactly</em> zero, they are sometimes changed irrevocably. See the <a href="../4a-Scars/" title="Scars">Scars</a> table for details.</p>
+<h3 id="deprivation-and-fatigue">Deprivation and Fatigue</h3>
+<p>A character <strong>deprived</strong> of a crucial need (such as food or rest) cannot heal HP or Ability scores. Anyone deprived for more than a day adds a <strong>Fatigue</strong> to their inventory, one for each day. Each Fatigue occupies one slot and lasts until they can recuperate (such as a whole night's rest in a safe spot). </p>
+<p>Characters can also gain Fatigue by:</p>
+<ul>
+<li>casting spells,</li>
+<li>suffering critical injuries,</li>
+<li>or through events in the narrative.</li>
+</ul>
+<h3 id="healing">Healing</h3>
+<p>Resting for a few moments after an encounter restores all lost HP. Ability loss and other serious ailments are more difficult to heal. You can generally recover lost Ability points with a week or two of rest under a healer's care or other source of appropriate expertise. Some of these services are free, while magical or more expedient means of recovery may come at a cost.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../5-Equipment/" class="btn btn-neutral float-right" title="Equipment">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../3-Making%20a%20Character/" class="btn btn-neutral" title="Making Your Character"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../3-Making%20a%20Character/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../5-Equipment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
