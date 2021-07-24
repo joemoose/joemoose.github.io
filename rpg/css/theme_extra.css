@@ -138,7 +138,7 @@ form .search-query {
 td, th {
    border: 1px solid #e1e4e5 !important; /* csslint allow: important */
    border-collapse: collapse;
-   word-wrap: break-word
+ 
 }
 
 /*
