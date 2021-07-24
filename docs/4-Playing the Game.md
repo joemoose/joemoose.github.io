@@ -14,7 +14,9 @@ Your description of what your character is doing determines the outcome of their
 
 ### Ability Saves
 
-When your character's Action is risky or could change the narrative, your GM may call for an **Ability Save**. Your GM tells you what Ability is relevant, and you then roll **1d20**. If the roll’s result is **less than** your character’s Ability score, the Action **succeeds**. Otherwise, it **fails**. 
+When your character's Action is risky or could change the narrative, your GM may call for an **Ability Save**. Your GM tells you what Ability is relevant, and you then roll **1d20**. If the result is **less than** your character’s Ability score, the Action **succeeds**. Otherwise, it **fails**. 
+
+Regardless of Ability scores, a roll of 1 always succeeds, while a 20 always fails.
 
 ### Advantage and Disadvantage
 
@@ -58,7 +60,7 @@ The game measures time in three durations: Round, Turn, and Watch.
 
 ### Distance
 
-The game measures distance with five zones or bands: Close, Near, Far, and Distant. Your character can move between adjacent zones in one Round. 
+The game measures distance with five zones or bands: Hand, Close, Near, Far, and Distant. Your character can move between adjacent zones in one Round. 
 
 - **Hand** means the opponents are in physical contact, grappling.
 - **Close** means that the opponents are within striking distance of hand-held melee weapons.
@@ -90,7 +92,7 @@ In situations that make an attack either more or less deadly, the GM may decide 
 
 ### Armour
 
-Before dealing damage, subtract the target's **Armor** rating from the result of the damage roll. Some weapons and types of attacks can *pierce* armour, reducing its rating to determine damage, or ignore armour entirely. 
+Before dealing damage, subtract the target's **Armor** rating from the result of the damage roll. Some weapons and types of attacks with the *pierce* quality reduce the target's armour ratings for determining damage. Some attacks, such as falling or burning, ignore armour entirely. 
 
 ### Sundered Shields
 
@@ -150,7 +152,7 @@ Damage first reduces your character’s HP. After HP is zero, damage reduces you
 
 ### Ability Loss
 
-After taking damage to Strength, you roll a Strength Save. If your Save fails, the damage inflicted is a **Critical Injury**. Your character adds a **Fatigue** debility to their inventory and is knocked unconscious and out of the fight until revived. 
+After taking damage to Strength, roll a Strength Save. If your Save fails, the damage inflicted is a **Critical Injury**. Your character adds a **Fatigue** debility to their inventory and is knocked unconscious and out of the fight until revived. 
 
 Losing HP represents general wear and tear that’s quickly restored and not life-threatening. Damage to Strength means more grievous harm. Some creatures, poisons, diseases, or spells can potentially damage your character’s other Abilities.
 

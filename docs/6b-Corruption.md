@@ -1,6 +1,6 @@
 # Corruption
 
-When your character is exposed to sorcerous Corruption, roll d20 and add your current Corruption level, then refer to the following table for a possible mutation.
+When your character is exposed to sorcerous Corruption, such as failing a Wide Save when casting a spell, roll d20 and add your current Corruption level to the result. Refer to the following table for a possible mutation.
 
 | Result | Corruption |
 | :----: | :--------- |

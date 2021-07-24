@@ -14,7 +14,7 @@ Grimoires will attract those who seek sorcerous power, and it is considered dang
 
 ## Casting Spells and Corruption
 
-Anyone can cast a spell by holding a Grimoire in one hand and reading its contents aloud. They then add one Fatigue to their inventory and must make a Wit Save to avoid Corruption. 
+Any character can cast a spell by holding a grimoire in one hand and reading its contents aloud. They then add one Fatigue to their inventory and make a Wit Save to avoid Corruption. 
 
 Failure on the Wit Save increases your character's current Corruption level by one. You then roll d20 on the [Corruptions](6b-Corruption.md "Corruptions") table, adding their current Corruption level, to determine what, if any, Corruption manifests.
 
