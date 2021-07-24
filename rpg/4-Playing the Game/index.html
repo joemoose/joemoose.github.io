@@ -1,197 +1,968 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Playing the Game - Dungeoneers</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Playing the Game";
-    var mkdocs_page_input_path = "4-Playing the Game.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
+    
+    
+      
+        <title>Playing the Game - Dungeoneers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe914879.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
 
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Dungeoneers</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#playing-the-game" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Dungeoneers" class="md-header__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Introduction</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../1-Rules%20Summary/">Rules Summary for the Grognards</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../2-Design%20Principles/">Design Principles</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Rules</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../3-Making%20a%20Character/">Making Your Character</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Playing the Game</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#actions-and-ability-saves">Actions and Ability Saves</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ability-saves">Ability Saves</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advantage-and-disadvantage">Advantage and Disadvantage</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#opposed-actions">Opposed Actions</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#aiding-and-interfering">Aiding and Interfering</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#group-saves">Group Saves</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#time-and-distance">Time and Distance</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#time">Time</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#distance">Distance</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#combat">Combat</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#initiative">Initiative</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#attacks">Attacks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#armour">Armour</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sundered-shields">Sundered Shields</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multiple-attacks">Multiple Attacks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#dual-weapons">Dual Weapons</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#blast">Blast</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#heroic-deeds">Heroic Deeds</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#resolving-deeds">Resolving Deeds</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#critical-deed-saves">Critical Deed Saves</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#retreat">Retreat</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#warband">Warband</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#damage-death-and-debilities">Damage, Death, and Debilities</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ability-loss">Ability Loss</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#scars">Scars</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deprivation-and-fatigue">Deprivation and Fatigue</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#healing">Healing</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../5-Equipment/">Equipment</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../6-Sorcery/">Sorcery</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Tables</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../3e-Archetypes/">Archetypes</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../3c-Backgrounds/">Backgrounds</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../6b-Corruption/">Corruption</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../3d-Gear/">Starting Equipment</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../5a-Misfires/">Gunne Misfires</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../3a-Names/">Names</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../4a-Scars/">Scars</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../6a-Spells/">Spells</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../3b-Traits/">Traits</a>
-                    </li>
-                </ul>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dungeoneers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Playing the Game
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Dungeoneers</a>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
       </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dungeoneers" class="md-nav__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dungeoneers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
-        
-          <li>Rules &raquo;</li>
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Introduction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-Rules%20Summary/" class="md-nav__link">
+        Rules Summary for the Grognards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-Design%20Principles/" class="md-nav__link">
+        Design Principles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Rules
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Rules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-Making%20a%20Character/" class="md-nav__link">
+        Making Your Character
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
         
       
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Playing the Game
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Playing the Game
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
     
-    <li>Playing the Game</li>
-    <li class="wy-breadcrumbs-aside">
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-and-ability-saves" class="md-nav__link">
+    Actions and Ability Saves
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions and Ability Saves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ability-saves" class="md-nav__link">
+    Ability Saves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-and-disadvantage" class="md-nav__link">
+    Advantage and Disadvantage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opposed-actions" class="md-nav__link">
+    Opposed Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiding-and-interfering" class="md-nav__link">
+    Aiding and Interfering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-saves" class="md-nav__link">
+    Group Saves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-and-distance" class="md-nav__link">
+    Time and Distance
+  </a>
+  
+    <nav class="md-nav" aria-label="Time and Distance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiative" class="md-nav__link">
+    Initiative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armour" class="md-nav__link">
+    Armour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sundered-shields" class="md-nav__link">
+    Sundered Shields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attacks" class="md-nav__link">
+    Multiple Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-weapons" class="md-nav__link">
+    Dual Weapons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blast" class="md-nav__link">
+    Blast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heroic-deeds" class="md-nav__link">
+    Heroic Deeds
+  </a>
+  
+    <nav class="md-nav" aria-label="Heroic Deeds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolving-deeds" class="md-nav__link">
+    Resolving Deeds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-deed-saves" class="md-nav__link">
+    Critical Deed Saves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retreat" class="md-nav__link">
+    Retreat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warband" class="md-nav__link">
+    Warband
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-death-and-debilities" class="md-nav__link">
+    Damage, Death, and Debilities
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage, Death, and Debilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ability-loss" class="md-nav__link">
+    Ability Loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scars" class="md-nav__link">
+    Scars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprivation-and-fatigue" class="md-nav__link">
+    Deprivation and Fatigue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healing" class="md-nav__link">
+    Healing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-  </ul>
   
-  <hr/>
-</div>
 
-          <div role="main">
-            <div class="section">
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-Equipment/" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-Sorcery/" class="md-nav__link">
+        Sorcery
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tables
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3e-Archetypes/" class="md-nav__link">
+        Archetypes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3c-Backgrounds/" class="md-nav__link">
+        Backgrounds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6b-Corruption/" class="md-nav__link">
+        Corruption
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-Gear/" class="md-nav__link">
+        Starting Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5a-Misfires/" class="md-nav__link">
+        Gunne Misfires
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3a-Names/" class="md-nav__link">
+        Names
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4a-Scars/" class="md-nav__link">
+        Scars
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6a-Spells/" class="md-nav__link">
+        Spells
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3b-Traits/" class="md-nav__link">
+        Traits
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
               
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-and-ability-saves" class="md-nav__link">
+    Actions and Ability Saves
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions and Ability Saves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ability-saves" class="md-nav__link">
+    Ability Saves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-and-disadvantage" class="md-nav__link">
+    Advantage and Disadvantage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opposed-actions" class="md-nav__link">
+    Opposed Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiding-and-interfering" class="md-nav__link">
+    Aiding and Interfering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-saves" class="md-nav__link">
+    Group Saves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-and-distance" class="md-nav__link">
+    Time and Distance
+  </a>
+  
+    <nav class="md-nav" aria-label="Time and Distance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance" class="md-nav__link">
+    Distance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiative" class="md-nav__link">
+    Initiative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armour" class="md-nav__link">
+    Armour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sundered-shields" class="md-nav__link">
+    Sundered Shields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attacks" class="md-nav__link">
+    Multiple Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-weapons" class="md-nav__link">
+    Dual Weapons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blast" class="md-nav__link">
+    Blast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heroic-deeds" class="md-nav__link">
+    Heroic Deeds
+  </a>
+  
+    <nav class="md-nav" aria-label="Heroic Deeds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolving-deeds" class="md-nav__link">
+    Resolving Deeds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-deed-saves" class="md-nav__link">
+    Critical Deed Saves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retreat" class="md-nav__link">
+    Retreat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warband" class="md-nav__link">
+    Warband
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage-death-and-debilities" class="md-nav__link">
+    Damage, Death, and Debilities
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage, Death, and Debilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ability-loss" class="md-nav__link">
+    Ability Loss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scars" class="md-nav__link">
+    Scars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprivation-and-fatigue" class="md-nav__link">
+    Deprivation and Fatigue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healing" class="md-nav__link">
+    Healing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
                 <h1 id="playing-the-game">Playing the Game</h1>
 <p>The core of this game is a conversation between the players and the GM. The GM describes the players’ current situation. The players then ask questions and tell what their characters do. The GM explains the results of the players’ actions; the players react and describe more activities, and so on.</p>
 <p>Suppose the outcome of your character’s actions is not immediately apparent, or the activity is risky. In that case, the GM may ask that you roll dice to determine the results.</p>
@@ -310,58 +1081,81 @@
 </ul>
 <h3 id="healing">Healing</h3>
 <p>Resting for a few moments after an encounter restores all lost HP. Ability loss and other serious ailments are more difficult to heal. You can generally recover lost Ability points with a week or two of rest under a healer's care or other source of appropriate expertise. Some of these services are free, while magical or more expedient means of recovery may come at a cost.</p>
+                
               
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../3-Making%20a%20Character/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Making Your Character" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Making Your Character
             </div>
           </div>
-          <footer>
+        </a>
+      
+      
+        
+        <a href="../5-Equipment/" class="md-footer__link md-footer__link--next" aria-label="Next: Equipment" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Equipment
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../5-Equipment/" class="btn btn-neutral float-right" title="Equipment">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../3-Making%20a%20Character/" class="btn btn-neutral" title="Making Your Character"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <span><a href="../3-Making%20a%20Character/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
     
-    
-      <span><a href="../5-Equipment/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+  </body>
 </html>
