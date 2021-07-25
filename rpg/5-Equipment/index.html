@@ -1,4 +1,4 @@
-﻿
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -29,10 +29,9 @@
     
       
         
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">        <style>:root{--md-text-font-family:"Noto Serif"}</style>
-      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -897,7 +896,7 @@
                 
                 
                 <h1 id="equipment">Equipment</h1>
-<p>All equipment that your character carries must be listed in an inventory slot. Each character has a maximum of <strong>ten</strong> inventory slots.</p>
+<p>All equipment that your character carries must be listed in an inventory slot. Each character has <strong>ten</strong> inventory slots.</p>
 <p>Prices in the following equipment lists are in silver coins. Barter is typically the means of exchange in small, remote settlements. Coinage is used in larger towns. The gold coin is known but exceedingly rare—fit for kings and dragons. </p>
 <p>The first 200 coins carried do not take up an inventory slot. Each <strong>additional 200 coins</strong> requires one inventory slot. For example, if you are carrying 1000 coins, you’ll need four inventory slots.</p>
 <p><strong>Tags</strong> describe your equipment’s general attributes and functions, such as weight and number of uses. See the following Tags and Equipment lists for details.</p>
@@ -973,7 +972,7 @@
 <tr>
 <td align="left">Beartrap</td>
 <td align="right">20</td>
-<td align="left">bulky, dangerous</td>
+<td align="left">dangerous, slow, bulky</td>
 </tr>
 <tr>
 <td align="left">Bandages</td>
@@ -1007,13 +1006,13 @@
 </tr>
 <tr>
 <td align="left">Book (blank)</td>
-<td align="right">200</td>
+<td align="right">100</td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">Book (research)</td>
-<td align="right">600</td>
-<td align="left">5 uses (Advantage on Save when researching)</td>
+<td align="right">400</td>
+<td align="left">5 uses, slow (Advantage on Wit Save when researching)</td>
 </tr>
 <tr>
 <td align="left">Bottle</td>
@@ -1036,7 +1035,7 @@
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">Caltrops, bag</td>
+<td align="left">Caltrops (bag)</td>
 <td align="right">10</td>
 <td align="left">bulky</td>
 </tr>
@@ -1161,7 +1160,7 @@
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">Lamp oil, 4 hours</td>
+<td align="left">Lantern oil, 4 hours</td>
 <td align="right">10</td>
 <td align="left">2 uses</td>
 </tr>
@@ -1178,7 +1177,7 @@
 <tr>
 <td align="left">Poultices and herbs</td>
 <td align="right">10</td>
-<td align="left">2 uses (disease, sickness)</td>
+<td align="left">2 uses (cures disease, sickness)</td>
 </tr>
 <tr>
 <td align="left">Manacles</td>
@@ -1187,13 +1186,13 @@
 </tr>
 <tr>
 <td align="left">Meat cleaver</td>
-<td align="right">12</td>
+<td align="right">10</td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">Medicine kit</td>
 <td align="right">20</td>
-<td align="left">6 uses, bulky, slow</td>
+<td align="left">5 uses, slow, bulky</td>
 </tr>
 <tr>
 <td align="left">Metal file</td>
@@ -1218,7 +1217,7 @@
 <tr>
 <td align="left">Nails, iron</td>
 <td align="right">5</td>
-<td align="left">12 uses</td>
+<td align="left">10 uses</td>
 </tr>
 <tr>
 <td align="left">Net</td>
@@ -1704,7 +1703,7 @@
 </tr>
 <tr>
 <td align="left">Fine gift</td>
-<td align="right">55</td>
+<td align="right">50</td>
 </tr>
 <tr>
 <td align="left">Noble gift</td>
@@ -1712,11 +1711,11 @@
 </tr>
 <tr>
 <td align="left">Ring or cameo</td>
-<td align="right">75</td>
+<td align="right">80</td>
 </tr>
 <tr>
 <td align="left">Finery</td>
-<td align="right">105</td>
+<td align="right">120</td>
 </tr>
 <tr>
 <td align="left">Fine tapestry</td>
@@ -1824,12 +1823,12 @@
 <tr>
 <td align="left">Black</td>
 <td align="right">120</td>
-<td align="right">Strength Save or 2d4 damage.</td>
+<td align="right">Strength Save or d8 damage.</td>
 </tr>
 <tr>
 <td align="left">Bloodweed</td>
 <td align="right">180</td>
-<td align="right">Strength Save to avoid Fatigue. Damage received is rolled twice with the lower result.</td>
+<td align="right">Strength Save to avoid Fatigue. Roll damage received twice and use the lower result.</td>
 </tr>
 <tr>
 <td align="left">Golden root</td>
@@ -1839,17 +1838,17 @@
 <tr>
 <td align="left">Oil of Tagit</td>
 <td align="right">90</td>
-<td align="right">Strength Save or all asleep.</td>
+<td align="right">Strength Save or fall asleep.</td>
 </tr>
 <tr>
 <td align="left">Red</td>
 <td align="right">120</td>
-<td align="right">Strength Save or d4 damage and blinded</td>
+<td align="right">Strength Save or d4 damage and blinded.</td>
 </tr>
 <tr>
 <td align="left">Serpent's Tears</td>
 <td align="right">120</td>
-<td align="right">Strength Save or damage received is rolled twice with the higher result.</td>
+<td align="right">Strength Save or roll damage received twice and use the higher result.</td>
 </tr>
 </tbody>
 </table>
@@ -1925,6 +1924,10 @@
 <td align="left">It protects you from harm. Reduce <em>n</em> from damage.</td>
 </tr>
 <tr>
+<td align="left"><em>+n Armour</em></td>
+<td align="left">Adds <em>n</em> to your Armour rating.</td>
+</tr>
+<tr>
 <td align="left"><em>Bulky</em></td>
 <td align="left">Requires 2 inventory slots.</td>
 </tr>
@@ -1938,7 +1941,7 @@
 </tr>
 <tr>
 <td align="left"><em>Requires</em></td>
-<td align="left">It's usable with a specific minimum Ability. If you don’t meet the requirements, it works poorly, if at all.</td>
+<td align="left">It's usable with a specific minimum Ability score. If you don’t meet the requirements, it works poorly, if at all.</td>
 </tr>
 </tbody>
 </table>
@@ -2056,7 +2059,7 @@
 </tr>
 <tr>
 <td align="left"><em>Requires</em></td>
-<td align="left">It's usable with a specific minimum Ability. If you don’t meet the requirements, it works poorly, if at all.</td>
+<td align="left">It's usable with a specific minimum Ability score. If you don’t meet the requirements, it works poorly, if at all.</td>
 </tr>
 <tr>
 <td align="left"><em>Reload</em></td>
@@ -2221,14 +2224,14 @@
 </tbody>
 </table>
 <h2 id="dragon-powder-gunnes">Dragon-Powder Gunnes</h2>
-<p>Dragon-power gunnes are expensive, exotic, and very loud. Wielded by either the rich or the foolhardy, these strange weapons could very well hail from the infernal planes.</p>
+<p>Dragon-power gunnes are expensive, exotic, and very loud. Wielded by the rich or the foolhardy, these strange weapons could very well hail from the infernal planes.</p>
 <p>All dragon-powder gunnes are characterized by the following traits:</p>
 <ul>
 <li><strong>Unwieldy</strong>: All have the <em>dangerous</em>, <em>two-handed</em>, <em>awkward</em>, <em>reload</em>, <em>piercing</em>, and <em>bulky</em> tags, unless otherwise noted. </li>
 <li><strong>Inaccurate</strong>: Requires either a Wit or Dexterity Save to hit a target before rolling damage.</li>
 <li><strong>Dangerous</strong>: A Critical Miss on the Save to hit a target results in a misfire. Roll on the <a href="../5a-Misfires/" title="Misfires">Misfires</a> table for the result.</li>
-<li><strong>Armour Piercing</strong>: All hand-held gunnes or bombs ignore 4 armour. Gunnes moved by two people or cannons ignore all armour.</li>
-<li><strong>Reloading</strong>: Most gunnes require Powder Shot ammunition and can only be fired once before reloading. Preparing another shot takes 1d2 rounds unless otherwise noted and requires two hands. You can’t reload a gunne if an enemy is within melee range.</li>
+<li><strong>Armour Piercing</strong>: All hand-held gunnes or bombs ignore 4 armour. Gunnes moved by two people or pack animals ignore all armour.</li>
+<li><strong>Reloading</strong>: Most gunnes require one load of Powder Shot ammunition and can only be fired once before reloading. Preparing another shot takes 1d2 rounds unless otherwise noted and requires two hands. You can’t reload a gunne if an enemy is within melee range.</li>
 <li><strong>Noisy</strong>: Igniting dragon-powder has loud and explosive results. Lesser creatures might flee when hearing the shot. Anything more intelligent will notice and investigate.</li>
 </ul>
 <p>Remember. If you can buy dragon-powder gunnes, so can everyone else.</p>
@@ -2247,7 +2250,7 @@
 <td align="center">d6</td>
 <td align="left">Pepperbox</td>
 <td align="right">500</td>
-<td align="left">Can be fired up to six times before being reloaded. Requires six Powder Shots to reload, each tube loaded separately.</td>
+<td align="left">Can be fired up to six times before reloading. Requires six Powder Shots to reload, each tube loaded separately.</td>
 </tr>
 <tr>
 <td align="center">2d8</td>
@@ -2271,13 +2274,13 @@
 <td align="center">2d6</td>
 <td align="left">Dragon Lance</td>
 <td align="right">700</td>
-<td align="left">Requires two Powder Shots per load. Deals full damage in melee range, or one damage die to each of two adjacent targets at range. It can function as a polearm weapon after firing.</td>
+<td align="left">Requires two Powder Shots per load. Deals full damage in melee range, or one die blast damage at range. It can function as a polearm weapon after firing.</td>
 </tr>
 <tr>
 <td align="center">2d8</td>
 <td align="left">Heavy Arquebus</td>
 <td align="right">800</td>
-<td align="left">Requires two shots per load. Deals full damage in melee range, or one damage die to each of two adjacent targets at range.</td>
+<td align="left">Requires two shots per load. Deals full damage in melee range, or one die blast damage at range.</td>
 </tr>
 <tr>
 <td align="center">2d10</td>
@@ -2289,7 +2292,7 @@
 <td align="center">6d8</td>
 <td align="left">Ribauldequin (Infernal Machine)</td>
 <td align="right">1800</td>
-<td align="left">Requires two people to move. Roll damage for every target in front of you, then divide damage by the total number of targets or three, whichever’s higher (rounded up). Requires nine Basilisk Shots per load and 1d3+4 rounds to reload.</td>
+<td align="left">Requires two people to move. Roll blast damage for every target in front of you, then divide damage by the total number of targets or three, whichever’s higher (rounded up). Requires nine Basilisk Shots per load and 1d3+4 rounds to reload.</td>
 </tr>
 <tr>
 <td align="center">4d10</td>
