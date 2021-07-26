@@ -229,9 +229,9 @@ gen_data['equipment'] = [
 ]
 gen_data['armor'] = {
   '1-3': 'No upper body protection',
-  '4-14': 'Brigandine (1 Armor, bulky)',
-  '15-19': 'Chainmail (2 Armor, bulky)',
-  '20': 'Plate (3 Armor, bulky)'
+  '4-14': 'Padded (1 Armor)',
+  '15-19': 'Leather (1 Armor)',
+  '20': 'Chainmail (2 Armor)'
 }
 
 gen_data['helmet'] = {
@@ -250,8 +250,8 @@ gen_data['weapons'] = {
 
 gen_data['wgroup1'] = ['Dagger', 'Cudgel', 'Staff']
 gen_data['wgroup2'] = ['Sword', 'Mace', 'Axe']
-gen_data['wgroup3'] = ['Longbow (bulky)', 'Crossbow (bulky)', 'Sling']
-gen_data['wgroup4'] = ['Halberd (bulky)', 'War Hammer (bulky)', 'Battleaxe (bulky)']
+gen_data['wgroup3'] = ['Longbow', 'Crossbow (bulky)', 'Sling']
+gen_data['wgroup4'] = ['Halberd', 'War Hammer', 'Battleaxe']
 
 gen_data['armor_weapons'] = {
   '1-10':'{armor}',
