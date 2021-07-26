@@ -225,20 +225,21 @@ gen_data['misfortune'] = [
 ]
 
 gen_data['equipment'] = [
-  'armor: {armor}<br>Helmet/Shield: {helmet}<br>Weapons: {weapons}<br>Items: {tool,gear}'
+  'armor: {armor}<br>Helmet/Shield: {helmet}<br>Weapons: {weapons}<br>Items: {tool,gear,trinket}<br>Bonus item: {bonus}'
 ]
+
 gen_data['armor'] = {
   '1-3': 'No upper body protection',
-  '4-14': 'Padded (1 Armor)',
-  '15-19': 'Leather (1 Armor)',
-  '20': 'Chainmail (2 Armor)'
+  '4-14': 'Padded armour',
+  '15-19': 'Leather armour',
+  '20': 'Chainmail armour'
 }
 
 gen_data['helmet'] = {
-  '1-13': ', no helmet or shield',
-  '14-16': ', a Helmet (+1 Armor)',
-  '17-19': ', a Shield (+1 Armor)',
-  '20': ', a Helmet (+1 Armor) and a Shield (+1 Armor)'
+  '1-13': '',
+  '14-16': ', helmet',
+  '17-19': ', shield',
+  '20': ', helmet, and shield'
 }
 
 gen_data['weapons'] = {
@@ -248,15 +249,26 @@ gen_data['weapons'] = {
 '20':'{wgroup4}'
 }
 
-gen_data['wgroup1'] = ['Dagger', 'Cudgel', 'Staff']
-gen_data['wgroup2'] = ['Sword', 'Mace', 'Axe']
-gen_data['wgroup3'] = ['Longbow', 'Crossbow (bulky)', 'Sling']
-gen_data['wgroup4'] = ['Halberd', 'War Hammer', 'Battleaxe']
+gen_data['wgroup1'] = ['Dagger', 'Spear', 'Staff']
+gen_data['wgroup2'] = ['Shortsword', 'Handaxe']
+gen_data['wgroup3'] = ['Bow', 'Longsword']
+gen_data['wgroup4'] = ['Greatsword', 'Crossbow']
 
 gen_data['armor_weapons'] = {
   '1-10':'{armor}',
   '11-20':'{weapons}'
 }
+
+gen_data['tool_trinket'] = {
+  '1-10':'{tool}',
+  '11-20':'{trinket}'
+}
+
+gen_data['bonus'] = {
+  '1-6': '{tool_trinket}',
+  '7-13': '{gear}',
+  '14-17': '{armor_weapons}',
+  '18-20': 'Spellbook containing the spell \'{spellbook}\''
 
 gen_data['tool'] = [
    'Bear trap'
@@ -279,6 +291,29 @@ gen_data['tool'] = [
 ,  'Sharp needle'
 ,  'Tinderbox'
 ,  'Torch'
+]
+
+gen_data['trinket'] = [
+  'Bottle'
+,  'Card Deck (stacks)'
+,  'Dice Set (stacks)'
+,  'Face Paint'
+,  'Fake Jewels (stacks)'
+,  'Horn'
+,  'Incense (stacks)'
+,  'Instrument'
+,  'Lens'
+,  'Marbles (stacks)'
+,  'Mirror'
+,  'Perfume'
+,  'Quill &  Ink'
+,  'Salt Pack (stacks)'
+,  'Small Bell'
+,  'Soap (stacks)'
+,  'Sponge'
+,  'Tar Pot'
+,  'Twine (stacks)'
+,  'Whistle'
 ]
 
 gen_data['gear'] = [
