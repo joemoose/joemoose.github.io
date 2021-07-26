@@ -225,7 +225,7 @@ gen_data['misfortune'] = [
 ]
 
 gen_data['equipment'] = [
-  'armor: {armor}<br>Helmet/Shield: {helmet}<br>Weapons: {weapons}<br>Items: {gear1,gear2}'
+  'armor: {armor}<br>Helmet/Shield: {helmet}<br>Weapons: {weapons}<br>Items: {tool,gear}'
 ]
 gen_data['armor'] = {
   '1-3': 'No upper body protection',
@@ -258,7 +258,7 @@ gen_data['armor_weapons'] = {
   '11-20':'{weapons}'
 }
 
-gen_data['gear1'] = [
+gen_data['tool'] = [
    'Bear trap'
 ,  'Black poison'
 ,  'Blanket'
@@ -281,7 +281,7 @@ gen_data['gear1'] = [
 ,  'Torch'
 ]
 
-gen_data['gear2'] = [
+gen_data['gear'] = [
    'Bandages'
 ,  'Caltrops'
 ,  'Candle'
