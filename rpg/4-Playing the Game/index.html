@@ -347,13 +347,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#group-saves" class="md-nav__link">
-    Group Saves
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -767,13 +760,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#group-saves" class="md-nav__link">
-    Group Saves
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -974,19 +960,15 @@
 <p>When your character's Action is risky or could change the narrative, your GM may call for an <strong>Ability Save</strong>. Your GM tells you what Ability is relevant, and you then roll <strong>d20</strong>. If the result is <strong>less than</strong> your character’s Ability score, the Action <strong>succeeds</strong>. Otherwise, it <strong>fails</strong>. </p>
 <p>Regardless of Ability scores, a roll of 1 always succeeds, while a 20 always fails.</p>
 <h3 id="advantage-and-disadvantage">Advantage and Disadvantage</h3>
-<p>Suppose careful preparation reduces the risk of an Action or other situational factors. In that case, your GM may grant an <strong>Advantage</strong> on your Ability Save. If so, you roll an extra d20 and use the <strong>lowest</strong> single result of the two dice.</p>
+<p>Suppose careful preparation reduces the risk of an Action or other situational factors. In that case, your GM may grant an <strong>Advantage</strong> on your Ability Save. If so, you roll an extra d20 and take the <strong>lowest</strong> single result of the two dice.</p>
 <p>If an Action has multiple advantages, it may no longer be considered risky and therefore might not require an Ability Save.</p>
-<p>Conversely, suppose the Action is made riskier by great haste, lack of appropriate gear, or other factors. In that case, your GM may require a <strong>Disadvantage</strong> on your Ability Save. If so, you roll an extra d20 and use the <strong>highest</strong> single result of the two dice.</p>
+<p>Conversely, suppose the Action is made riskier by great haste, lack of appropriate gear, or other factors. In that case, your GM may require a <strong>Disadvantage</strong> on your Ability Save. If so, you roll an extra d20 and take the <strong>highest</strong> single result of the two dice.</p>
 <p>Ability Saves with both Advantages and Disadvantages are rolled as usual with one d20.</p>
 <h3 id="opposed-actions">Opposed Actions</h3>
 <p>If opponents are attempting the same Action, the Action is <strong>Opposed</strong>. For example, your character is holding a door closed while an enemy is forcing it open. To determine an outcome, <strong>both opponents</strong> make Ability Saves, and the <strong>lowest</strong> roll succeeds. </p>
 <h3 id="aiding-and-interfering">Aiding and Interfering</h3>
 <p>Player characters can come to the <strong>Aid</strong> of their companions to help make an Action succeed. Everyone involved makes separate Abilities Saves, and the best result decides the outcome. All characters aiding with the Action potentially share any adverse consequences of a failed Save.</p>
 <p>Conversely, player characters can <strong>Interfere</strong> with another player character’s actions and prevent them from succeeding. Everyone involved makes an Ability Save, and the worst roll decides the outcome. </p>
-<h3 id="group-saves">Group Saves</h3>
-<p>An adventuring group of player characters will sometimes need to make an Ability Save as a whole to accomplish a collective Action. In these cases, one player rolls the Ability Save for the group.</p>
-<p>If it’s evident in the narrative which player character best determines the outcome, that character rolls the Ability Save. For example, if the group is petitioning a clan chieftain for a favour, the spokesperson makes a Wit Save. </p>
-<p>If a group Ability Save doesn't have a delineated character to decide an outcome, the roll then falls to the player character in the group who is most likely to cause the Save to <strong>fail</strong>. For example, the player character with the lowest Dexterity would roll a Save if the party were sneaking past a sleeping ogre. This particular Group Save would be a good time for friends to come to their Aid.</p>
 <h2 id="time-and-distance">Time and Distance</h2>
 <p>Time and distance are abstracted and flexible, depending on the current narrative. </p>
 <h3 id="time">Time</h3>
@@ -1007,6 +989,8 @@
 </ul>
 <h2 id="combat">Combat</h2>
 <p>In each Round of combat, your character can move and take one Action or forgo taking an Action and move twice.</p>
+<p>Each round, you declare what your character is doing before dice are rolled.</p>
+<p>The GM will indicate the likely actions that your opponents will take.</p>
 <h3 id="initiative">Initiative</h3>
 <p>All players first <strong>declare their actions</strong> for the round and then determine who goes first as follows:</p>
 <ul>
@@ -1015,14 +999,14 @@
 </ul>
 <p>Afterwards, declare your actions and roll a Dexterity Save at the beginning of each new Round to see who goes first. The lowest roll goes first, and then in order of increasing results. Characters who failed the Dexterity Save go after the opponents. Continue doing so until the encounter is over. The subsequent roll may result in one side taking two consecutive actions.</p>
 <h3 id="attacks">Attacks</h3>
-<p>Attacks <em>always</em> hit. The attacker rolls their weapon’s damage die and deals that much damage to their opponent.</p>
+<p>Attacks <em>always</em> hit. The attacker rolls their weapon’s damage die and deals that much damage to their opponent's HP.</p>
 <p>In situations that make an attack either more or less deadly, the GM may decide that your character’s damage is <strong>Enhanced</strong> or <strong>Impaired</strong>.</p>
 <ul>
 <li>If an attack is Enhanced, such as attacking an unaware target, roll your damage die and an extra <strong>d12</strong>. Take the single highest result.</li>
 <li>If the attack is Impaired, such as firing through cover, roll your damage die and an extra <strong>d4</strong>. Take the single lowest result.</li>
 </ul>
 <h3 id="armour">Armour</h3>
-<p>Before dealing damage, subtract the target's <strong>Armor</strong> rating from the result of the damage roll. Some weapons and types of attacks with the <em>pierce</em> quality reduce the target's armour rating for determining damage. Some attacks, such as falling or burning, ignore armour entirely. </p>
+<p>Before dealing damage to HP, subtract the target's <strong>Armor</strong> rating from the result of the damage roll. Some weapons and types of attacks with the <em>pierce</em> quality reduce the armour rating for determining damage. Some attacks, such as falling or burning, ignore armour entirely. </p>
 <h3 id="sundered-shields">Sundered Shields</h3>
 <p>If your character has a shield equipped, you could choose to ignore all damage in an attack by sundering their shield. A sundered shield is destroyed.</p>
 <h3 id="multiple-attacks">Multiple Attacks</h3>
@@ -1030,9 +1014,9 @@
 <h3 id="dual-weapons">Dual Weapons</h3>
 <p>If your character wields two weapons, roll damage for each, but deal the single highest result.</p>
 <h3 id="blast">Blast</h3>
-<p>Attacks with a <strong>blast</strong> quality affect all targets in a zone, rolling damage separately for each affected character. Blast refers to anything from explosions to massive cleaving onslaughts to the impact of a siege engine projectile. If unsure how many targets can be affected in the zone, roll the related damage die for the number.</p>
+<p>Attacks with a <strong>blast</strong> quality affect all targets in a zone, rolling damage separately for each. Blast refers to anything from explosions to massive cleaving onslaughts to the impact of siege engine projectiles. If unsure how many targets can be affected in the zone, roll the related damage die for the number.</p>
 <h3 id="heroic-deeds">Heroic Deeds</h3>
-<p><strong>Deeds</strong> are ad-hoc heroic manoeuvres your character might attempt during combat. Examples include:</p>
+<p><strong>Heroic Deeds</strong> are ad-hoc manoeuvres your character might attempt during combat. Examples include:</p>
 <ul>
 <li>Disarming an opponent</li>
 <li>Swinging from a chandelier to knock a target over</li>
@@ -1050,7 +1034,7 @@
 <li>On a 20, the deed fails miserably, and the intended result happens to your character instead. You might be able to make an Ability Save to avoid the deed’s effect.</li>
 </ul>
 <h3 id="retreat">Retreat</h3>
-<p>Running away from a dire situation always requires a successful Dexterity sSaveave, as well as a safe destination to run to.</p>
+<p>Running away from a dire situation always requires a successful Dexterity Save, as well as a safe destination to run to.</p>
 <h3 id="warband">Warband</h3>
 <p>Large groups of similar combatants fighting together are treated as a single unit.</p>
 <ul>
@@ -1059,10 +1043,10 @@
 <li>Attacks against individuals by Warbands are <strong>enhanced</strong> and always deal <strong>blast</strong> damage.</li>
 </ul>
 <h2 id="damage-death-and-debilities">Damage, Death, and Debilities</h2>
-<p>Damage first reduces your character’s HP. After HP is zero, damage then reduces your Strength score. </p>
+<p>Damage first reduces your character’s HP. Damage that reduces HP to zero decreases the Strength Ability score by the amount remaining. </p>
 <h3 id="ability-loss">Ability Loss</h3>
-<p>After taking damage to an Strength, roll a Strength Save. If your Save fails, the damage inflicted is a <strong>Critical Injury</strong>. Your character adds a <strong>Fatigue</strong> debility to their inventory and is knocked unconscious and out of the fight until revived. </p>
-<p>Losing HP represents general wear and tear that’s quickly restored and not life-threatening. Damage to Strength means more grievous harm. Some creatures, poisons, diseases, or spells can potentially damage your character’s other Abilities after first reducing HP. </p>
+<p>After taking damage to Strength, roll a Strength Save. If your Save fails, the damage is a <strong>Critical Injury</strong>. Your character adds a <strong>Fatigue</strong> debility to their inventory and is knocked unconscious and out of the fight until revived. </p>
+<p>Losing HP represents general wear and tear that’s quickly restored and not life-threatening. Damage to Strength means more grievous harm. Some creatures, poisons, diseases, or spells can potentially damage your character’s other Abilities. </p>
 <p>Damage to any Ability score is potentially grave.</p>
 <ul>
 <li>If <strong>Strength</strong> is reduced to zero, your character dies. It’s time to roll a new character. </li>
