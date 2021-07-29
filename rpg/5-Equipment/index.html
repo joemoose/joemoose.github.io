@@ -896,8 +896,8 @@
                 
                 
                 <h1 id="equipment">Equipment</h1>
-<p>All equipment that your character carries must be listed in an inventory slot. Each character has <strong>ten</strong> inventory slots.</p>
-<p>Most items require one slot. Bulky items require two. </p>
+<p>All equipment that your character carries must be listed in an inventory slot. Each character has <strong>twelve</strong> inventory slots.</p>
+<p>Most items require one slot. Bulky items require two. Small items may sometimes be stacked together in a single slot.</p>
 <p>Prices in the following equipment lists are in silver coins. Barter is typically the means of exchange in small, remote settlements. Coinage is used in larger towns. The gold coin is known but exceedingly rare—fit for kings and dragons. </p>
 <p>The first 200 coins carried do not take up an inventory slot. Each <strong>additional 200 coins</strong> requires one inventory slot. For example, if you are carrying 1000 coins, you’ll need four inventory slots.</p>
 <p><strong>Tags</strong> describe your equipment’s general qualities and functions, such as bulky inventory or number of uses. See the following Tags and Equipment lists for details.</p>
@@ -1584,7 +1584,7 @@
 </tr>
 <tr>
 <td align="left">Bacon, side of</td>
-<td align="right">10</td>
+<td align="right">8</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -1614,7 +1614,7 @@
 </tr>
 <tr>
 <td align="left">Feast</td>
-<td align="right">15 per person</td>
+<td align="right">10 per person</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -1669,18 +1669,18 @@
 </tr>
 <tr>
 <td align="left">Rations</td>
-<td align="right">2</td>
-<td align="left">2 uses</td>
+<td align="right">3</td>
+<td align="left">3 uses</td>
 </tr>
 <tr>
 <td align="left">Rations, travel</td>
-<td align="right">12</td>
-<td align="left">4 uses</td>
+<td align="right">10</td>
+<td align="left">5 uses</td>
 </tr>
 <tr>
 <td align="left">Waterskin</td>
 <td align="right">5</td>
-<td align="left">4 uses</td>
+<td align="left">3 uses</td>
 </tr>
 <tr>
 <td align="left">Wine/ale, bottle</td>
@@ -1723,7 +1723,7 @@
 <td align="right">350</td>
 </tr>
 <tr>
-<td align="left">Royal crown</td>
+<td align="left">Crown</td>
 <td align="right">5,000</td>
 </tr>
 </tbody>
@@ -1941,6 +1941,10 @@
 <td align="left">It's cumbersome or noisy to move around while wearing. Finesse Saves have a Disadvantage.</td>
 </tr>
 <tr>
+<td align="left"><em>Cover</em></td>
+<td align="left">Provides cover against ranged attacks for Impaired damage.</td>
+</tr>
+<tr>
 <td align="left"><em>Fitted</em></td>
 <td align="left">Tailored to fit the owner perfectly and removes the <em>Clumsy</em> tag. Other wearers would not receive this benefit. Price increases threefold.</td>
 </tr>
@@ -1971,8 +1975,13 @@
 <td align="left">+1 armour, offhand</td>
 </tr>
 <tr>
+<td align="left">Tower Shield</td>
+<td align="right">100</td>
+<td align="left">+1 armour, cover, offhand, awkward, clumsy, bulky</td>
+</tr>
+<tr>
 <td align="left">Padded</td>
-<td align="right">30</td>
+<td align="right">20</td>
 <td align="left">1 armour, worn, clumsy</td>
 </tr>
 <tr>
@@ -2047,7 +2056,7 @@
 <td align="left">The damage is not reduced by armour.</td>
 </tr>
 <tr>
-<td align="left"><em>Main hand</em></td>
+<td align="left"><em>Main</em></td>
 <td align="left">It is wielded in your main hand.</td>
 </tr>
 <tr>
@@ -2127,19 +2136,19 @@
 <td align="left">Improvised</td>
 <td align="center">1d4</td>
 <td align="right">-</td>
-<td align="left">close, thrown, main hand</td>
+<td align="left">close, thrown, main</td>
 </tr>
 <tr>
 <td align="left">Dagger</td>
 <td align="center">1d4</td>
 <td align="right">10</td>
-<td align="left">hand, close, thrown, main hand, offhand</td>
+<td align="left">hand, close, thrown, main, offhand</td>
 </tr>
 <tr>
 <td align="left">Handaxe</td>
 <td align="center">1d4</td>
 <td align="right">10</td>
-<td align="left">close, thrown, main hand, offhand</td>
+<td align="left">close, thrown, main, offhand</td>
 </tr>
 <tr>
 <td align="left">Mace</td>
@@ -2151,7 +2160,7 @@
 <td align="left">Shortsword</td>
 <td align="center">1d6</td>
 <td align="right">30</td>
-<td align="left">hand, close, main hand</td>
+<td align="left">hand, close, main</td>
 </tr>
 <tr>
 <td align="left">Spear</td>
@@ -2205,26 +2214,26 @@
 <tr>
 <td align="left">Sling</td>
 <td align="center">1d4</td>
-<td align="right">10</td>
-<td align="left">near, main hand</td>
+<td align="right">5</td>
+<td align="left">near, main</td>
 </tr>
 <tr>
-<td align="left">Bow</td>
+<td align="left">Shortbow</td>
 <td align="center">1d6</td>
 <td align="right">40</td>
 <td align="left">near, far, two-handed, bulky</td>
 </tr>
 <tr>
-<td align="left">Great Bow</td>
-<td align="center">1d8</td>
-<td align="right">100</td>
-<td align="left">near, far, two-handed, awkward, 1 piercing, requires 9+ Brawn, bulky</td>
-</tr>
-<tr>
 <td align="left">Crossbow</td>
-<td align="center">1d10</td>
+<td align="center">1d8</td>
 <td align="right">120</td>
 <td align="left">near, far, reload, two-handed, 1 piercing, bulky</td>
+</tr>
+<tr>
+<td align="left">Longbow</td>
+<td align="center">1d10</td>
+<td align="right">100</td>
+<td align="left">near, far, two-handed, awkward, 1 piercing, requires 9+ Brawn, bulky</td>
 </tr>
 </tbody>
 </table>
@@ -2234,7 +2243,7 @@
 <ul>
 <li><strong>Unwieldy</strong>: All have the <em>dangerous</em>, <em>two-handed</em>, <em>awkward</em>, <em>reload</em>, <em>piercing</em>, and <em>bulky</em> tags, unless otherwise noted. </li>
 <li><strong>Inaccurate</strong>: Requires either an Intellect or a Finesse Save to hit a target before rolling damage.</li>
-<li><strong>Dangerous</strong>: A Critical Miss on the Save to hit a target results in a misfire. Roll on the <a href="../5a-Misfires/" title="Misfires">Misfires</a> table for the outcome.</li>
+<li><strong>Perilous</strong>: A Critical Miss on the Save to hit a target results in a misfire. Roll on the <a href="../5a-Misfires/" title="Misfires">Misfires</a> table for the outcome.</li>
 <li><strong>Armour-Piercing</strong>: All hand-held gunnes or bombs ignore 4 armour. Gunnes moved by two people or pack animals ignore all armour.</li>
 <li><strong>Powerful</strong>: Enhanced attacks with gunnes roll an extra <strong>d20</strong>, impaired <strong>d6</strong>.</li>
 <li><strong>Reloading</strong>: Most gunnes require one load of Powder Shot ammunition and can only be fired once before reloading. Preparing another shot takes 1d2 rounds unless otherwise noted and requires two hands. You can’t reload a gunne if an enemy is within melee range.</li>
