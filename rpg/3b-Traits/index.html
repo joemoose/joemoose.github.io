@@ -1,0 +1,1164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://joemoose.github.io/rpg/3b-Traits/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Traits - Dungeoneers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">        <style>:root{--md-text-font-family:"Noto Serif"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#traits" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Dungeoneers" class="md-header__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dungeoneers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Traits
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dungeoneers" class="md-nav__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dungeoneers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Introduction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-Rules%20Summary/" class="md-nav__link">
+        Rules Summary for the Grognards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-Design%20Principles/" class="md-nav__link">
+        Design Principles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Rules
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Rules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-Making%20a%20Character/" class="md-nav__link">
+        Making Your Character
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-Playing%20the%20Game/" class="md-nav__link">
+        Playing the Game
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-Equipment/" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-Sorcery/" class="md-nav__link">
+        Sorcery
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tables
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3e-Archetypes/" class="md-nav__link">
+        Archetypes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3c-Backgrounds/" class="md-nav__link">
+        Backgrounds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6b-Corruption/" class="md-nav__link">
+        Corruption
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5a-Misfires/" class="md-nav__link">
+        Gunne Misfires
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3a-Names/" class="md-nav__link">
+        Names
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4a-Scars/" class="md-nav__link">
+        Scars
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6a-Spells/" class="md-nav__link">
+        Spells
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-Gear/" class="md-nav__link">
+        Starting Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Traits
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Traits
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physique" class="md-nav__link">
+    Physique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skin" class="md-nav__link">
+    Skin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hair" class="md-nav__link">
+    Hair
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face" class="md-nav__link">
+    Face
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speech" class="md-nav__link">
+    Speech
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clothing" class="md-nav__link">
+    Clothing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtue" class="md-nav__link">
+    Virtue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vice" class="md-nav__link">
+    Vice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reputation" class="md-nav__link">
+    Reputation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misfortunes" class="md-nav__link">
+    Misfortunes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physique" class="md-nav__link">
+    Physique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skin" class="md-nav__link">
+    Skin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hair" class="md-nav__link">
+    Hair
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#face" class="md-nav__link">
+    Face
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speech" class="md-nav__link">
+    Speech
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clothing" class="md-nav__link">
+    Clothing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtue" class="md-nav__link">
+    Virtue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vice" class="md-nav__link">
+    Vice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reputation" class="md-nav__link">
+    Reputation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misfortunes" class="md-nav__link">
+    Misfortunes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="traits">Traits</h1>
+<p>Roll d10 on the following tables for your character's appearance and traits.</p>
+<h2 id="physique">Physique</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Athletic</td>
+<td align="center">6</td>
+<td align="left">Scrawny</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Brawny</td>
+<td align="center">7</td>
+<td align="left">Short</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Flabby</td>
+<td align="center">8</td>
+<td align="left">Statuesque</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Lanky</td>
+<td align="center">9</td>
+<td align="left">Stout</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Rugged</td>
+<td align="center">10</td>
+<td align="left">Towering</td>
+</tr>
+</tbody>
+</table>
+<h2 id="skin">Skin</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Birthmark</td>
+<td align="center">6</td>
+<td align="left">Rosy</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Dark</td>
+<td align="center">7</td>
+<td align="left">Soft</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Oily</td>
+<td align="center">8</td>
+<td align="left">Tanned</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Pale</td>
+<td align="center">9</td>
+<td align="left">Tattooed</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Pockmarked</td>
+<td align="center">10</td>
+<td align="left">Weathered</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hair">Hair</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Bald</td>
+<td align="center">6</td>
+<td align="left">Long</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Braided</td>
+<td align="center">7</td>
+<td align="left">Luxurious</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Curly</td>
+<td align="center">8</td>
+<td align="left">Oily</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Filthy</td>
+<td align="center">9</td>
+<td align="left">Wavy</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Frizzy</td>
+<td align="center">10</td>
+<td align="left">Wispy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="face">Face</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Bony</td>
+<td align="center">6</td>
+<td align="left">Round</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Broken</td>
+<td align="center">7</td>
+<td align="left">Sharp</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Chiselled</td>
+<td align="center">8</td>
+<td align="left">Soft</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Elongated</td>
+<td align="center">9</td>
+<td align="left">Square</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Rat-like</td>
+<td align="center">10</td>
+<td align="left">Sunken</td>
+</tr>
+</tbody>
+</table>
+<h2 id="speech">Speech</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Blunt</td>
+<td align="center">6</td>
+<td align="left">Gravelly</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Booming</td>
+<td align="center">7</td>
+<td align="left">Precise</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Cryptic</td>
+<td align="center">8</td>
+<td align="left">Squeaky</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Droning</td>
+<td align="center">9</td>
+<td align="left">Stuttering</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Formal</td>
+<td align="center">10</td>
+<td align="left">Whispery</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clothing">Clothing</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Antique</td>
+<td align="center">6</td>
+<td align="left">Frayed</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Bloody</td>
+<td align="center">7</td>
+<td align="left">Frumpy</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Elegant</td>
+<td align="center">8</td>
+<td align="left">Livery</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Filthy</td>
+<td align="center">9</td>
+<td align="left">Rancid</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Foreign</td>
+<td align="center">10</td>
+<td align="left">Soiled</td>
+</tr>
+</tbody>
+</table>
+<h2 id="virtue">Virtue</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Ambitious</td>
+<td align="center">6</td>
+<td align="left">Honourable</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Cautious</td>
+<td align="center">7</td>
+<td align="left">Humble</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Courageous</td>
+<td align="center">8</td>
+<td align="left">Merciful</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Disciplined</td>
+<td align="center">9</td>
+<td align="left">Serene</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Gregarious</td>
+<td align="center">10</td>
+<td align="left">Tolerant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vice">Vice</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Aggressive</td>
+<td align="center">6</td>
+<td align="left">Lazy</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Bitter</td>
+<td align="center">7</td>
+<td align="left">Nervous</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Craven</td>
+<td align="center">8</td>
+<td align="left">Rude</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Deceitful</td>
+<td align="center">9</td>
+<td align="left">Vain</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Greedy</td>
+<td align="center">10</td>
+<td align="left">Vengeful</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reputation">Reputation</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Ambitious</td>
+<td align="center">6</td>
+<td align="left">Loafer</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Boor</td>
+<td align="center">7</td>
+<td align="left">Oddball</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Dangerous</td>
+<td align="center">8</td>
+<td align="left">Repulsive</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Entertainer</td>
+<td align="center">9</td>
+<td align="left">Respected</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Honest</td>
+<td align="center">10</td>
+<td align="left">Wise</td>
+</tr>
+</tbody>
+</table>
+<h2 id="misfortunes">Misfortunes</h2>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+<th align="center">Roll</th>
+<th align="left">Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">Abandoned</td>
+<td align="center">6</td>
+<td align="left">Defrauded</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">Addicted</td>
+<td align="center">7</td>
+<td align="left">Demoted</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">Blackmailed</td>
+<td align="center">8</td>
+<td align="left">Discredited</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">Condemned</td>
+<td align="center">9</td>
+<td align="left">Disowned</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">Cursed</td>
+<td align="center">10</td>
+<td align="left">Exiled</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../3d-Gear/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Starting Equipment" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Starting Equipment
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>

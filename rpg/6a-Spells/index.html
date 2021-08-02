@@ -1,0 +1,1129 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://joemoose.github.io/rpg/6a-Spells/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Spells - Dungeoneers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">        <style>:root{--md-text-font-family:"Noto Serif"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spells" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Dungeoneers" class="md-header__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dungeoneers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spells
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dungeoneers" class="md-nav__button md-logo" aria-label="Dungeoneers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Dungeoneers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Introduction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-Rules%20Summary/" class="md-nav__link">
+        Rules Summary for the Grognards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-Design%20Principles/" class="md-nav__link">
+        Design Principles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Rules
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Rules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-Making%20a%20Character/" class="md-nav__link">
+        Making Your Character
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-Playing%20the%20Game/" class="md-nav__link">
+        Playing the Game
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-Equipment/" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-Sorcery/" class="md-nav__link">
+        Sorcery
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tables
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3e-Archetypes/" class="md-nav__link">
+        Archetypes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3c-Backgrounds/" class="md-nav__link">
+        Backgrounds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6b-Corruption/" class="md-nav__link">
+        Corruption
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5a-Misfires/" class="md-nav__link">
+        Gunne Misfires
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3a-Names/" class="md-nav__link">
+        Names
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4a-Scars/" class="md-nav__link">
+        Scars
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Spells
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-Gear/" class="md-nav__link">
+        Starting Equipment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3b-Traits/" class="md-nav__link">
+        Traits
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="spells">Spells</h1>
+<p>To determine a spell, roll 3d for the hundreds digit, d6 for the tens digit, and another d6 for the ones digit.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Roll</th>
+<th>Spell</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">111.</td>
+<td>Acid Stomach</td>
+<td align="left">Anything you eat dissolves instantly and then can be vomited forth for 1d8 damage.</td>
+</tr>
+<tr>
+<td align="center">112.</td>
+<td>Adhere</td>
+<td align="left">Covers an object in exceedingly sticky slime.</td>
+</tr>
+<tr>
+<td align="center">113.</td>
+<td>Anchor</td>
+<td align="left">A durable wire sprouts from your arms, affixing itself to two points within 50 feet on each side.</td>
+</tr>
+<tr>
+<td align="center">114.</td>
+<td>Animate Object</td>
+<td align="left">An object obeys your commands as best it can.</td>
+</tr>
+<tr>
+<td align="center">115.</td>
+<td>Anthropomorphize</td>
+<td align="left">An animal gains either human intelligence or human appearance.</td>
+</tr>
+<tr>
+<td align="center">116.</td>
+<td>Arcane Eye</td>
+<td align="left">You can see through a floating eyeball that flies around at your command.</td>
+</tr>
+<tr>
+<td align="center">121.</td>
+<td>Astral Prison</td>
+<td align="left">Freezes an object in time and space within an impenetrable crystal shell.</td>
+</tr>
+<tr>
+<td align="center">122.</td>
+<td>Attract</td>
+<td align="left">Two objects are strongly magnetically attracted to each other if they come within 25 feet.</td>
+</tr>
+<tr>
+<td align="center">123.</td>
+<td>Babble</td>
+<td align="left">A creature must loudly and clearly repeat everything you think. It is otherwise mute.</td>
+</tr>
+<tr>
+<td align="center">124.</td>
+<td>Bait Flower</td>
+<td align="left">A plant sprouts from the ground that emanates the smell of your choice.</td>
+</tr>
+<tr>
+<td align="center">125.</td>
+<td>Beast Form</td>
+<td align="left">You and your possessions transform into a mundane animal.</td>
+</tr>
+<tr>
+<td align="center">126.</td>
+<td>Befuddle</td>
+<td align="left">A creature of your choice cannot form new short-term memories.</td>
+</tr>
+<tr>
+<td align="center">131.</td>
+<td>Bless</td>
+<td align="left">You or a target have Enhanced attacks.</td>
+</tr>
+<tr>
+<td align="center">132.</td>
+<td>Bird Wings</td>
+<td align="left">Your arms turn into large bird wings.</td>
+</tr>
+<tr>
+<td align="center">133.</td>
+<td>Body Swap</td>
+<td align="left">You switch bodies with a creature you touch. If one body dies, the other dies as well.</td>
+</tr>
+<tr>
+<td align="center">134.</td>
+<td>Change Weather</td>
+<td align="left">You may alter the type of weather at will, but you do not otherwise direct it.</td>
+</tr>
+<tr>
+<td align="center">135.</td>
+<td>Charm</td>
+<td align="left">A creature you can see treats you as a friend.</td>
+</tr>
+<tr>
+<td align="center">136.</td>
+<td>Comprehend</td>
+<td align="left">You become fluent in all languages for a short while.</td>
+</tr>
+<tr>
+<td align="center">141.</td>
+<td>Command</td>
+<td align="left">A target obeys a single three-word command that does not harm it.</td>
+</tr>
+<tr>
+<td align="center">142.</td>
+<td>Cone of Foam</td>
+<td align="left">Dense foam sprays from your hand, coating the target.</td>
+</tr>
+<tr>
+<td align="center">143.</td>
+<td>Control Plants</td>
+<td align="left">Nearby plants and trees obey you and gain the ability to move at a slow pace.</td>
+</tr>
+<tr>
+<td align="center">144.</td>
+<td>Cure Wounds</td>
+<td align="left">Restore all HP to a creature you touch.</td>
+</tr>
+<tr>
+<td align="center">145.</td>
+<td>Deafen</td>
+<td align="left">All nearby creatures are deafened.</td>
+</tr>
+<tr>
+<td align="center">146.</td>
+<td>Detect Magic</td>
+<td align="left">You can see or hear nearby magical auras.</td>
+</tr>
+<tr>
+<td align="center">151.</td>
+<td>Disassemble</td>
+<td align="left">Any of your body parts may be detached and reattached at will without causing pain or damage. You can still control them.</td>
+</tr>
+<tr>
+<td align="center">152.</td>
+<td>Disguise</td>
+<td align="left">You alter the appearance of one character at will as long as they remain humanoid. Attempts to duplicate other characters will seem uncanny.</td>
+</tr>
+<tr>
+<td align="center">153.</td>
+<td>Displace</td>
+<td align="left">An object appears to be up to 15 feet from its actual position.</td>
+</tr>
+<tr>
+<td align="center">154.</td>
+<td>Earthquake</td>
+<td align="left">The ground begins shaking violently around you. Structures may be damaged or collapse.</td>
+</tr>
+<tr>
+<td align="center">155.</td>
+<td>Elasticity</td>
+<td align="left">Your body can stretch up to 15 feet.</td>
+</tr>
+<tr>
+<td align="center">156.</td>
+<td>Elemental Wall</td>
+<td align="left">A straight wall of fire or ice up to 50 feet long and 10 feet high rises from the ground.</td>
+</tr>
+<tr>
+<td align="center">161.</td>
+<td>Fear</td>
+<td align="left">The target becomes terrified of a specific type of thing or person of your choice.</td>
+</tr>
+<tr>
+<td align="center">162.</td>
+<td>Filch</td>
+<td align="left">A small visible item teleports to your hands.</td>
+</tr>
+<tr>
+<td align="center">163.</td>
+<td>Flare</td>
+<td align="left">A bright ball of energy fires a trail of light into the sky, revealing your location.</td>
+</tr>
+<tr>
+<td align="center">164.</td>
+<td>Fog Cloud</td>
+<td align="left">A dense fog spreads out from you.</td>
+</tr>
+<tr>
+<td align="center">165.</td>
+<td>Frenzy</td>
+<td align="left">A nearby creature erupts in a rage of violence.</td>
+</tr>
+<tr>
+<td align="center">166.</td>
+<td>Gate</td>
+<td align="left">A portal to a random plane opens.</td>
+</tr>
+<tr>
+<td align="center">211.</td>
+<td>Ghost Sound</td>
+<td align="left">You create illusory sounds that seem to come from a direction of your choice.</td>
+</tr>
+<tr>
+<td align="center">212.</td>
+<td>Gravity Shift</td>
+<td align="left">You can change the direction of gravity for yourself.</td>
+</tr>
+<tr>
+<td align="center">213.</td>
+<td>Greed</td>
+<td align="left">A creature develops an overwhelming urge to possess a visible item of your choice.</td>
+</tr>
+<tr>
+<td align="center">214.</td>
+<td>Haste</td>
+<td align="left">Your movement speed triples.</td>
+</tr>
+<tr>
+<td align="center">215.</td>
+<td>Hatred</td>
+<td align="left">A creature develops a deep hatred of another creature or group of your choice and wishes to destroy them.</td>
+</tr>
+<tr>
+<td align="center">216.</td>
+<td>Hear Whispers</td>
+<td align="left">You can hear faint sounds distinctly.</td>
+</tr>
+<tr>
+<td align="center">221.</td>
+<td>Hover</td>
+<td align="left">An object hovers, frictionless, a few feet above the ground. It can hold up to one humanoid.</td>
+</tr>
+<tr>
+<td align="center">222.</td>
+<td>Hypnotize</td>
+<td align="left">A creature enters a trance and will truthfully answer yes or no questions you ask it.</td>
+</tr>
+<tr>
+<td align="center">223.</td>
+<td>Icy Touch</td>
+<td align="left">A thick ice layer spreads across a touched surface, up to 15 feet in radius.</td>
+</tr>
+<tr>
+<td align="center">224.</td>
+<td>Illuminate</td>
+<td align="left">A floating light moves as you command.</td>
+</tr>
+<tr>
+<td align="center">225.</td>
+<td>Invisibility</td>
+<td align="left">You cannot be seen while remaining motionless or for one round while moving.</td>
+</tr>
+<tr>
+<td align="center">226.</td>
+<td>Invisible Tether</td>
+<td align="left">Two objects within 15 feet of each other cannot be moved more than 15 feet apart.</td>
+</tr>
+<tr>
+<td align="center">231.</td>
+<td>Knock</td>
+<td align="left">A nearby mundane or magical lock unlocks loudly.</td>
+</tr>
+<tr>
+<td align="center">232.</td>
+<td>Leap</td>
+<td align="left">You jump up to 50 feet once.</td>
+</tr>
+<tr>
+<td align="center">233.</td>
+<td>Liquid Air</td>
+<td align="left">The air around you becomes swimmable.</td>
+</tr>
+<tr>
+<td align="center">234.</td>
+<td>Magic Dampener</td>
+<td align="left">All nearby magical effects have their effectiveness halved.</td>
+</tr>
+<tr>
+<td align="center">235.</td>
+<td>Manse</td>
+<td align="left">A sturdy, furnished cottage appears for 12 hours. You can permit or forbid entry to it at will.</td>
+</tr>
+<tr>
+<td align="center">236.</td>
+<td>Magic Missile</td>
+<td align="left">You shoot an arcane missile for d10 damage that unerringly seeks its target, even around corners.</td>
+</tr>
+<tr>
+<td align="center">241.</td>
+<td>Manipulate Gravity</td>
+<td align="left">Gravity within a circle of 50-foot radius increases threefold or lessens to one-third.</td>
+</tr>
+<tr>
+<td align="center">242.</td>
+<td>Marble Craze</td>
+<td align="left">Your pockets fill with marbles.</td>
+</tr>
+<tr>
+<td align="center">243.</td>
+<td>Masquerade</td>
+<td align="left">A character’s appearance and voice become identical to another person you touch.</td>
+</tr>
+<tr>
+<td align="center">244.</td>
+<td>Miniaturize</td>
+<td align="left">A creature you touch shrinks to the size of a mouse.</td>
+</tr>
+<tr>
+<td align="center">245.</td>
+<td>Mirror Image</td>
+<td align="left">An illusory duplicate of yourself appears and is under your control.</td>
+</tr>
+<tr>
+<td align="center">246.</td>
+<td>Mirrorwalk</td>
+<td align="left">A mirror becomes a gateway to another mirrored surface that you looked into today.</td>
+</tr>
+<tr>
+<td align="center">251.</td>
+<td>Missile Shield</td>
+<td align="left">A creature you touch is protected from mundane missile attacks.</td>
+</tr>
+<tr>
+<td align="center">252.</td>
+<td>Multiarm</td>
+<td align="left">You gain an extra fully functional arm.</td>
+</tr>
+<tr>
+<td align="center">253.</td>
+<td>Night Sphere</td>
+<td align="left">A 50-foot-wide sphere of darkness displaying the night sky appears before you.</td>
+</tr>
+<tr>
+<td align="center">254.</td>
+<td>Null Magic</td>
+<td align="left">You counter a spell or negate a magical effect.</td>
+</tr>
+<tr>
+<td align="center">255.</td>
+<td>Objectify</td>
+<td align="left">You become an inanimate object between the sizes of a warhorse or an apple.</td>
+</tr>
+<tr>
+<td align="center">256.</td>
+<td>Ooze Form</td>
+<td align="left">You become a living jelly.</td>
+</tr>
+<tr>
+<td align="center">261.</td>
+<td>Pacify</td>
+<td align="left">A creature near you has an aversion to violence.</td>
+</tr>
+<tr>
+<td align="center">262.</td>
+<td>Pit</td>
+<td align="left">A pit up to 15 feet wide and 15 feet deep opens in the ground.</td>
+</tr>
+<tr>
+<td align="center">263.</td>
+<td>Primal Surge</td>
+<td align="left">A creature rapidly evolves into a mutated version of its species.</td>
+</tr>
+<tr>
+<td align="center">264.</td>
+<td>Push</td>
+<td align="left">An object is pushed either towards you or away from you with the strength of three men.</td>
+</tr>
+<tr>
+<td align="center">265.</td>
+<td>Raise Dead</td>
+<td align="left">A skeleton rises from the ground to serve you. It is mindless and can only obey simple orders.</td>
+</tr>
+<tr>
+<td align="center">266.</td>
+<td>Ray of Frost</td>
+<td align="left">A creature or object is encased in ice.</td>
+</tr>
+<tr>
+<td align="center">311.</td>
+<td>Read Mind</td>
+<td align="left">You can hear the surface thoughts of nearby creatures.</td>
+</tr>
+<tr>
+<td align="center">312.</td>
+<td>Repel</td>
+<td align="left">Two objects are strongly repelled from each other if they come within 15 feet.</td>
+</tr>
+<tr>
+<td align="center">313.</td>
+<td>Scry</td>
+<td align="left">You can see through the eyes of a creature you touched earlier today.</td>
+</tr>
+<tr>
+<td align="center">314.</td>
+<td>Sculpt Elements</td>
+<td align="left">All inanimate material behaves like clay in your hands.</td>
+</tr>
+<tr>
+<td align="center">315.</td>
+<td>Shroud</td>
+<td align="left">All creatures around you are invisible until they move.</td>
+</tr>
+<tr>
+<td align="center">316.</td>
+<td>Shuffle</td>
+<td align="left">Two creatures you can see instantly switch places.</td>
+</tr>
+<tr>
+<td align="center">321.</td>
+<td>Sleep</td>
+<td align="left">A creature you can see falls into a light sleep.</td>
+</tr>
+<tr>
+<td align="center">322.</td>
+<td>Slick</td>
+<td align="left">Every surface in a 50-foot radius becomes frictionless and slippery.</td>
+</tr>
+<tr>
+<td align="center">323.</td>
+<td>Smoke Form</td>
+<td align="left">Your body becomes living smoke.</td>
+</tr>
+<tr>
+<td align="center">324.</td>
+<td>Snail Knight</td>
+<td align="left">Ten minutes after casting, a knight sitting astride a giant snail rides into view. He can answer most questions about quests or chivalry and may aid you if he finds you worthy.</td>
+</tr>
+<tr>
+<td align="center">325.</td>
+<td>Sniff</td>
+<td align="left">You can smell even the faintest trace of scents.</td>
+</tr>
+<tr>
+<td align="center">326.</td>
+<td>Sort</td>
+<td align="left">Inanimate items sort themselves according to a category you specify.</td>
+</tr>
+<tr>
+<td align="center">331.</td>
+<td>Spark</td>
+<td align="left">You create a blinding light followed by a frighteningly loud boom.</td>
+</tr>
+<tr>
+<td align="center">332.</td>
+<td>Speak with Dead</td>
+<td align="left">The spirit of a dead body rises and will answer three questions truthfully.</td>
+</tr>
+<tr>
+<td align="center">333.</td>
+<td>Spider Climb</td>
+<td align="left">You can climb surfaces like a spider.</td>
+</tr>
+<tr>
+<td align="center">334.</td>
+<td>Stoneskin</td>
+<td align="left">A creature’s skin becomes rock for +2 armour.</td>
+</tr>
+<tr>
+<td align="center">335.</td>
+<td>Switcheroo</td>
+<td align="left">You swap places with a creature.</td>
+</tr>
+<tr>
+<td align="center">336.</td>
+<td>Summon Cube</td>
+<td align="left">Once per second, you may summon or banish a 5-foot-wide cube of earth. New cubes must be affixed to the ground or other cubes.</td>
+</tr>
+<tr>
+<td align="center">341.</td>
+<td>Summon Idol</td>
+<td align="left">A carved stone statue the size of a horse rises from the ground.</td>
+</tr>
+<tr>
+<td align="center">342.</td>
+<td>Swarm</td>
+<td align="left">You become a swarm of birds, rodents, or fish. Only blast attacks can harm you.</td>
+</tr>
+<tr>
+<td align="center">343.</td>
+<td>Telekinesis</td>
+<td align="left">You may mentally move one item under 60 pounds.</td>
+</tr>
+<tr>
+<td align="center">344.</td>
+<td>Telepathy</td>
+<td align="left">Two creatures can hear each other’s thoughts, no matter how far apart they move.</td>
+</tr>
+<tr>
+<td align="center">345.</td>
+<td>Teleport</td>
+<td align="left">An object or person you can see is transported from one place to another in a 50-foot radius.</td>
+</tr>
+<tr>
+<td align="center">346.</td>
+<td>Thicket</td>
+<td align="left">A dense thicket of trees and underbrush 50 feet wide sprouts up from the ground.</td>
+</tr>
+<tr>
+<td align="center">351.</td>
+<td>Time Rush</td>
+<td align="left">Time in a bubble with a 25-foot radius starts moving two times faster.</td>
+</tr>
+<tr>
+<td align="center">352.</td>
+<td>Time Slow</td>
+<td align="left">Time in a bubble with a 25-foot radius moves two times slower.</td>
+</tr>
+<tr>
+<td align="center">353.</td>
+<td>Tristan</td>
+<td align="left">A benign, ordinary, average man appears until the spell ends. He will obey polite commands.</td>
+</tr>
+<tr>
+<td align="center">354.</td>
+<td>True Sight</td>
+<td align="left">You see through all nearby illusions.</td>
+</tr>
+<tr>
+<td align="center">355.</td>
+<td>Upwell</td>
+<td align="left">A spring of freshwater appears.</td>
+</tr>
+<tr>
+<td align="center">356.</td>
+<td>Vision</td>
+<td align="left">You completely control what a creature sees.</td>
+</tr>
+<tr>
+<td align="center">361.</td>
+<td>Visual Illusion</td>
+<td align="left">A silent, immobile, room-sized illusion of your choice appears.</td>
+</tr>
+<tr>
+<td align="center">362.</td>
+<td>Ward</td>
+<td align="left">A silver circle 50 feet across appears on the ground. Choose one type of creature that cannot cross it.</td>
+</tr>
+<tr>
+<td align="center">363.</td>
+<td>Web</td>
+<td align="left">Your wrists shoot thick webbing.</td>
+</tr>
+<tr>
+<td align="center">364.</td>
+<td>X-Ray Vision</td>
+<td align="left">You can see through walls, doors, and clothing.</td>
+</tr>
+<tr>
+<td align="center">365.</td>
+<td>Wizard Mark</td>
+<td align="left">Your finger shoots a stream of paint visible only to you. It can be seen at any distance, even through solid objects.</td>
+</tr>
+<tr>
+<td align="center">366.</td>
+<td>Zone of Truth</td>
+<td align="left">All creatures in a 50-foot bubble are compelled to speak the truth.</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../4a-Scars/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scars" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Scars
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../3d-Gear/" class="md-footer__link md-footer__link--next" aria-label="Next: Starting Equipment" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Starting Equipment
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>
