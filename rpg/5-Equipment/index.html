@@ -1972,9 +1972,14 @@
 <td align="left">+1 HP, worn</td>
 </tr>
 <tr>
+<td align="left">Buckler</td>
+<td align="right">20</td>
+<td align="left">+1 armour (+0 versus ranged attacks), offhand</td>
+</tr>
+<tr>
 <td align="left">Shield</td>
 <td align="right">40</td>
-<td align="left">+1 armour, offhand</td>
+<td align="left">+1 armour, offhand, bulky</td>
 </tr>
 <tr>
 <td align="left">Tower Shield</td>
@@ -2038,6 +2043,10 @@
 <td align="left">Damages all targets in the zone.</td>
 </tr>
 <tr>
+<td align="left"><em>Block</em></td>
+<td align="left">The weapon can be used to block attacks for +1 <em>armour</em> versus melee weapons (not ranged attacks) instead of attacking an opponent. The usage must be declared at the beginning of the round.</td>
+</tr>
+<tr>
 <td align="left"><em>Bulky</em></td>
 <td align="left">Requires 2 inventory slots.</td>
 </tr>
@@ -2074,6 +2083,10 @@
 <td align="left">Ignores <em>n</em> armour rating. Hardened steel melee weapons add <em>1 piercing</em>, and the price increases threefold.</td>
 </tr>
 <tr>
+<td align="left"><em>Reach</em></td>
+<td align="left">The length of this weapon means that it may be used to attack from the second rank, over a large barricade, or from a balcony one floor above the ground.</td>
+</tr>
+<tr>
 <td align="left"><em>Requires</em></td>
 <td align="left">Usable only with a specific minimum Ability score.</td>
 </tr>
@@ -2082,8 +2095,8 @@
 <td align="left">It must be reloaded or reset before attacking again.</td>
 </tr>
 <tr>
-<td align="left"><em>Shoddy</em></td>
-<td align="left">It is not well made and has the potential to break in use. Shoddy weapons are generally half the price.</td>
+<td align="left"><em>Subdue</em></td>
+<td align="left">Weapon can be used to incapacitate an opponent rather than kill. Any Critical Injury stuns an opponent.</td>
 </tr>
 <tr>
 <td align="left"><em>Thrown</em></td>
@@ -2132,19 +2145,25 @@
 <td align="left">Unarmed</td>
 <td align="center">1d3</td>
 <td align="right">-</td>
-<td align="left">hand, close, two-handed</td>
+<td align="left">hand, close, subdue, two-handed</td>
 </tr>
 <tr>
 <td align="left">Improvised</td>
 <td align="center">1d4</td>
 <td align="right">-</td>
-<td align="left">close, thrown, main</td>
+<td align="left">close, thrown, main, subdue</td>
 </tr>
 <tr>
 <td align="left">Dagger</td>
 <td align="center">1d4</td>
 <td align="right">10</td>
 <td align="left">hand, close, thrown, main, offhand</td>
+</tr>
+<tr>
+<td align="left">Parrying Dagger</td>
+<td align="center">1d4</td>
+<td align="right">15</td>
+<td align="left">hand, close, block, offhand</td>
 </tr>
 <tr>
 <td align="left">Handaxe</td>
@@ -2156,13 +2175,13 @@
 <td align="left">Cudgel</td>
 <td align="center">1d4 or 1d6</td>
 <td align="right">5</td>
-<td align="left">close, hand and a half</td>
+<td align="left">close, hand and a half, subdue</td>
 </tr>
 <tr>
 <td align="left">Staff</td>
 <td align="center">1d6</td>
 <td align="right">10</td>
-<td align="left">close, near, hand and a half, awkward</td>
+<td align="left">close, near, block, hand and a half, awkward, subdue</td>
 </tr>
 <tr>
 <td align="left">Shortsword</td>
@@ -2174,7 +2193,7 @@
 <td align="left">Spear</td>
 <td align="center">1d6</td>
 <td align="right">20</td>
-<td align="left">close, thrown, main</td>
+<td align="left">close, thrown, reach, main</td>
 </tr>
 <tr>
 <td align="left">Longsword</td>
@@ -2192,7 +2211,7 @@
 <td align="left">Polearm</td>
 <td align="center">1d8</td>
 <td align="right">40</td>
-<td align="left">near, awkward, two-handed, bulky</td>
+<td align="left">near, reach, awkward, two-handed, bulky</td>
 </tr>
 <tr>
 <td align="left">Greatsword</td>
