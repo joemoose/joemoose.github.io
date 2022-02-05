@@ -1,0 +1,1423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+    
+    
+      
+        <title>Security - HOSTILE Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:""}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#security" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HOSTILE Space" class="md-header__button md-logo" aria-label="HOSTILE Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HOSTILE Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Security
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Setting/" class="md-tabs__link">
+        Setting and Future History
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Technology/" class="md-tabs__link">
+        Technology Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Equipment Lists
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HOSTILE Space" class="md-nav__button md-logo" aria-label="HOSTILE Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    HOSTILE Space
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Setting and Future History
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setting and Future History" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Setting and Future History
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Setting/" class="md-nav__link">
+        Setting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Setting/Nations_of_Earth/" class="md-nav__link">
+        Nations of Earth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Setting/Offworld_Colonization/" class="md-nav__link">
+        Offworld Colonization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Setting/Rise_of_the_Corporations/" class="md-nav__link">
+        Rise of the Corporations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Technology Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Technology Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Technology Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/" class="md-nav__link">
+        Technology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Power/" class="md-nav__link">
+        Power
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Hyperdrive/" class="md-nav__link">
+        Hyperdrive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Communication/" class="md-nav__link">
+        Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Artificial_Gravity/" class="md-nav__link">
+        Artificial Gravity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Hypersleep/" class="md-nav__link">
+        Hypersleep
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Computing/" class="md-nav__link">
+        Computing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Technology/Androids/" class="md-nav__link">
+        Androids
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Equipment Lists
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Equipment Lists" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Equipment Lists
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Computer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Camping_Gear/" class="md-nav__link">
+        Camping Gear
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Computer_Hardware/" class="md-nav__link">
+        Computer Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Computer_Software/" class="md-nav__link">
+        Computer Software
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Gear
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gear" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gear
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clothing_and_Protection/" class="md-nav__link">
+        Clothing and Protection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Communications/" class="md-nav__link">
+        Communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Drugs/" class="md-nav__link">
+        Drugs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expedition_Gear/" class="md-nav__link">
+        Expedition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mining/" class="md-nav__link">
+        Mining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Personal_Devices/" class="md-nav__link">
+        Personal Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Security
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shelters/" class="md-nav__link">
+        Shelters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_9" type="checkbox" id="__nav_3_3_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_9">
+          Survival
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Survival" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Survival
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Survival_Equipment/" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Survival_Kits/" class="md-nav__link">
+        Kits
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Military
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Military" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Military
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Armour/" class="md-nav__link">
+        Armour
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" type="checkbox" id="__nav_3_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_2">
+          Firearms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Firearms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Firearms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Firearm_Accessories/" class="md-nav__link">
+        Accessories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ammunition/" class="md-nav__link">
+        Ammunition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rifles/" class="md-nav__link">
+        Rifles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shotguns/" class="md-nav__link">
+        Shotguns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Handguns/" class="md-nav__link">
+        Handguns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Heavy_Weapons/" class="md-nav__link">
+        Heavy Weapons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Machineguns/" class="md-nav__link">
+        Machineguns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Explosives/" class="md-nav__link">
+        Explosives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Grenades/" class="md-nav__link">
+        Grenades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Melee%20Weapons/" class="md-nav__link">
+        Melee Weapons
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Robots_and_Drones/" class="md-nav__link">
+        Robots and Drones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Starship_Locker/" class="md-nav__link">
+        Starship Locker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vehicles/" class="md-nav__link">
+        Vehicles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wages/" class="md-nav__link">
+        Wages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="security">Security</h1>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Brand</th>
+<th>Cost</th>
+<th>Mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advanced Jammer</td>
+<td>Novomo PLT-7000</td>
+<td>20,000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Binoculars</td>
+<td>Zenith CF Falcon Binoculars</td>
+<td>300</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Bug</td>
+<td>iTek Bug 4</td>
+<td>20</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bug, Video</td>
+<td>¡Tek Bug 7</td>
+<td>50</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Bug Unit</td>
+<td>Novomo Pro-Series EM Scanner</td>
+<td>450</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>Cable Tap</td>
+<td>¡Tek Line-Stop</td>
+<td>50</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Sony Matrix DD 1018 Digital Camera</td>
+<td>500</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Card-Lock Decryptor</td>
+<td>IE 505 Military Security Kit</td>
+<td>1,000</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>Disquise Kit</td>
+<td>Bauspace Fashion 45</td>
+<td>800</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Flashlight</td>
+<td>Norden LSGS Flashlight</td>
+<td>120</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Forensics Toolkit</td>
+<td>Luna 21 Forensics Toolkit</td>
+<td>1,000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Handcuffs</td>
+<td>Mo-Dyne Binders</td>
+<td>60</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Infrared Motion Sensor</td>
+<td>Inferno IR Detector 67</td>
+<td>50</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Jammer</td>
+<td>Novomo PLT-6320</td>
+<td>1,000</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Laser Ear</td>
+<td>CRM Pro-Security Sonic Unit</td>
+<td>3,000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Locator Beacon</td>
+<td>Gulfstar PLB2 Personal Locator Beacon</td>
+<td>100</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Lockpick Wallet</td>
+<td>Lockpick Wallet</td>
+<td>100</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Motion Tracker</td>
+<td>IE J34 Motion Tracker</td>
+<td>1,680</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Optic Probe</td>
+<td>¡TEk Optics 88</td>
+<td>100</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Remote Piloted Drone</td>
+<td>ASA RQ-456 Blizzard Aerial Drone</td>
+<td>15,000</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Scrambler</td>
+<td>Toshiba Securacom</td>
+<td>200</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>Wirecutters</td>
+<td>Aldine Max-Shears</td>
+<td>50</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="descriptions">Descriptions</h2>
+<p><strong>Aldine Max-Shears</strong>: Heavy-duty wire-cutting shears, a basic tool. Cost $50. Mass 0.5kg.</p>
+<p><strong>ASA RQ-456 Blizzard Aerial Drone</strong>: A miniature robotic quad-copter drone with camera, microphone and thermal imager used by security companies to protect properties by overflying the area. It has a 2 hr endurance, a range of 1000m and moves 50m/turn. They are operated from a dedicated portable control unit.</p>
+<p><strong>Bauspace Fashion 45</strong>: A case full of polycarbonate skin and hair grafts, contact lenses, and other gear (such as false teeth, etc.) that anyone can use to transform their appearance into something different. Includes a variety of living ‘false faces’ grown on collagen and shark-cartilage polysaccharides. These seem utterly real but can only be worn for 3-5 hours at a time before they begin they deform.</p>
+<p><strong>CRM Pro-Security Sonic Unit</strong>: This rifle-like piece of gear can be pointed at a wall or pane of glass and pick up any conversations on the other side. Its range is line of sight. It comes with a table-top tripod that can be folded for ease of mobility and a black acrylic case.</p>
+<p><strong>Gulfstar PLB2 Personal Locator Beacon</strong>: A wrist-mounted emergency beacon with a range (once activated) of up to 10 km. The PLB uses a standard emergency frequency that can be tracked by any modern avionics system, Gulfstar Hand Radio, or Novomo EM Scanner. The signal will last for 24 hours. Cost $100. Mass negl.</p>
+<p><strong>Inferno Electronics J34 Motion Tracker</strong>: The Inferno Electronics J34 Motion Tracker is a hand-held unit with a simple shoulder strap that uses discriminatory Doppler shift ultra-sound scanning to detect movement within a 100-degree cone ahead of the operator. Range varies, from 10-20m indoors to almost 600-800m in open country. They are useful tools, but subject to varied limitations, anything that moves can show up on the reading if not properly tuned out, extremely slow-moving objects may not show up at all, and of course, any enemy listening in will probably detect the loud ultra-sound bursts being emitted from the J34. The referee makes an Average Comms roll on the player’s behalf to operate a motion tracker. With success, he can give the player a pretty accurate indication of what the scanner is picking up; if unsuccessful, he should give the player false data. Player involvement can be increased by letting them roll one of the 2D6, with the referee rolling the other in secret. Cost: $1680. Mass 1kg.</p>
+<p><strong>Inferno IR Detector 67</strong>: Portable unit that can be stuck to a wall or door. It sends a unique signal if tripped to a bug detector or hand radio, or it can just give off an audible alarm. Can pick up motion through the door or wall if not too thick.</p>
+<p><strong>IE 505 Military Security Kit</strong>: This military/intelligence-only unit can access card locks and re-route the data to try and fool the lock’s onboard processor into believing that it is the correct card. The processor unit is attached to a ‘trojan’ card via a multi-wire cable and is all carried in a large fold-out wallet. It allows a person with Security skill to try and break through a card lock. Custom-made decryptors put together by crime gangs are generally illegal. Cost $1,000. Mass 200 kg.</p>
+<p><strong>iTek Bug 4</strong>: These tiny bugs have a range of 100m and transmit for 24 hours.</p>
+<p><strong>iTek Bug 7</strong>: With a fisheye lens, these micro-cameras give a distorted 180-degree view and record sound. They are often disguised as a button or part of furniture. They transmit out to 100m for 24 hours.</p>
+<p><strong>iTek Line-Stop</strong>: This unit transmits all information that it picks up from a fibre-optic cable within 2cm. It can send the signal out to 100m indefinitely.</p>
+<p><strong>iTEk Optics 88 Optic Probe</strong>: Fiber-optic lens and cable attachment for cameras that can be pushed under doors, around corners etc., for surveillance purposes.</p>
+<p><strong>Lockpick Wallet</strong>: An ad-hoc kit of tools designed to defeat manual door locks.</p>
+<p><strong>Luna 21 Forensics Toolkit</strong>: Required for investigating crime scenes and testing samples. This kit contains diagnostic sensors, hand tools, computer analysis programs and spare parts. Cost $1,000. Mass 3 kg.</p>
+<p><strong>Mo-Dyne Binders Handcuffs</strong>: Steel handcuffs for holding prisoners in check.</p>
+<p><strong>Norden LSGS Flashlight</strong>: A waterproof and impact-resistant flashlight, roughly 20 cm in length, with an endurance of 6 hours. A flashlight produces a wide cone of light up to 18 meters long with a radius of 6 meters at the end of the beam. Cost $120. Mass 1kg.</p>
+<p><strong>Novomo Pro-Series EM Scanner</strong>: This device detects the electromagnetic emissions of technological devices and can be used as a diagnostic tool when examining equipment (+1 DM to work out what’s wrong with it) or when searching for hidden bugs or devices. The Comms skill can be used to sweep a room for bugs. Cost $450. Mass 200g.</p>
+<p><strong>Novomo PLT-6320</strong>: The PLT-6320 is a hand-held radio jamming unit with a 100m range and will disrupt most radio signals. It will also interfere with security motion sensors, jamming their frequencies. Mass 1kg. The Advanced Jammer (the Novomo PLT-7000) is available, with a 3km range. It is, however, backpack-sized.</p>
+<p><strong>Sony Matrix DD1018 Digital Camera</strong>A hand-held digital camera capable of still photography and video. It is capable of low-light photography and includes an in-built timer. The camera can take 300 still shots or up to two hours of video. It can be plugged directly into any computer to download images and videos. Cost $500. Mass 1kg.</p>
+<p><strong>Toshiba Securacom Scrambler</strong>: Such a unit fits over any telephone or hand-held radio and scrambles the message before it relays it to another phone or radio. The receiver must also have a unit set to the same code. Will stop the casual listener.</p>
+<p><strong>Zenith CF Falcon Binoculars</strong>: These high-tech binoculars feature low-light night- vision and a laser range-finder. Cost $300. Mass 1kg.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Personal_Devices/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Personal Devices" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Personal Devices
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Shelters/" class="md-footer__link md-footer__link--next" aria-label="Next: Shelters" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Shelters
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+    
+  </body>
+</html>
