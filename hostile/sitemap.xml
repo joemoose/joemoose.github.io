@@ -6,17 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://joemoose.github.io/hostile/player_characters/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://joemoose.github.io/hostile/Equipment/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Ammunition/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Armour/</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -56,52 +51,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Explosives/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Firearm_Accessories/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Grenades/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Handguns/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Heavy_Weapons/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Machineguns/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Melee%20Weapons/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://joemoose.github.io/hostile/Equipment/Mining/</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/hostile/Equipment/Personal_Devices/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Rifles/</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -117,11 +72,6 @@
     </url>
     <url>
          <loc>https://joemoose.github.io/hostile/Equipment/Shelters/</loc>
-         <lastmod>2022-02-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://joemoose.github.io/hostile/Equipment/Shotguns/</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -157,6 +107,86 @@
     </url>
     <url>
          <loc>https://joemoose.github.io/hostile/Equipment/Wages/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Ammunition/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Armour/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Assault%20Rifles/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Carbines/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Energy%20Weapons/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Explosives/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Firearm_Accessories/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Grenades/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Handguns/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Heavy_Weapons/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Machineguns/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Melee%20Weapons/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Revolvers/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Rifles/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/SMGs/</loc>
+         <lastmod>2022-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/hostile/Equipment/Military/Shotguns/</loc>
          <lastmod>2022-02-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
