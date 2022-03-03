@@ -33,6 +33,8 @@
         
         var pageToc = [
           {title: "Grenades", url: "#_top", children: [
+              {title: "Hand Grenades", url: "#hand-grenades" },
+              {title: "Propelled Grenades", url: "#propelled-grenades" },
               {title: "Descriptions", url: "#descriptions" },
           ]},
         ];
@@ -61,11 +63,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../Melee%20Weapons/" class="btn btn-xs btn-default pull-right">
+      <a href="../Melee_Weapons/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../Melee%20Weapons/" class="btn btn-xs btn-link">
+      <a href="../Melee_Weapons/" class="btn btn-xs btn-link">
         Melee Weapons
       </a>
     </div>
@@ -83,58 +85,126 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <h1 id="grenades">Grenades</h1>
+<h2 id="hand-grenades">Hand Grenades</h2>
 <table>
 <thead>
 <tr>
 <th>Item</th>
 <th>Damage</th>
-<th>Cost per Case (6)</th>
-<th>Mass (Individual)</th>
+<th align="center">Cost per Case (6)</th>
+<th align="center">Mass (Individual)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>M1 Smoke HC</td>
 <td>Special; see description</td>
-<td>90</td>
-<td>0.5</td>
+<td align="center">90</td>
+<td align="center">0.5</td>
 </tr>
 <tr>
 <td>M2 Riot Agent</td>
 <td>Special; see description</td>
-<td>150</td>
-<td>0.5</td>
+<td align="center">150</td>
+<td align="center">0.5</td>
 </tr>
 <tr>
 <td>M3 Stun</td>
 <td>2D6 stun; see description</td>
-<td>180</td>
-<td>0.5</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
 </tr>
 <tr>
 <td>M4 Fragmentation</td>
 <td>5D6/3D6/1D6; see description</td>
-<td>180</td>
-<td>0.5</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
 </tr>
 <tr>
-<td>M5 High Explosive</td>
+<td>M5 Incendiary</td>
+<td>2d6 plus burning</td>
+<td align="center">160</td>
+<td align="center">.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="propelled-grenades">Propelled Grenades</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Damage</th>
+<th align="center">Cost per Case (6)</th>
+<th align="center">Mass (Individual)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1P Smoke HC</td>
+<td>Special; see description</td>
+<td align="center">90</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M2P Riot Agent</td>
+<td>Special; see description</td>
+<td align="center">150</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M3P Stun</td>
+<td>2D6 stun; see description</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>MAP Multiple Proiectile</td>
+<td>4D6</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M5P High Explosive</td>
 <td>5D6; reduce armour by 10</td>
-<td>180</td>
-<td>0.5</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
 </tr>
 <tr>
-<td>M6 Airburst</td>
+<td>M6P Airburst</td>
 <td>5D6/3D6/1D6; see description</td>
-<td>180</td>
-<td>0.5</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M7P Baton</td>
+<td>1D6 plus knockdown</td>
+<td align="center">90</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M8P EMP</td>
+<td>Special; see description</td>
+<td align="center">220</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M9P Illumination</td>
+<td>Special; see description</td>
+<td align="center">120</td>
+<td align="center">0.5</td>
+</tr>
+<tr>
+<td>M14P White Phosphorus</td>
+<td>2D6 plus burning</td>
+<td align="center">180</td>
+<td align="center">0.5</td>
 </tr>
 </tbody>
 </table>
 <h2 id="descriptions">Descriptions</h2>
-<p><strong>M1 Smoke HC Grenade</strong>: The M1 smoke grenade creates a thick cloud of coloured smoke six metres in radius, centred on the location of the grenade. This smoke imposes a-2 DM on all attacks within or through the cloud (doubled for laser weapons). The smoke dissipates in 1D6x3 rounds, although high winds and other extreme weather can sharply reduce this time.</p>
-<p><strong>M2 Riot Agent Grenade</strong>: The M2 riot agent grenade creates a cloud of fentanyl derivatives gas six metres in radius, centred on the location of the grenade. This fentanyl analogue will typically incapacitate anyone within the cloud that is not wearing breathing equipment. Victims must make a Very Difficult (-4) Endurance roll to avoid being knocked out for 1D6x10 minutes. Success means the victim suffers a-1 on all actions but is otherwise free to act. A roll of double-2 indicates serious injury. The victim suffers 2D6+2 damage. The gas will dissipate in 1D6x3 rounds, although high winds and other extreme weather can sharply reduce this time.</p>
-<p><strong>M3 Stun Grenade</strong>: The M3 stun grenade is non-lethal and does not inflict typical damage. A character within six metres of a stun grenade detonation must make an Endurance check with a negative DM equal to the damage (after armour is subtracted). If this Endurance check is failed, the character is incapacitated for 1-3 rounds. If the Endurance check is successful, the character is unaffected by the weapon, and the stun damage is ignored.</p>
+<p><strong>M1 &amp; M1P Smoke HC Grenades</strong>: The M1 smoke grenade creates a thick cloud of coloured smoke six metres in radius, centred on the location of the grenade. This smoke imposes a -2 DM on all attacks within or through the cloud (doubled for laser weapons). The smoke dissipates in 1D6x3 rounds, although high winds and other extreme weather can sharply reduce this time.</p>
+<p><strong>M2 &amp; M2P Riot Agent Grenades</strong>: The M2 riot agent grenade creates a cloud of fentanyl derivatives gas six metres in radius, centred on the location of the grenade. This fentanyl analogue will typically incapacitate anyone within the cloud that is not wearing breathing equipment. Victims must make a Very Difficult (-4) Endurance roll to avoid being knocked out for 1D6x10 minutes. Success means the victim suffers a-1 on all actions but is otherwise free to act. A roll of double-2 indicates serious injury. The victim suffers 2D6+2 damage. The gas will dissipate in 1D6x3 rounds, although high winds and other extreme weather can sharply reduce this time.</p>
+<p><strong>M3 &amp; M3P Stun Grenades</strong>: The M3 stun grenade is non-lethal and does not inflict typical damage. A character within six metres of a stun grenade detonation must make an Endurance check with a negative DM equal to the damage (after armour is subtracted). If this Endurance check is failed, the character is incapacitated for 1-3 rounds. If the Endurance check is successful, the character is unaffected by the weapon, and the stun damage is ignored.</p>
 <p><strong>M4 Fragmentation Grenade</strong>: A core of high explosive is surrounded by a layer of notched wire which fragments on detonation. The damage from fragmentation grenades decreases with distance from the blast.</p>
 <table>
 <thead>
@@ -158,8 +228,36 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tr>
 </tbody>
 </table>
-<p><strong>M5 High Explosive Grenade</strong>: This is only available as a 30mm round for grenade launcher and cannot be hand thrown. The M5 HEAP (High Explosive Armor Piercing) grenade can penetrate light armour. It can inflict severe damage against lightly armoured and civilian vehicles and bunkers, buildings and fortifications. It will reduce the target's Armour points by ten and inflict 5D6 damage. It has a blast radius of 5m, and anybody within that radius will suffer 2D6 damage. Fired from the G6 Grenade Launcher, this grenade is laser targeted and will try to home in on any target designated by the firer using the G6's integral laser painter. This provides a +1 to hit.</p>
-<p><strong>M6 Fragmentation Airburst Grenade</strong>:  This is only available as a 30mm round for a grenade launcher and cannot be hand thrown. The M6 has similar properties to the M4 Fragmentation grenade. Still, it can be commanded to detonate in the air a target once the firer has established range to the target using the G6's laser designator. This negates the defender's-2 for shooting from cover and negates hard and total cover for a character who considers himself safe.</p>
+<p><strong>M4P Multiple Projectile Grenade</strong>: The warhead of the M4P is a cup of twenty number 4 buckshot that are all released in a sabot-style design. This multiple projectile grenade effectively makes the grenade launcher a very large shotgun doing 4D6 damage to single target. Use Shotgun range and damage falloff.</p>
+<p><strong>M5 Incendiary Grenade</strong>: A phosphorous grenade burns with a white hot heat and scatters fragments of super-heated phosphorus across its 3m radius blast area. The grenade burns fiercely for 3 rounds igniting anything remotely flammable nearby. Anyone within the blast radius suffers 2D6 damage and catches fire. Used inside a vehicle or starship, the grenade will damage equipment, surfaces, and fittings.</p>
+<p><strong>M5P High Explosive Grenades</strong>: The M5 HEAP (High Explosive Armor Piercing) grenade can penetrate light armour. It can inflict severe damage against lightly armoured and civilian vehicles and bunkers, buildings and fortifications. It will reduce the target's Armour points by ten and inflict 5D6 damage. It has a blast radius of 5m, and anybody within that radius will suffer 2D6 damage. Fired from the G6 Grenade Launcher, this grenade is laser targeted and will try to home in on any target designated by the firer using the G6's integral laser painter. This provides a +1 to hit.</p>
+<p><strong>M6P Fragmentation Airburst Grenade</strong>: The M6 has similar properties to the M4 Fragmentation grenade. Still, it can be commanded to detonate in the air a target once the firer has established range to the target using the G6's laser designator. This negates the defender's -2 for shooting from cover and negates hard and total cover for a character who considers himself safe.</p>
+<table>
+<thead>
+<tr>
+<th>Distance</th>
+<th>Damage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 metres</td>
+<td>5D6</td>
+</tr>
+<tr>
+<td>6 metres</td>
+<td>3D6</td>
+</tr>
+<tr>
+<td>9 metres</td>
+<td>1D6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>M7P Baton Grenade</strong>: This non-lethal round uses a sand-bag jelly to inflict blunt trauma, inflict 1D6 damage and knock over a target if they fail a Difficult Strength roll. A target knocked over is stunned for rounds before they can attempt to stand.</p>
+<p><strong>M8P EMP Grenade</strong>: EMP (or electromagnetic pulse) rounds create a massive burst of electromagnetic radiation which will not harm humans but will cause unshielded electronics within 100m of the impact point to shut down for 1D6+1 minutes. Most electronics in the setting are robust and designed to survive such flares, and thus a saving throw is allowed. Military equipment is unaffected on 5+, colonial equipment S unaffected on 8+, Earth-based civilian electronics are unaffected on a 10+. Effects are only temporary.</p>
+<p><strong>M9P Illumination Grenade</strong>: Illuminating rounds are designed to provide almost daylight intensity illumination of the immediate area. The grenade is shot into iS the air and the bright illuminating flare descends on a parachute. Thermal sights and light intensification scopes will normally cut out to protect the user's vision. The flare will take rounds to descend and illuminate a radius of 100m.</p>
+<p><strong>M14P White Phosphorus Grenade</strong>: A white phosphorous ('Willie Pete') grenade burns with a white hot heat and scatters fragments of super-heated phosphorus across its blast area. The grenade burns fiercely for 3 rounds igniting anything remotely flammable nearby. Anyone within the blast radius suffers 2D6 damage and catches fire. Used inside a vehicle or starship, the grenade will do a lot of component damage to equipment, surfaces and fittings.</p>
 
   <br>
     
@@ -172,11 +270,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../Melee%20Weapons/" class="btn btn-xs btn-default pull-right">
+      <a href="../Melee_Weapons/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../Melee%20Weapons/" class="btn btn-xs btn-link">
+      <a href="../Melee_Weapons/" class="btn btn-xs btn-link">
         Melee Weapons
       </a>
     </div>
