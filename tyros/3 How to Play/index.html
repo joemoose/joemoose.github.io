@@ -1,192 +1,972 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>How to Play - Tyros RPG</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "How to Play";
-        var mkdocs_page_input_path = "3 How to Play.md";
-        var mkdocs_page_url = null;
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Zachary Taylor">
+      
+      
+        <link rel="canonical" href="https://joemoose.github.io/tyros/3%20How%20to%20Play/">
+      
+      
+        <link rel="prev" href="../2%20Equipment/">
+      
+      
+        <link rel="next" href="../4%20Appendix/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>How to Play - TYROS RPG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ffa9267a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Tyros RPG
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-play" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../1%20Make%20an%20Adventurer/">Make an Adventurer</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../2%20Equipment/">Equipment</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">How to Play</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#attribute-checks">Attribute Checks</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-attributes">Using Attributes</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#critical-successes-and-failures">Critical Successes and Failures</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#advantage-and-disadvantage">Advantage and Disadvantage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#luck">Luck</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#time">Time</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#distances-and-zones">Distances and Zones</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#combat">Combat</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#initiative">Initiative</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#actions">Actions</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#attacks">Attacks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#bonus-damage">Bonus Damage</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#impaired-attacks">Impaired Attacks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#critical-hits">Critical Hits</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#dual-wielding">Dual-Wielding</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multiple-attackers">Multiple Attackers</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ranged-attacks">Ranged Attacks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#aiming">Aiming</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#blast">Blast</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#subdual">Subdual</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gambits">Gambits</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advantage-in-combat">Advantage in Combat</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#morale">Morale</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#disengaging">Disengaging</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#hit-points-and-damage">Hit Points and Damage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#critical-damage">Critical Damage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#attribute-score-loss-and-death">Attribute Score Loss and Death</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#rest-and-healing">Rest and healing</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#advancement">Advancement</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#level">Level</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#stamina">Stamina</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#spells">Spells</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#casting-a-spell">Casting a Spell</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#recharging-a-spell">Recharging a Spell</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#miscasting-a-spell">Miscasting a Spell</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#selling-a-spell">Selling a Spell</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#spell-list">Spell List</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#spells-extract">Spells extract</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../4%20Appendix/">Appendix</a>
-                </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TYROS RPG" class="md-header__button md-logo" aria-label="TYROS RPG" data-md-component="logo">
+      
+  <img src="../img/RPG-game.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TYROS RPG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to Play
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Tyros RPG</a>
+    
+      <form class="md-header__option" data-md-component="palette">
         
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>How to Play</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <h1 id="how-to-play">How to Play</h1>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TYROS RPG" class="md-nav__button md-logo" aria-label="TYROS RPG" data-md-component="logo">
+      
+  <img src="../img/RPG-game.png" alt="logo">
+
+    </a>
+    TYROS RPG
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20Make%20an%20Adventurer/" class="md-nav__link">
+        Make an Adventurer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2%20Equipment/" class="md-nav__link">
+        Equipment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How to Play
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How to Play
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-checks" class="md-nav__link">
+    Attribute Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-attributes" class="md-nav__link">
+    Using Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-successes-and-failures" class="md-nav__link">
+    Critical Successes and Failures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantage-and-disadvantage" class="md-nav__link">
+    Advantage and Disadvantage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luck" class="md-nav__link">
+    Luck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distances-and-zones" class="md-nav__link">
+    Distances and Zones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiative" class="md-nav__link">
+    Initiative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    Attacks
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-damage" class="md-nav__link">
+    Bonus Damage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impaired-attacks" class="md-nav__link">
+    Impaired Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-hits" class="md-nav__link">
+    Critical Hits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-wielding" class="md-nav__link">
+    Dual-Wielding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attackers" class="md-nav__link">
+    Multiple Attackers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranged-attacks" class="md-nav__link">
+    Ranged Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiming" class="md-nav__link">
+    Aiming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blast" class="md-nav__link">
+    Blast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subdual" class="md-nav__link">
+    Subdual
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gambits" class="md-nav__link">
+    Gambits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-in-combat" class="md-nav__link">
+    Advantage in Combat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morale" class="md-nav__link">
+    Morale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disengaging" class="md-nav__link">
+    Disengaging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hit-points-and-damage" class="md-nav__link">
+    Hit Points and Damage
+  </a>
+  
+    <nav class="md-nav" aria-label="Hit Points and Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-damage" class="md-nav__link">
+    Critical Damage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-score-loss-and-death" class="md-nav__link">
+    Attribute Score Loss and Death
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-and-healing" class="md-nav__link">
+    Rest and healing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advancement" class="md-nav__link">
+    Advancement
+  </a>
+  
+    <nav class="md-nav" aria-label="Advancement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stamina" class="md-nav__link">
+    Stamina
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spells" class="md-nav__link">
+    Spells
+  </a>
+  
+    <nav class="md-nav" aria-label="Spells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casting-a-spell" class="md-nav__link">
+    Casting a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recharging-a-spell" class="md-nav__link">
+    Recharging a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscasting-a-spell" class="md-nav__link">
+    Miscasting a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selling-a-spell" class="md-nav__link">
+    Selling a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spell-list" class="md-nav__link">
+    Spell List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4%20Appendix/" class="md-nav__link">
+        Appendix
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5%20Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-checks" class="md-nav__link">
+    Attribute Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-attributes" class="md-nav__link">
+    Using Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-successes-and-failures" class="md-nav__link">
+    Critical Successes and Failures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantage-and-disadvantage" class="md-nav__link">
+    Advantage and Disadvantage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luck" class="md-nav__link">
+    Luck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distances-and-zones" class="md-nav__link">
+    Distances and Zones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiative" class="md-nav__link">
+    Initiative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    Attacks
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-damage" class="md-nav__link">
+    Bonus Damage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impaired-attacks" class="md-nav__link">
+    Impaired Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-hits" class="md-nav__link">
+    Critical Hits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-wielding" class="md-nav__link">
+    Dual-Wielding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attackers" class="md-nav__link">
+    Multiple Attackers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranged-attacks" class="md-nav__link">
+    Ranged Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiming" class="md-nav__link">
+    Aiming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blast" class="md-nav__link">
+    Blast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subdual" class="md-nav__link">
+    Subdual
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gambits" class="md-nav__link">
+    Gambits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-in-combat" class="md-nav__link">
+    Advantage in Combat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morale" class="md-nav__link">
+    Morale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disengaging" class="md-nav__link">
+    Disengaging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hit-points-and-damage" class="md-nav__link">
+    Hit Points and Damage
+  </a>
+  
+    <nav class="md-nav" aria-label="Hit Points and Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-damage" class="md-nav__link">
+    Critical Damage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-score-loss-and-death" class="md-nav__link">
+    Attribute Score Loss and Death
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-and-healing" class="md-nav__link">
+    Rest and healing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advancement" class="md-nav__link">
+    Advancement
+  </a>
+  
+    <nav class="md-nav" aria-label="Advancement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level" class="md-nav__link">
+    Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stamina" class="md-nav__link">
+    Stamina
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spells" class="md-nav__link">
+    Spells
+  </a>
+  
+    <nav class="md-nav" aria-label="Spells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casting-a-spell" class="md-nav__link">
+    Casting a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recharging-a-spell" class="md-nav__link">
+    Recharging a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscasting-a-spell" class="md-nav__link">
+    Miscasting a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selling-a-spell" class="md-nav__link">
+    Selling a Spell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spell-list" class="md-nav__link">
+    Spell List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="how-to-play">How to Play</h1>
 <p>The core of this game is a conversation between the players and the game master (GM). The GM describes the players’ current situation. Then the players ask questions and tell the GM what their characters do. The GM explains the results of their actions, and then the players react again and describe more activities, and so on.</p>
 <p>The GM answers your questions and always respects your freedom of choice. The GM provides challenges, obstacles, and situations to solve and overcome. Still, the game is more than just a story narrated by the GM—it’s an interactive fiction built on your and your fellow players’ decisions. Consider it as both creating and acting in an adventure story simultaneously.</p>
 <p>Suppose the outcome of your character’s actions is not immediately apparent, or the activity is inherently risky. In that case, the GM might ask you to roll dice to determine the results.</p>
 <h2 id="attribute-checks">Attribute Checks</h2>
 <p>When you describe your character doing something risky, or the outcome is uncertain, the GM may ask you to make an <strong>attribute check</strong>.</p>
-<p>Roll a <strong>d20</strong> and compare the result to the applicable attribute score. If the result is less than or equal to the relevant attribute score, your character succeeds and suffers no consequences. If the result exceeds the score, your character fails and suffers the outcome described by the GM.</p>
+<p>Roll a <strong>d20</strong> and compare the result to the applicable attribute score. If the result is <strong>less than or equal to</strong> the relevant attribute score, your character <strong>succeeds</strong> and suffers no consequences. If the result <strong>exceeds the score</strong>, your character <strong>fails</strong> and suffers the outcome described by the GM.</p>
 <h2 id="using-attributes">Using Attributes</h2>
-<p>Your character is a determined, resourceful adventurer, capable of trying almost anything. So when the outcome is risky, and the GM calls for an attribute check, how do we determine which attribute to roll against?</p>
+<p>Your character is a determined, resourceful adventurer, capable of almost anything. So when the outcome is risky, and the GM calls for an attribute check, how do we determine which attribute to roll against?</p>
 <p>Your description of the action determines the applicable attribute. Consider a locked castle door—how do you pass through it? If you break out a crowbar and try to force it open, that’s a STR check. If you use a lock pick to unlock the door, that’s a DEX check. If you want to bribe a guard to open it, that’s a WIL check.</p>
 <p>Don’t think about what your character is capable of, but <em>how</em> they would approach a problem. Play to all of your character’s assets.</p>
 <h2 id="critical-successes-and-failures">Critical Successes and Failures</h2>
-<p>Rolling the <strong>exact attribute score</strong> on a check is a critical success, and the outcome will be better than expected. Increase your LUCK attribute score by 1.</p>
-<p>Conversely, rolling a <strong>20</strong> is a critical failure, and the outcome will be worse than expected. Decrease your LUCK by 1.</p>
+<p>Rolling the <strong>exact attribute score</strong> on a check is a <strong>critical success</strong>, and the outcome will be better than expected. Increase your LUCK attribute score by 1.</p>
+<p>Conversely, rolling a <strong>20</strong> is a <strong>critical failure</strong>, and the outcome will be worse than expected. Decrease your LUCK by 1.</p>
 <h2 id="advantage-and-disadvantage">Advantage and Disadvantage</h2>
-<p>If you roll a check and are particularly well prepared or equipped, the GM may allow you to roll with an advantage. Roll <strong>two d20s</strong> and take the <strong>best</strong> result.</p>
-<p>If you are in a dire position or ill-prepared for your task, the GM may ask you to roll with a disadvantage. Roll <strong>two d20s</strong> and take the <strong>worst</strong> result.</p>
+<p>If you roll an attribute check and are particularly well prepared or equipped for the task, the GM may allow you to roll with an <strong>advantage</strong>. Roll <strong>two d20s</strong> and take the <strong>best</strong> result.</p>
+<p>If you are in a dire position or ill-prepared for your task, the GM may ask you to roll with a <strong>disadvantage</strong>. Roll <strong>two d20s</strong> and take the <strong>worst</strong> result.</p>
 <h2 id="luck">Luck</h2>
 <p>Luck applies only to player characters, not hirelings, monsters, or any other non-player characters controlled by the GM.</p>
-<p>You can decrease (burn) your LUCK to change the dice rolls for an attribute check. Add or remove the amount of LUCK you want to burn from the result. Be warned: running out of LUCK (the score becoming zero) will cause all your dice rolls to have a disadvantage and possibly other detrimental effects. LUCK can’t be less than zero.</p>
+<p>You can decrease (burn) your LUCK to change the dice rolls for an attribute check. Add or remove the amount of LUCK you want to burn from the result. Be warned: running out of LUCK (the score becoming zero) will cause all your dice rolls to have a disadvantage and possibly other calamitous effects. LUCK can’t be less than zero.</p>
 <p>The GM may sometimes call for a LUCK check if an outcome is random and your other attributes don’t apply.</p>
 <h2 id="time">Time</h2>
 <p>The game measures time in three durations:</p>
@@ -196,7 +976,7 @@
 <li><strong>Watch</strong> is the time scale used when traveling. Each Watch is 6 hours: morning, afternoon, evening, and night. A party can travel 6 miles in 1 watch in open terrain and clear weather.</li>
 </ul>
 <h2 id="distances-and-zones">Distances and Zones</h2>
-<p>The game uses zones as abstractions of distance and area to divide larger physical spaces into smaller units, like rooms in a house.</p>
+<p>The game uses <strong>zones</strong> as abstractions of distance and area to divide larger physical spaces into smaller units, like rooms in a house.</p>
 <p>For example, at the start of combat, the GM divides the battlefield into at least three zones; one where the party starts, one where the enemies start, and the area between them.</p>
 <p>The distance within and between zones is relative:</p>
 <p><strong>Close</strong>: Within the same zone.</p>
@@ -232,53 +1012,53 @@
 <p>On your turn in a combat round, your character can move to an adjacent zone and take an action. Actions can range from attacking, moving again, tripping or disarming an opponent, negotiating, or anything else within reason.</p>
 <h3 id="attacks">Attacks</h3>
 <p><strong>Attacks always hit</strong>. Roll your weapon’s damage die or dice (refer to the weapons list) and do that much damage to an opponent minus their armor. Remember, this is also true for your opponents; their attacks always hit you.</p>
-<h3 id="bonus-damage">Bonus Damage</h3>
-<p>In some situations, attacks may receive an extra die, noted as +d6, +d8, etc. Roll the extra die with your weapon’s damage roll, keeping the <strong>best</strong> result. For example, attacks against helpless or unaware targets receive <strong>+d12</strong> bonus damage.</p>
-<h3 id="impaired-attacks">Impaired Attacks</h3>
-<p>When an attack is impaired, such as firing into cover or fighting while your hands are bound, roll the <strong>+d4</strong> damage and use the <strong>worst</strong> result.</p>
-<h3 id="critical-hits">Critical Hits</h3>
-<p>Rolling the <strong>maximum damage</strong> on a weapon’s die roll is a critical hit. A critical hit <strong>ignores</strong> the target’s armor and deals the total damage.</p>
-<h3 id="dual-wielding">Dual-Wielding</h3>
+<h4 id="bonus-damage">Bonus Damage</h4>
+<p>In some situations, attacks may receive an extra die, noted as +d6, +d8, etc. Roll the extra die with your weapon’s damage roll, keeping the <strong>best</strong> result. For example, attacks against helpless or unaware targets receive +d12 bonus damage.</p>
+<h4 id="impaired-attacks">Impaired Attacks</h4>
+<p>When an attack is <strong>impaired</strong>, such as firing into cover or fighting while your hands are bound, roll <strong>+d4</strong> damage and keep the <strong>worst</strong> result.</p>
+<h4 id="critical-hits">Critical Hits</h4>
+<p>Rolling the <strong>maximum damage</strong> on a weapon’s die roll is a <strong>critical hit</strong>. A critical hit <strong>ignores</strong> the target’s armor and deals the total damage.</p>
+<h4 id="dual-wielding">Dual-Wielding</h4>
 <p>If attacking with two weapons, one in your main hand and one offhand, roll damage for both and choose the best result.</p>
-<h3 id="multiple-attackers">Multiple Attackers</h3>
+<h4 id="multiple-attackers">Multiple Attackers</h4>
 <p>If multiple combatants attack the same target, all attackers roll their damage but keep only the best result. </p>
-<h3 id="ranged-attacks">Ranged Attacks</h3>
+<h4 id="ranged-attacks">Ranged Attacks</h4>
 <p>Ranged weapons can’t be used if you’re in the same zone as your target.</p>
-<h3 id="aiming">Aiming</h3>
+<h4 id="aiming">Aiming</h4>
 <p>Not moving and using an action to aim instead of attacking allows a character to ignore the target’s armor with a ranged weapon the next round.</p>
-<h3 id="blast">Blast</h3>
-<p>Attacks with the <em>blast</em> quality affect all targets in the zone, rolling damage separately for each affected combatant. Blast refers to anything from fireballs, massive cleaving onslaughts, and a swarm of tiny creatures. If unsure how many targets can be affected in the zone, roll the weapon’s damage die for the number.</p>
-<h3 id="subdual">Subdual</h3>
+<h4 id="blast">Blast</h4>
+<p>Attacks with the <em>blast</em> quality affect all targets in the zone, rolling damage separately for each affected combatant. Blast refers to anything from fireballs, massive sweeping onslaughts, and a swarm of tiny creatures. If unsure how many targets can be affected in the zone, roll the weapon’s damage die for the number of targets affected.</p>
+<h4 id="subdual">Subdual</h4>
 <p>Rather than inflicting grievous harm, you can attempt to <strong>subdue</strong> an opponent using a melee weapon. Ranged weapons can’t subdue. Declare that you’re trying to subdue and then attack as usual but halve the damage. An opponent who would suffer critical damage or death from a subdual attack is instead knocked unconscious.</p>
 <h3 id="gambits">Gambits</h3>
-<p>Gambits are combat maneuvers such as stunning, shoving, disarming, tripping, or sundering armor. They’re resolved with a check by the combatant most at risk. Gambits can’t cause damage directly but may do so indirectly (for example, pushing an enemy off a ledge). </p>
+<p>Gambits are combat maneuvers such as stunning, shoving, disarming, tripping, or sundering armor. They’re resolved with an attribute check by the combatant most at risk. Gambits can’t cause damage directly but may do so indirectly (for example, pushing an enemy off a ledge). </p>
 <h3 id="advantage-in-combat">Advantage in Combat</h3>
 <p>Characters can gain an advantage in combat by attacking a target on lower ground, off balance, disarmed, distracted, or tactically disadvantaged in any significant way. </p>
-<p>When a character has an advantage against an opponent on their combat turn, they can apply advantage to either their damage roll or a gambit against that opponent. Alternatively, you can make an attack and a gambit attempt against that opponent without an advantage in the same round.</p>
-<p>If you apply advantage to your damage roll, roll only your weapon’s damage die twice, taking the best result. If you have any bonus damage dice, such as +d12, for attacking an unaware opponent, bonus dice are not rolled twice. Bonus damage dice rolls are only ever rolled once and not modified by advantage.</p>
+<p>When a character has an advantage against an opponent on their combat turn, they can apply advantage to either their damage roll or a gambit attempt against that opponent. Alternatively, you can make an attack and a gambit attempt against that opponent without an advantage in the same round.</p>
+<p>If you apply advantage to your damage roll, roll only your weapon’s damage die twice, taking the best result. If you have any bonus damage dice, such as a +d12 for attacking an unaware opponent, bonus dice are not rolled twice. Bonus damage dice rolls are only ever rolled once and not modified by advantage.</p>
 <h3 id="morale">Morale</h3>
 <p>When you’re fighting more than one opponent, the opponents must pass a WIL check as a group to keep fighting after they take their first casualty and again after they lose half their numbers or their leader is defeated.</p>
 <p>Lone foes must pass a WIL check when reduced to 0 HP.</p>
 <p>Morale checks don’t apply to players. You have to decide when it’s prudent to run away!</p>
 <h3 id="disengaging">Disengaging</h3>
-<p>If you want to retreat to an adjacent zone while an enemy occupies your zone, you must first make a successful STR <em>or</em> DEX check to disengage from the fight. If you fail, the enemy makes a free attack as you move out of the zone.</p>
-<p>An attribute check is not required if you have allies in the zone that haven’t yet taken action.</p>
+<p>If you want to retreat to an adjacent zone while an enemy occupies your zone, you must first make a successful STR <em>or</em> DEX check to disengage from the fight. If you fail, the enemy makes a free attack against you as you retreat out of the zone.</p>
+<p>An attribute check is not required to disengage if you have allies in the zone that haven’t yet taken action.</p>
 <h2 id="hit-points-and-damage">Hit Points and Damage</h2>
-<p>Damage is first dealt to your Hit Points (HP). HP represents your ability to avoid or shrug off any harm.</p>
-<p>When HP is depleted, the damage is dealt to your STR attribute. Damage to the STR attribute is potentially grievous harm.</p>
+<p>Damage is first dealt to your <strong>Hit Points</strong> (HP). HP represents your ability to avoid or shrug off any harm.</p>
+<p>When HP is depleted, the damage is dealt to your <strong>STR attribute</strong>. Damage to the STR attribute is potentially grievous harm.</p>
 <p>After taking STR damage, you must make a STR check. If the check succeeds, you’re still in action and can continue fighting. If you fail, you take <strong>critical damage</strong>.</p>
-<h2 id="critical-damage">Critical Damage</h2>
-<p>When you suffer critical damage, you are knocked unconscious and take an <em>Injured</em> burden. You remain unconscious until revived by an ally. Even after you’re revived, the <em>Injured</em> burden remains until it’s cleared.</p>
+<h3 id="critical-damage">Critical Damage</h3>
+<p>When you suffer critical damage, you are knocked unconscious and take a <em>Wounded</em> constraint. You remain unconscious until revived by an ally. Even after you’re revived, the <em>Wounded</em> constraint remains until it’s cleared.</p>
 <p>If you’re left unconscious for an hour, your character dies.</p>
 <h2 id="attribute-score-loss-and-death">Attribute Score Loss and Death</h2>
 <p>If your STR is reduced to zero, your character is dead. If your DEX is reduced to zero, you’re paralyzed. If your WIL is reduced to zero, you fall into a stupor. All your dice rolls are disadvantaged if your LUCK is reduced to zero.</p>
-<p>If your character dies, create a new one. The GM will introduce them as quickly as possible. </p>
+<p>If your character dies, create a new one. The GM will introduce them as quickly as possible. Alternatively, you can take over playing one of your hirelings. You can still create a new character later if you choose.</p>
 <h2 id="rest-and-healing">Rest and healing</h2>
 <p>There are three ways for your character to rest and recover:</p>
 <ul>
 <li><strong>Short Rest</strong>: Resting for a complete turn restores all lost HP but may expose the party.</li>
-<li><strong>Long Rest</strong>: Resting for a watch uninterrupted restores one lost point of STR, DEX, and WIL and removes all <em>Dazed</em> and <em>Fatigued</em> burdens.</li>
-<li><strong>Full Rest</strong>: Resting in a safe location for a week restores all lost STR, DEX, and WIL and removes all <em>Injured</em> or other long-term burdens.</li>
+<li><strong>Long Rest</strong>: Resting for a watch uninterrupted restores one lost point of STR, DEX, and WIL and clears all <em>Dazed</em> and <em>Fatigued</em> constraints.</li>
+<li><strong>Full Rest</strong>: Resting in a safe location for a week restores all lost STR, DEX, and WIL and clears all <em>Wounded</em> or other long-term constraints.</li>
 </ul>
 <p>Magical healing or the care of skilled healers may shorten these recovery times.</p>
 <h2 id="advancement">Advancement</h2>
@@ -332,13 +1112,13 @@
 </table>
 <p>When your character earns enough XP to advance to the next level, perform the following actions:</p>
 <ul>
-<li><strong>Roll for attribute increase</strong>: Roll 3d6 for each attribute: STR, DEX, WIL, and LUCK. If the result exceeds the maximum value that your character has for the attribute, increase it by one. If none of your attributes are increased, increase the lowest attribute by 1.</li>
+<li><strong>Roll for attribute increase</strong>: Roll 3d6 for each attribute: STR, DEX, WIL, and LUCK. If the result exceeds the maximum value that your character has for the attribute, increase it by one. If none of your attributes are increased after rolling for each, increase the lowest attribute by 1.</li>
 <li><strong>Roll hit points</strong>: Roll the dice listed for the new level’s HP. If the result exceeds the maximum HP that your character has, replace it with the rolled value. Otherwise, increase your HP by 1.</li>
 </ul>
 <p>The highest value that a character can attain for attributes and HP is 18.</p>
 <h3 id="stamina">Stamina</h3>
-<p>Starting at level 2, your character gains the <strong>Stamina</strong> attribute. Stamina allows your character to ignore burdens.</p>
-<p>For each point of Stamina, you may place one burden into the Stamina space on your character sheet rather than in your inventory. After it’s put into the Stamina space, a burden is ignored but can’t be removed until cleared.</p>
+<p>Starting at level 2, your character gains the <strong>Stamina</strong> attribute. Stamina allows your character to ignore constraints.</p>
+<p>For each point of Stamina, you may place one constraint into the Stamina space on your character sheet rather than in your inventory. After it’s put into the Stamina space, a constraint is ignored but can’t be removed until its cleared requirement is met.</p>
 <h2 id="spells">Spells</h2>
 <p>Spells are living, sentient spirits bound within rune-etched obsidian or lead tablets. Spells are rare and found in forgotten places, such as dungeons, ancient tombs, and dragon hoards. The capture and binding of spells is an art lost to all but the most learned wizards, who guard their secrets jealously.</p>
 <p>A spell tablet has three units of arcane energy or essence used to power the spell it contains. Essence is volatile and can be depleted from the tablet by casting its spell. The more essence you harness when casting a spell, the greater its magnitude and effect, but the greater the risk of depleting the essence. Once all essence is exhausted from a tablet, the spell can no longer be cast.</p>
@@ -350,7 +1130,7 @@
 <h3 id="recharging-a-spell">Recharging a Spell</h3>
 <p>Once all the essence in a tablet is depleted, its spell can no longer be cast. Each tablet, however, has a recharge condition. Fulfilling this condition rekindles the spirit within the tablet and restores three essence. </p>
 <h3 id="miscasting-a-spell">Miscasting a Spell</h3>
-<p>Whenever one or more <strong>6s</strong> are rolled when casting a spell, the spell parasitically drains the caster’s focus and mental energies. For each 6, the caster takes <strong>d6</strong> damage to WIL and then makes a WIL check. If failed, the caster takes a <em>Dazed</em> burden.</p>
+<p>Whenever one or more <strong>6s</strong> are rolled when casting a spell, the spell parasitically drains the caster’s focus and mental energies. For each 6, the caster takes <strong>d6</strong> damage to WIL and then makes a WIL check. If failed, the caster takes a <em>Dazed</em> constraint.</p>
 <p>The spell still materializes, though at a cost to the caster.</p>
 <h3 id="selling-a-spell">Selling a Spell</h3>
 <p>A fully charged spell tablet can usually be sold for 2d6 x 100 coins in a large settlement. A depleted tablet is, at most, a fourth of its value.</p>
@@ -358,16 +1138,16 @@
 <p>In the following Effect descriptions:</p>
 <ul>
 <li>[DICE] is the number of dice rolled equal to the essence used to cast the spell.</li>
-<li>[SUM] is the sum of the rolled dice.</li>
+<li>[SUM] is the sum of the dice rolled.</li>
 </ul>
+<p>The spell effect is based on the [DICE] and SUM] values.</p>
 <p>For example, the Darkness spell creates a [SUM] x 2-foot diameter sphere of pure darkness for [DICE] turns.</p>
 <p>If two essence are used to cast Darkness, and the result of the 2d6 roll is 7, the spell creates a sphere 14 feet wide for 2 turns.</p>
-<h2 id="spells-extract">Spells extract</h2>
 <table>
 <thead>
 <tr>
 <th align="center">d66</th>
-<th align="left">Spell Name</th>
+<th align="left">Name</th>
 <th align="left">Effect</th>
 <th align="left">Recharge</th>
 </tr>
@@ -490,7 +1270,7 @@
 <tr>
 <td align="center">42</td>
 <td align="left">Heal</td>
-<td align="left">Heal [SUM] HP and [SUM]/2 (rounded up) attribute points <em>or</em> remove [DICE] burdens from a creature.</td>
+<td align="left">Heal [SUM] HP and [SUM]/2 (rounded up) attribute points <em>or</em> clear [DICE] constraints from a creature.</td>
 <td align="left">Cut yourself with a silvered blade for d6 STR damage and sprinkle your blood on the spell tablet.</td>
 </tr>
 <tr>
@@ -591,50 +1371,57 @@
 </tr>
 </tbody>
 </table>
-              
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../2%20Equipment/" class="btn btn-neutral float-left" title="Equipment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../4%20Appendix/" class="btn btn-neutral float-right" title="Appendix">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../2%20Equipment/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../4%20Appendix/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
 </html>

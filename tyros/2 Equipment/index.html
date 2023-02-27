@@ -1,135 +1,703 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Equipment - Tyros RPG</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Equipment";
-        var mkdocs_page_input_path = "2 Equipment.md";
-        var mkdocs_page_url = null;
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Zachary Taylor">
+      
+      
+        <link rel="canonical" href="https://joemoose.github.io/tyros/2%20Equipment/">
+      
+      
+        <link rel="prev" href="../1%20Make%20an%20Adventurer/">
+      
+      
+        <link rel="next" href="../3%20How%20to%20Play/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>Equipment - TYROS RPG</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ffa9267a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Tyros RPG
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#equipment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../1%20Make%20an%20Adventurer/">Make an Adventurer</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Equipment</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#inventory-slots">Inventory slots</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#coins">Coins</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#burdens">Burdens</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#example-burdens">Example Burdens</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#hirelings">Hirelings</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#hireling-morale">Hireling Morale</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hireling-advancement">Hireling Advancement</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#weapons">Weapons</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#armor">Armor</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tools-gear">Tools &amp; Gear</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#illumination">Illumination</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#expeditionary-kits">Expeditionary Kits</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#artisan-kits">Artisan Kits</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#clothing">Clothing</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#food">Food</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#animals">Animals</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#lodging">Lodging</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#transportation">Transportation</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../3%20How%20to%20Play/">How to Play</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../4%20Appendix/">Appendix</a>
-                </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TYROS RPG" class="md-header__button md-logo" aria-label="TYROS RPG" data-md-component="logo">
+      
+  <img src="../img/RPG-game.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TYROS RPG
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Equipment
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Tyros RPG</a>
+    
+      <form class="md-header__option" data-md-component="palette">
         
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Equipment</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <h1 id="equipment">Equipment</h1>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TYROS RPG" class="md-nav__button md-logo" aria-label="TYROS RPG" data-md-component="logo">
+      
+  <img src="../img/RPG-game.png" alt="logo">
+
+    </a>
+    TYROS RPG
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20Make%20an%20Adventurer/" class="md-nav__link">
+        Make an Adventurer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Equipment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Equipment
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-slots" class="md-nav__link">
+    Inventory slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coins" class="md-nav__link">
+    Coins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-constraints" class="md-nav__link">
+    Example Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hirelings" class="md-nav__link">
+    Hirelings
+  </a>
+  
+    <nav class="md-nav" aria-label="Hirelings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hireling-morale" class="md-nav__link">
+    Hireling Morale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hireling-advancement" class="md-nav__link">
+    Hireling Advancement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weapons" class="md-nav__link">
+    Weapons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    Armor
+  </a>
+  
+    <nav class="md-nav" aria-label="Armor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-armor-notes" class="md-nav__link">
+    Additional Armor Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-gear" class="md-nav__link">
+    Tools &amp; Gear
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools &amp; Gear">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illumination" class="md-nav__link">
+    Illumination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expeditionary-kits" class="md-nav__link">
+    Expeditionary Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artisan-kits" class="md-nav__link">
+    Artisan Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clothing" class="md-nav__link">
+    Clothing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#food" class="md-nav__link">
+    Food
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animals" class="md-nav__link">
+    Animals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lodging" class="md-nav__link">
+    Lodging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transportation" class="md-nav__link">
+    Transportation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3%20How%20to%20Play/" class="md-nav__link">
+        How to Play
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4%20Appendix/" class="md-nav__link">
+        Appendix
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5%20Credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-slots" class="md-nav__link">
+    Inventory slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coins" class="md-nav__link">
+    Coins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-constraints" class="md-nav__link">
+    Example Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hirelings" class="md-nav__link">
+    Hirelings
+  </a>
+  
+    <nav class="md-nav" aria-label="Hirelings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hireling-morale" class="md-nav__link">
+    Hireling Morale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hireling-advancement" class="md-nav__link">
+    Hireling Advancement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weapons" class="md-nav__link">
+    Weapons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    Armor
+  </a>
+  
+    <nav class="md-nav" aria-label="Armor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-armor-notes" class="md-nav__link">
+    Additional Armor Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-gear" class="md-nav__link">
+    Tools &amp; Gear
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools &amp; Gear">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illumination" class="md-nav__link">
+    Illumination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expeditionary-kits" class="md-nav__link">
+    Expeditionary Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artisan-kits" class="md-nav__link">
+    Artisan Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clothing" class="md-nav__link">
+    Clothing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#food" class="md-nav__link">
+    Food
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animals" class="md-nav__link">
+    Animals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lodging" class="md-nav__link">
+    Lodging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transportation" class="md-nav__link">
+    Transportation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="equipment">Equipment</h1>
 <p>The equipment your character carries defines their role and specialty in the group.</p>
 <h2 id="inventory-slots">Inventory slots</h2>
 <p>Your character has <strong>12</strong> inventory slots to carry items in 2 hand slots, 4 body slots, and 6 backpack slots. </p>
@@ -141,13 +709,13 @@
 <p>Most items take up one inventory slot. Some bulky items, such as armor and group equipment kits, take up two slots. Smaller items may be bundled into a single slot at the GM’s discretion.</p>
 <p>Your character can’t carry more items than their inventory allows. Carts, horses, or mules can increase inventory space. Hirelings can also be employed to haul your equipment. </p>
 <h2 id="coins">Coins</h2>
-<p>Your character can carry up to 50 coins freely in their pockets. After that, each additional 200 coins occupy one inventory slot.</p>
-<h2 id="burdens">Burdens</h2>
-<p>Burdens are adverse conditions your character suffers, such as <em>Injured</em> or <em>Frightened</em>. Complications from failed checks or events in the narrative can inflict burdens.</p>
-<p>Each burden must be placed in an inventory slot. You can have multiple copies of the same burden. If there aren’t enough inventory slots for a new burden, an item must be dropped to make room.</p>
-<p>Some burdens have additional adverse effects. These effects apply as long as the burden remains in your inventory. </p>
-<p>Conditions can be removed only by meeting their clear requirement, usually a short, long, or full rest.</p>
-<h3 id="example-burdens">Example Burdens</h3>
+<p>Your character can carry up to 50 coins freely in their pockets. After that, each additional 250 coins occupy one inventory slot.</p>
+<h2 id="constraints">Constraints</h2>
+<p>Constraints are detrimental conditions your character endures, such as <em>Wounded</em> or <em>Frightened</em>. Constraints can result from failed attribute checks, baleful spells, or events in the narrative.</p>
+<p>Each constraint must be placed in an inventory slot. You can have multiple copies of the same constraint. If there aren’t enough inventory slots for a new constraint, an item must be dropped to make room.</p>
+<p>Some constraints have additional adverse effects besides taking up inventory slots. These effects apply as long as the constraint remains in your inventory. </p>
+<p>Conditions can only be removed from your inventory by meeting their cleared requirement, usually a short, long, or full rest.</p>
+<h3 id="example-constraints">Example Constraints</h3>
 <table>
 <thead>
 <tr>
@@ -168,18 +736,31 @@
 <td align="left">Meal and long rest</td>
 </tr>
 <tr>
+<td align="left"><em>Fatigued</em></td>
+<td align="left">No effect besides taking up inventory</td>
+<td align="left">Long rest</td>
+</tr>
+<tr>
 <td align="left"><em>Frightened</em></td>
 <td align="left">Make a WIL check to approach the source of fear</td>
 <td align="left">Short rest</td>
 </tr>
 <tr>
-<td align="left"><em>Injured</em></td>
+<td align="left"><em>Geas</em></td>
+<td align="left">No effect besides taking up inventory</td>
+<td align="left">Complete the magical obligation</td>
+</tr>
+<tr>
+<td align="left"><em>Wounded</em></td>
 <td align="left">Disadvantage on STR and DEX checks</td>
 <td align="left">Full rest</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note</strong>: See the “How to Play” section for information about attribute checks and disadvantages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>See the <a href="../3%20How%20to%20Play/">How to Play</a> section for information about attribute checks and disadvantages.</p>
+</p>
+</div>
 <h2 id="hirelings">Hirelings</h2>
 <p>A pair of helping hands might give you the edge you’ll need to survive or, at the very least, carry more equipment. In many settlements, especially larger ones, you can find people willing to explore the world with you. </p>
 <ul>
@@ -197,18 +778,19 @@
 <p>Hirelings who receive a share of treasure gain 1 XP per coin above their daily wage. Like your character, once they earn 1000 XP, they advance to Level 2.</p>
 <p>Not receiving a share of treasure may cause resentment amongst hirelings.</p>
 <h2 id="usage">Usage</h2>
-<p>Most items have three <strong>uses</strong> as an abstract method to track resource consumption or wear and tear on adventuring gear. After all three uses are marked, the item is depleted, broken, or destroyed. Usage can be repaired on things such as weapons and armor for 10% of the original cost per use removed. </p>
+<p>Most items have three <strong>uses</strong> as an abstract method to track resource consumption or wear and tear on adventuring gear. A healing elixer, for example, marks off one use after each quaff. </p>
+<p>After three uses are marked off, the item is depleted, broken, or destroyed. Usage can be repaired on items such as weapons and armor for 10% of the original cost per use removed. </p>
 <ul>
-<li><strong>Weapons, armor, and ammunition</strong>: After a fight, roll <strong>d6</strong> for each item used during the battle. On <strong>5-6</strong>, mark a usage.</li>
-<li><strong>Other equipment</strong>: If used in a way that could break or deplete it, the GM may ask you to mark usage.</li>
+<li><strong>Weapons, armor, and ammunition</strong>: After a fight, roll <strong>d6</strong> for each item used during the battle. On <strong>5 or 6</strong>, mark one usage.</li>
+<li><strong>Other equipment</strong>: If used in a way that could break or deplete it, the GM may ask you to either mark one usage or roll <strong>d6</strong>; on a <strong>5 or 6</strong>, mark a usage.</li>
 </ul>
 <h2 id="weapons">Weapons</h2>
 <p>Some weapons have characteristics that affect their use.</p>
 <ul>
 <li><strong>Ammo</strong>: Long- and short-range weapons require the listed ammunition to be carried in a body slot. </li>
-<li><strong>STR</strong>: Using the weapon requires the minimum Strength attribute score. If STR is less than the requirement, the damage is Impaired.</li>
 <li><strong>Long-range</strong>: This weapon can attack a target up to three zones away.</li>
 <li><strong>Short-range</strong>: This weapon can attack a target up to 2 zones away. Attacks 3 zones away are Impaired.</li>
+<li><strong>STR</strong>: Using the weapon requires the minimum STR score. If STR is less than the requirement, the damage is Impaired.</li>
 <li><strong>Thrown</strong>: This weapon can attack a target in the same zone or be thrown at a target in an adjacent zone.</li>
 <li><strong>Two-handed</strong>: This weapon takes up both hand slots.</li>
 <li><strong>Versatile</strong>: This weapon has two entries noted under damage; it deals the first wielded with one hand and adds bonus damage wielded with two (roll both, take the best).</li>
@@ -219,7 +801,7 @@
 <th align="left">Weapon</th>
 <th align="center">Damage Die</th>
 <th align="left">Notes</th>
-<th align="center">Coins</th>
+<th align="right">Coins</th>
 </tr>
 </thead>
 <tbody>
@@ -227,91 +809,91 @@
 <td align="left">Unarmed</td>
 <td align="center">d4</td>
 <td align="left">Doesn't ignore armor on a critical hit</td>
-<td align="center">None</td>
+<td align="right">None</td>
 </tr>
 <tr>
 <td align="left">Cudgel</td>
 <td align="center">d4</td>
 <td align="left">None</td>
-<td align="center">5</td>
+<td align="right">5</td>
 </tr>
 <tr>
 <td align="left">Staff</td>
 <td align="center">d4/+d4</td>
 <td align="left">Versatile</td>
-<td align="center">10</td>
+<td align="right">10</td>
 </tr>
 <tr>
 <td align="left">Dagger</td>
 <td align="center">d4+1</td>
 <td align="left">Thrown</td>
-<td align="center">15</td>
+<td align="right">15</td>
 </tr>
 <tr>
 <td align="left">Spear</td>
 <td align="center">d6/+d6</td>
 <td align="left">Versatile, Thrown</td>
-<td align="center">15</td>
+<td align="right">15</td>
 </tr>
 <tr>
 <td align="left">Axe</td>
 <td align="center">d8</td>
 <td align="left">Thrown</td>
-<td align="center">20</td>
+<td align="right">20</td>
 </tr>
 <tr>
 <td align="left">Mace</td>
 <td align="center">2d4</td>
 <td align="left">None</td>
-<td align="center">20</td>
+<td align="right">20</td>
 </tr>
 <tr>
 <td align="left">Sword</td>
 <td align="center">d8/+d8</td>
 <td align="left">Versatile</td>
-<td align="center">30</td>
+<td align="right">30</td>
 </tr>
 <tr>
 <td align="left">Polearm</td>
 <td align="center">d10</td>
-<td align="left">Two-handed</td>
-<td align="center">40</td>
+<td align="left">Two-handed<br/>Enhaced damage if mounted and charging,<br/>or set to receive a charge</td>
+<td align="right">40</td>
 </tr>
 <tr>
 <td align="left">Maul</td>
 <td align="center">2d6</td>
 <td align="left">Two-handed, STR 7+</td>
-<td align="center">30</td>
+<td align="right">30</td>
 </tr>
 <tr>
 <td align="left">Great Sword</td>
 <td align="center">d12</td>
 <td align="left">Two-handed, STR 11+</td>
-<td align="center">60</td>
+<td align="right">60</td>
 </tr>
 <tr>
 <td align="left">Sling</td>
 <td align="center">d4</td>
 <td align="left">Short-range<br/>Ammo: Stones and pouch: 1 coin</td>
-<td align="center">5</td>
+<td align="right">5</td>
 </tr>
 <tr>
 <td align="left">Shortbow</td>
 <td align="center">d6</td>
 <td align="left">Short-range, Two-handed, STR 7+<br/>Ammo: Arrows and quiver: 5 coins</td>
-<td align="center">50</td>
+<td align="right">50</td>
 </tr>
 <tr>
 <td align="left">Crossbow</td>
 <td align="center">d8</td>
 <td align="left">Long-range, Two-handed, STR 7+<br/>Ammo: Quarrels and case: 5 coins</td>
-<td align="center">100</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Longbow</td>
 <td align="center">d10</td>
 <td align="left">Long-range, Two-handed, STR 11+<br/>Ammo: Arrows and quiver: 10 coins</td>
-<td align="center">150</td>
+<td align="right">150</td>
 </tr>
 </tbody>
 </table>
@@ -321,9 +903,9 @@
 <thead>
 <tr>
 <th align="left">Type</th>
-<th align="left">Armor Rating</th>
-<th align="left">Details</th>
-<th align="center">Coins</th>
+<th align="left">Rating</th>
+<th align="left">Notes</th>
+<th align="right">Coins</th>
 </tr>
 </thead>
 <tbody>
@@ -331,52 +913,63 @@
 <td align="left">Heavy cloak</td>
 <td align="left">+1 armor</td>
 <td align="left">One body slot</td>
-<td align="center">20</td>
+<td align="right">20</td>
 </tr>
 <tr>
 <td align="left">Helmet</td>
 <td align="left">+1 armor</td>
-<td align="left">One body slot, provides an advantage on critical damage checks</td>
-<td align="center">20</td>
+<td align="left">One body slot</td>
+<td align="right">20</td>
 </tr>
 <tr>
 <td align="left">Shield</td>
 <td align="left">+1 armor</td>
-<td align="left">Offhand, can be sundered (destroyed) to avoid all damage from an attack, can be used as an offhand weapon (as cudgel) instead of +1 armor</td>
-<td align="center">30</td>
+<td align="left">Offhand</td>
+<td align="right">30</td>
 </tr>
 <tr>
 <td align="left">Cloth (Gambeson)</td>
 <td align="left">1 armor</td>
-<td align="left">Two body slots</td>
-<td align="center">60</td>
+<td align="left">One body slot</td>
+<td align="right">60</td>
 </tr>
 <tr>
 <td align="left">Light (Brigandine)</td>
 <td align="left">2 armor</td>
 <td align="left">Two body slots</td>
-<td align="center">500</td>
+<td align="right">500</td>
 </tr>
 <tr>
 <td align="left">Medium (Chain)</td>
 <td align="left">3 armor</td>
 <td align="left">Two body slots</td>
-<td align="center">1200</td>
+<td align="right">1200</td>
 </tr>
 <tr>
 <td align="left">Heavy (Plate Mail)</td>
 <td align="left">4 armor</td>
 <td align="left">Two body slots</td>
-<td align="center">4,000</td>
+<td align="right">4,000</td>
 </tr>
 <tr>
 <td align="left">Extreme (Full Plate)</td>
 <td align="left">5 armor</td>
 <td align="left">Two body slots, a helmet is integrated</td>
-<td align="center">8,000</td>
+<td align="right">8,000</td>
 </tr>
 </tbody>
 </table>
+<h3 id="additional-armor-notes">Additional Armor Notes</h3>
+<ul>
+<li><strong>Items with +1 armor rating</strong> can be combined with the base armor: cloth, light, heavy, or extreme.</li>
+<li><strong>Helmets</strong> provide an advantage on STR checks to avoid critical damage.</li>
+<li><strong>Shields</strong> have other uses:<ul>
+<li>can be sundered to avoid all damage from an attack; the shield is then destroyed</li>
+<li>can be used as a dual weapon (as cudgel) instead of providing +1 armor; declare its use as a weapon before a combat round begins</li>
+</ul>
+</li>
+<li><strong>Extreme Armor</strong> receives the benefit of a helmet (advantage on critical damage checks) as part of the base armor</li>
+</ul>
 <h2 id="tools-gear">Tools &amp; Gear</h2>
 <table>
 <thead>
@@ -676,6 +1269,7 @@
 </tbody>
 </table>
 <h3 id="expeditionary-kits">Expeditionary Kits</h3>
+<p>All expeditionary kits are bulky.</p>
 <table>
 <thead>
 <tr>
@@ -687,32 +1281,33 @@
 <tbody>
 <tr>
 <td align="left">Camping</td>
-<td align="left">(bedrolls, tarps, tent, tie line) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Bedrolls, tarps, tent, tie lines</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Climbing</td>
-<td align="left">(rope, spikes, grappling hook, chalk) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Rope, spikes, grappling hook, chalk</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Healers</td>
-<td align="left">(bandages, splints, arrow spoon, forceps, herbal poultices, needle &amp; thread) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Bandages, splints, forceps, herbal poultices, needle, thread</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Illumination</td>
-<td align="left">(torches, lanterns, lamp oil, tinderbox) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Torches, lanterns, lamp oil, tinderbox</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Provisions</td>
-<td align="left">(rations, waterskin, mess kit, pots, salt) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Rations, waterskin, mess kit, pots, salt</td>
+<td align="right">100</td>
 </tr>
 </tbody>
 </table>
 <h3 id="artisan-kits">Artisan Kits</h3>
+<p>All artisan kits are bulky.</p>
 <table>
 <thead>
 <tr>
@@ -724,33 +1319,38 @@
 <tbody>
 <tr>
 <td align="left">Alchemy</td>
-<td align="left">(flasks, retort, alcohol, reagents, powdered iron) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Flasks, retort, retort frame, reagents, glass stirring rod, mortar, pestle</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td align="left">Crafting</td>
+<td align="left">Assorted tools and materials for a <em>specific</em> craft</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Disguise</td>
-<td align="left">(cosmetics, dyes, wigs) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Cosmetics, dyes, wigs</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Forgery</td>
-<td align="left">(ink, quills, scrolls, seals, wax) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Ink, quills, scrolls, seals, wax</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Herbalist</td>
-<td align="left">(clippers, pouches, mortar &amp; pestle, muslin, pan, alcohol ) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Clippers, pouches, mortar, pestle, muslin, pan, alcohol</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Thieves</td>
-<td align="left">(lockpicks, hand drill, crowbar, file) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Lockpicks, hand drill, crowbar, file</td>
+<td align="right">100</td>
 </tr>
 <tr>
 <td align="left">Tinkers</td>
-<td align="left">(needles &amp; thread, whetstone, hammer, tongs, charcoal, leather scraps, glue ) <em>bulky</em></td>
-<td align="right">50</td>
+<td align="left">Whetstone, hammer, tongs, charcoal, leather scraps, glue</td>
+<td align="right">100</td>
 </tr>
 </tbody>
 </table>
@@ -985,50 +1585,57 @@
 </tr>
 </tbody>
 </table>
-              
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../1%20Make%20an%20Adventurer/" class="btn btn-neutral float-left" title="Make an Adventurer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../3%20How%20to%20Play/" class="btn btn-neutral float-right" title="How to Play">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../1%20Make%20an%20Adventurer/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../3%20How%20to%20Play/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
 </html>
