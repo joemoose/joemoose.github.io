@@ -10,7 +10,7 @@
         <meta name="author" content="Zachary Taylor">
       
       
-        <link rel="canonical" href="https://joemoose.github.io/tyros/5%20Appendix/">
+        <link rel="canonical" href="https://joemoose.github.io/dungeoneers/5%20Appendix/">
       
       
         <link rel="prev" href="../3.4%20Advancement/">
@@ -684,6 +684,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#misfires" class="md-nav__link">
+    Misfires
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gonnes" class="md-nav__link">
     Gonnes
   </a>
@@ -693,13 +700,6 @@
           <li class="md-nav__item">
   <a href="#ammunition" class="md-nav__link">
     Ammunition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gonne-misfires" class="md-nav__link">
-    Gonne Misfires
   </a>
   
 </li>
@@ -1044,7 +1044,7 @@
 <li>Rolling a 20, a worse-than-expected outcome. LUCK -1.</li>
 </ul>
 <h3 id="combat">Combat</h3>
-<p>On your turn, you can move and take an action.</p>
+<p>On your turn, you can move and take one action.</p>
 <p><strong>Initiative</strong></p>
 <p>Declare actions before rolling dice. A <em>fast</em> turn is a single action. A <em>slow</em> turn is an action and moving, or actions that take more time.</p>
 <ol>
@@ -1238,7 +1238,7 @@
 <td align="right">20</td>
 </tr>
 <tr>
-<td align="left">Healing from a chirurgeon</td>
+<td align="left">Care from a healer</td>
 <td align="right">5</td>
 </tr>
 <tr>
@@ -1432,35 +1432,62 @@
 </ul>
 <h2 id="4-simplified-initiative">4. Simplified Initiative</h2>
 <hr />
-<p>If you prefer a simpler and faster method to establish a turn order when combat breaks out, follow this rule.</p>
+<p>If you prefer a more straightforward and faster method to establish a turn order when combat breaks out, follow this rule.</p>
 <p>If you attack unsuspecting foes, your character and any allies aware of the plan go first. Otherwise, make a DEX <em>or</em> WIL check to act before your opponents. In following combat rounds, maintain this order.</p>
 <h2 id="5-alternate-leveling">5. Alternate Leveling</h2>
 <hr />
 <p>Rather than tracking experience points and leveling up based on the value of looted treasure and artifacts, you can tie your character’s level advancement to essential milestones, such as completing an expedition and returning to civilization. You’ll need to bring something of value back to show for your efforts or, at the very least, share an adventurous tale to be sung by troubadours.</p>
-<p>You need as many milestones equal to your current level to advance to the next level. For example, a level 1 character reaches level 2 after one expedition. To go on to level 3, they need to complete two more expeditions.</p>
+<p>You need as many milestones equal to your current level to advance to the next level. For example, a level 1 character reaches level 2 after one expedition. To go on to level 3, they need to complete two more journeys.</p>
 <h2 id="6-dragonpowder-gonnes">6. Dragonpowder Gonnes</h2>
 <hr />
 <p>Dragonpowder gonnes are expensive, exotic, and very loud. Wielded by the rich or the foolhardy, these strange weapons are reputed to be of Dwarven manufacture. However, they could very well hail from the infernal planes.</p>
 <p>All dragonpowder gonnes have the following characteristics:</p>
 <ul>
-<li><strong>Ammo</strong>: Gonnes require expensive ammunition. Remove one shot from your ammo supply after reloading. Some gonnes require more than a single shot per reload.</li>
-<li><strong>Armor piercing</strong>: Damage ignores 4 armor ratings.</li>
-<li><strong>Unwieldy</strong>: Unlike all other weapons, gonnes first require <strong>a successful DEX <em>or</em> WIL check to do damage</strong>. If the check fails, the attack misses its target and does no damage. In either event, the gonne must be reloaded before firing again. Rainy or windy conditions impose a disadvantage on the attribute check.<ul>
-<li>On a <strong>critical success</strong>, the gonne ignores all the target’s armor.</li>
-<li>On a <strong>critical failure</strong>, the gonne misfires. Roll on the following Misfire Table to determine the results.</li>
-</ul>
-</li>
-<li><strong>Deadly</strong>: On a <strong>critical hit</strong>, roll damage a second time rather than ignoring all armor as with other weapons. If another critical hit occurs, roll damage a third time, and so on.</li>
-<li><strong>Long-range</strong>: If you can see the target, you can attack it. However, you cannot attack targets in the same zone as you. The exception is the <em>Fire Lance</em>; see the following Gonnes Table.</li>
-<li><strong>Reloading</strong>: Gonnes require an action and a <strong>successful DEX <em>or</em> WIL check to reload</strong>. Reloading requires both hands, and you can’t reload a gonne while moving or if an enemy is in the same zone. Mark off one ammo usage after successfully reloading.<ul>
-<li>On a <strong>critical success</strong>, you can attack in the same action as reloading.</li>
-<li>On a <strong>critical failure</strong>, mark off one (wasted) ammo usage.</li>
-</ul>
-</li>
+<li><strong>Armor piercing</strong>: Damage always ignores 3 armor ratings; a critical damage roll ignores all armor.</li>
 <li><strong>Noisy</strong>: Igniting dragonpowder has loud and explosive results. Lesser creatures make a morale check when hearing the shot. Anything more intelligent will notice and investigate.</li>
+<li><strong>Reloading</strong>: Reloading requires both hands and one action per shot loaded. </li>
 </ul>
+<h3 id="misfires">Misfires</h3>
+<p>If you roll <strong>double 1s</strong> on the damage and bonus dice, a misfire occurs instead of damage to your target. Roll 2d6 and consult the following table for the result.</p>
+<table>
+<thead>
+<tr>
+<th align="center">2d6</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2</td>
+<td align="left">The gonne explodes and is destroyed. Roll 2d6 damage to you.</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">You catch on fire, taking d4 damage per round, ignoring armor until you put it out.</td>
+</tr>
+<tr>
+<td align="center">4–5</td>
+<td align="left">Sparks get in your eyes. All DEX and WIL checks are disadvantaged until you take one round to remove the sparks and make a STR check.</td>
+</tr>
+<tr>
+<td align="center">6–8</td>
+<td align="left">The gonne fails to fire. You must take one round of fiddling with the mechanism and make a WIL check before firing it again.</td>
+</tr>
+<tr>
+<td align="center">9–10</td>
+<td align="left">The gonne breaks. It will need to be thoroughly cleaned and repaired. The repair cost is 30% of its price.</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="left">The gonne is fine, but every player character nearby must make a LUCK check. The character who fails and rolls the highest takes damage rather than the target.</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="left">The gonne explodes and is destroyed. Roll 2d6 <em>blast</em> damage to you and everyone nearby.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="gonnes">Gonnes</h3>
-<p>Remember, if you can buy dragonpowder gonnes, so can everyone else.</p>
 <table>
 <thead>
 <tr>
@@ -1473,39 +1500,27 @@
 <tbody>
 <tr>
 <td align="left">Pomegranate</td>
-<td align="center">2d6</td>
+<td align="center">d10</td>
 <td align="left">Thrown. One inventory slot. Destroyed on use. <em>Blast</em> damage.</td>
 <td align="right">300</td>
 </tr>
 <tr>
 <td align="left">Petronel</td>
-<td align="center">d10</td>
-<td align="left">One inventory slot. One-handed: it is fired in the main hand but requires both hands to reload.</td>
+<td align="center">d8 +d8</td>
+<td align="left">One inventory slot. It is fired with the main hand but requires both hands to reload.</td>
 <td align="right">600</td>
 </tr>
 <tr>
 <td align="left">Fire Lance</td>
-<td align="center">d10/(d6)</td>
-<td align="left">Two-hands. Bulky. Deals damage to a single target in melee range or d6 <em>blast</em> damage at an adjacent zone. It can function as a polearm after firing. Requires two Powder Shots for each reload.</td>
+<td align="center">d10 +d10/(d6)</td>
+<td align="left">Two-hands. Bulky. Either deals d10 +d10 damage to a single target in melee range or d6 <em>blast</em> damage at an adjacent zone. It can function as a polearm after firing. Requires reloading two Powder Shots.</td>
 <td align="right">1,000</td>
 </tr>
 <tr>
 <td align="left">Hand Cannon</td>
-<td align="center">d12</td>
+<td align="center">d12 +d12</td>
 <td align="left">Two-hands. Bulky.</td>
 <td align="right">800</td>
-</tr>
-<tr>
-<td align="left">Bombard</td>
-<td align="center">4d10</td>
-<td align="left">Can only be moved using a pack animal and wagon. It requires two people to operate and takes one round to aim. It deals d8 damage to anyone standing directly behind it when it fires. Requires one Cannon Shot and two rounds for each attribute check to reload.</td>
-<td align="right">4,000</td>
-</tr>
-<tr>
-<td align="left">Basilisk (Infernal Machine)</td>
-<td align="center">6d10</td>
-<td align="left">Requires two people to move or a pack animal and wagon. Roll blast damage for every target in front of you. Divide the damage by the number of targets or three, whichever’s higher (rounded up). Requires reloading nine Basilisk Shots. More than one person can reload to hasten the process.</td>
-<td align="right">6,000</td>
 </tr>
 </tbody>
 </table>
@@ -1523,56 +1538,6 @@
 <td align="left">Powder Shot</td>
 <td align="center">6 per bag</td>
 <td align="center">180</td>
-</tr>
-<tr>
-<td align="left">Basilisk Shot</td>
-<td align="center">9 per bag</td>
-<td align="center">360</td>
-</tr>
-<tr>
-<td align="left">Cannon Shot</td>
-<td align="center">1, bulky</td>
-<td align="center">100</td>
-</tr>
-</tbody>
-</table>
-<h3 id="gonne-misfires">Gonne Misfires</h3>
-<p>On a critical failure when firing a dragonpowder gonne, roll <strong>2d6</strong> and refer to the following table.</p>
-<table>
-<thead>
-<tr>
-<th align="center">2d6</th>
-<th align="left">Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">2</td>
-<td align="left">The gonne explodes and is destroyed, dealing d12 damage to you.</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="left">You catch on fire, taking d4 damage per round, ignoring armor until you put it out.</td>
-</tr>
-<tr>
-<td align="center">4–5</td>
-<td align="left">Sparks get in your eyes. All DEX and WIL checks are disadvantaged until you take a moment and make a STR check.</td>
-</tr>
-<tr>
-<td align="center">6–8</td>
-<td align="left">The gonne fails to fire. You must take one round of fiddling with the mechanism and make a WIL check before firing it again.</td>
-</tr>
-<tr>
-<td align="center">9–10</td>
-<td align="left">The gonne breaks. It will need to be thoroughly cleaned and repaired before being used again. The repair cost is 30% of its price.</td>
-</tr>
-<tr>
-<td align="center">11</td>
-<td align="left">The gonne is fine, but everyone nearby must make a LUCK check. The shot hits the character who fails and rolls the highest.</td>
-</tr>
-<tr>
-<td align="center">12</td>
-<td align="left">The gonne explodes and is destroyed, dealing d12 <em>blast</em> damage to you and everyone nearby.</td>
 </tr>
 </tbody>
 </table>
@@ -1623,12 +1588,12 @@
 <hr />
 <h3 id="thief_1"><div style="width: 100%;text-align: center">THIEF</div></h3>
 <hr />
-<p>Thieves are adventurers who live by their wits and luck, with a little resourcefulness for good measure. Their range of unique talents makes them versatile companions in adventures.</p>
+<p>Thieves are adventurers who live by their wits and luck, with a bit of resourcefulness for good measure. Their range of unique talents makes them versatile companions in adventures.</p>
 <h4 id="talents">Talents</h4>
 <p>You have a variety of unique abilities. When you first create your character, and each time you gain a level, you can choose one talent from the following list or gain mastery of a talent you already know.</p>
 <p><strong>BACKSTAB</strong>: When you attack a creature that isn’t aware of you, in addition to the advantage you would typically gain, you double the damage rolled.</p>
 <ul>
-<li><strong>Mastery</strong>: During combat, as part of your attack, you can make a DEX or WIL check against a creature aware of you to flank or confuse the target, adding +d12 damage bonus.</li>
+<li><strong>Mastery</strong>: During combat, as part of your attack, you can make a DEX or WIL check against a creature aware of you to flank or confuse the target, adding a +d12 damage bonus.</li>
 </ul>
 <p><strong>EXPERTISE</strong>: You can re-roll an attribute check once per session.</p>
 <ul>
@@ -1677,7 +1642,7 @@
 </blockquote>
 <h5 id="create">CREATE</h5>
 <p>Bring forth a creation. The creature or object created exists for [essence] rounds. The creation is, at most, the size or weight of the sorcerer. For each additional essence, you can double the size or weight of your creation. </p>
-<p>More essence can be sacrificed to imbue the creation with specific properties or powers beyond its basic form. Creations cannot deal damage directly (use Harm), nor are they sentient. You can create objects with magical effects (flying carpets, invisibility cloaks), but these objects do not deal magic damage or provide permanent results. For example, HP restored from an invoked healing elixer lasts only for the duration of your invocation.</p>
+<p>More essence can be sacrificed to imbue the creation with specific properties or powers beyond its basic form. Creations cannot deal damage directly (use Harm), nor are they sentient. You can create objects with magical effects (flying carpets, invisibility cloaks), but these objects do not deal magic damage or provide permanent results. For example, HP restored from an invoked healing potion lasts only for the duration of your invocation.</p>
 <blockquote>
 <p>Zathar the Sorcerer invokes a flying throne, which he mounts to escape. He sacrifices six essences (the throne is about his <em>weight</em> and can <em>fly</em> for <em>4 rounds</em>).</p>
 </blockquote>
@@ -1687,7 +1652,7 @@
 <p>Zathar sacrifices two essence. He can Harm one creature for 2d6 damage or two creatures for d6 damage each.</p>
 </blockquote>
 <h5 id="soul-sight">SOUL SIGHT</h5>
-<p>You can see an [essence] number of creatures’ souls as long as you concentrate exclusively on the observation and do not move. This sight allows you to sense the approximate location of invisible creatures. You can also immediately sense if a person is possessed, undead, protected by the gods, lying, a spellcaster, or in some other meta-physiological state.</p>
+<p>You can see an [essence] number of creatures’ souls if you concentrate exclusively on the observation and do not move. Soul sight allows you to sense the approximate location of invisible creatures. You can also immediately discern if a person is possessed, undead, protected by the gods, lying, a spellcaster, or in some other meta-physiological state.</p>
 <h5 id="ward">WARD</h5>
 <p>Manifest a simmering, translucent shield around you or a target creature or object for [essence] rounds. The ward provides an advantage on attribute checks to avoid magical effects and a disadvantage on damage from physical attacks. The ward moves with its target. The ward can be sundered and destroyed to negate all damage from a single spell or attack.</p>
 <h4 id="dark-magic">Dark Magic</h4>
@@ -1768,7 +1733,7 @@
 <h3 id="corruption">Corruption</h3>
 <p>Sorcery is volatile and warps its practitioners. Magical corruption is everpresent in the settings of sword and sorcery. </p>
 <p>Your corruption level can be increased manifold: by invoking sorcerous powers, attuning to forbidden relics, casting malignant spells, or committing heinous acts. A newly created character has zero corruption level.</p>
-<p>As your corruption level increases, you potentially suffer increasingly unpleasant mutations.</p>
+<p>As your corruption level increases, you may suffer increasingly unpleasant mutations.</p>
 <h4 id="corruption-checks">Corruption Checks</h4>
 <p>When directed by the GM to make a corruption check, roll <strong>d20</strong>.</p>
 <ul>
@@ -1852,7 +1817,7 @@
 </tr>
 <tr>
 <td align="center">17</td>
-<td align="left">You cannot enter a home uninvited or cross over running water unless carried.</td>
+<td align="left">You can only enter a home uninvited or cross over running water if carried.</td>
 </tr>
 <tr>
 <td align="center">18</td>
