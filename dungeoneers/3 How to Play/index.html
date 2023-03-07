@@ -41,10 +41,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Georgia:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Georgia";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -87,9 +89,7 @@
     
       
 
-  
-
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Dungeoneers RPG" class="md-header__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -174,144 +174,13 @@
     
   </nav>
   
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      Home
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../1%20Make%20an%20Adventurer/" class="md-tabs__link">
-      Your Character
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../2%20Equipment/" class="md-tabs__link">
-      Equipment
-    </a>
-  </li>
-
-      
-        
-  
-  
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      How to Play
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.1%20Combat/" class="md-tabs__link">
-      Combat
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.2%20Damage/" class="md-tabs__link">
-      Damage
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.3%20Spells/" class="md-tabs__link">
-      Spells
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.4%20Advancement/" class="md-tabs__link">
-      Leveling Up
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../5%20Appendix/" class="md-tabs__link">
-      Appendix
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../4%20Attribution/" class="md-tabs__link">
-      Attribution
-    </a>
-  </li>
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -324,12 +193,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Dungeoneers RPG" class="md-nav__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -588,6 +453,88 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-checks" class="md-nav__link">
+    Attribute Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-attributes" class="md-nav__link">
+    Using Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-successes-and-failures" class="md-nav__link">
+    Critical Successes and Failures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantage-and-disadvantage" class="md-nav__link">
+    Advantage and Disadvantage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luck" class="md-nav__link">
+    Luck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distances-and-zones" class="md-nav__link">
+    Distances and Zones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -596,39 +543,39 @@
                   
 
 
-<h1 id="how-to-play">How to Play</h1>
-<h2 id="introduction">Introduction</h2>
+<h1 id="how-to-play">How to Play<a class="headerlink" href="#how-to-play" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The core of this game is a conversation between the players and the game master (GM). The GM describes the players’ current situation. Then the players ask questions and tell the GM what their characters do. The GM explains the results of their actions, and then the players react again and describe more activities, and so on.</p>
 <p>The GM answers your questions and always respects your freedom of choice. The GM provides challenges, obstacles, and situations to solve and overcome. Still, the game is more than just a story narrated by the GM—it’s an interactive fiction built on your and your fellow players’ decisions. Consider it as both creating and acting in an adventure story simultaneously.</p>
 <p>Suppose the outcome of your character’s actions is not immediately apparent, or the activity is inherently risky. In that case, the GM might ask you to roll dice to determine the results.</p>
-<h2 id="attribute-checks">Attribute Checks</h2>
+<h2 id="attribute-checks">Attribute Checks<a class="headerlink" href="#attribute-checks" title="Permanent link">&para;</a></h2>
 <p>When you describe your character doing something risky, or the outcome is uncertain, the GM may ask you to make an <strong>attribute check</strong>.</p>
 <p>Roll a <strong>d20</strong> and compare the result to the applicable attribute score. If the result is <strong>less than or equal to</strong> the relevant attribute score, your character <strong>succeeds</strong> and suffers no complications. If the result <strong>exceeds the score</strong>, your character <strong>fails</strong> and suffers the outcome described by the GM.</p>
-<h2 id="using-attributes">Using Attributes</h2>
+<h2 id="using-attributes">Using Attributes<a class="headerlink" href="#using-attributes" title="Permanent link">&para;</a></h2>
 <p>Your character is a determined, resourceful adventurer, capable of almost anything. So when the outcome is risky, and the GM calls for an attribute check, how do we determine which attribute to roll against?</p>
 <p>Your description of the action determines the applicable attribute. Consider a locked castle door—how do you pass through it? If you break out a crowbar and try to force it open, that’s a STR check. If you use a lock pick to unlock the door, that’s a DEX check. If you want to bribe a guard to open it, that’s a WIL check.</p>
 <p>Don’t think about what your character is capable of, but <em>how</em> they would approach a problem. Play to all of your character’s assets.</p>
-<h2 id="critical-successes-and-failures">Critical Successes and Failures</h2>
+<h2 id="critical-successes-and-failures">Critical Successes and Failures<a class="headerlink" href="#critical-successes-and-failures" title="Permanent link">&para;</a></h2>
 <p>Rolling the <strong>exact attribute score</strong> on a check is a <strong>critical success</strong>, and the outcome will be better than expected. Increase your LUCK attribute score by 1.</p>
 <p>Conversely, rolling a <strong>20</strong> is a <strong>critical failure</strong>, and the outcome will be worse than expected. Decrease your LUCK by 1.</p>
-<h2 id="advantage-and-disadvantage">Advantage and Disadvantage</h2>
+<h2 id="advantage-and-disadvantage">Advantage and Disadvantage<a class="headerlink" href="#advantage-and-disadvantage" title="Permanent link">&para;</a></h2>
 <p>If you roll an attribute check and are particularly well prepared or equipped for the task, the GM may allow you to roll with an <strong>advantage</strong>. Roll <strong>two d20s</strong> and take the <strong>best</strong> result.</p>
 <p>If you are in a dire position or ill-prepared for your task, the GM may ask you to roll with a <strong>disadvantage</strong>. Roll <strong>two d20s</strong> and take the <strong>worst</strong> result.</p>
-<h2 id="luck">Luck</h2>
+<h2 id="luck">Luck<a class="headerlink" href="#luck" title="Permanent link">&para;</a></h2>
 <p>You can decrease (burn) your LUCK attribute score to change the dice rolls for other attribute checks. Add or remove the amount of LUCK you want to burn from the result. Be warned: running out of LUCK (the score becoming zero) will cause all your dice rolls to have a disadvantage and possibly other calamitous effects. LUCK can’t be less than zero.</p>
 <p>The GM may sometimes call for a LUCK check if an outcome is random and your other attributes don’t apply.</p>
 <div class="admonition note">
 <p class="admonition-title">Note<p>Luck applies only to player characters, not hirelings, monsters, or any other non-player characters controlled by the GM.</p>
 </p>
 </div>
-<h2 id="time">Time</h2>
+<h2 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h2>
 <p>The game measures time in three durations:</p>
 <ul>
 <li><strong>Round</strong> is the time scale for combat. Each round is around 10 seconds.</li>
 <li><strong>Turn</strong> is the time scale for exploration. Each turn is around 10 minutes, enough time to explore a room and perform an Action or two.</li>
 <li><strong>Watch</strong> is the time scale used when traveling. Each Watch is 6 hours: morning, afternoon, evening, and night. A party can travel 6 miles in 1 watch in open terrain and clear weather.</li>
 </ul>
-<h2 id="distances-and-zones">Distances and Zones</h2>
+<h2 id="distances-and-zones">Distances and Zones<a class="headerlink" href="#distances-and-zones" title="Permanent link">&para;</a></h2>
 <p>The game uses <strong>zones</strong> as abstractions of distance and area to divide larger physical spaces into smaller units, like rooms in a house.</p>
 <p>For example, at the start of combat, the GM divides the battlefield into at least three zones; one where the party starts, one where the enemies start, and the area between them.</p>
 <p>The distance within and between zones is relative:</p>
@@ -737,7 +684,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>

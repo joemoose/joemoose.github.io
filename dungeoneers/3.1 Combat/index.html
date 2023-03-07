@@ -41,10 +41,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Georgia:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Georgia";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -87,9 +89,7 @@
     
       
 
-  
-
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Dungeoneers RPG" class="md-header__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -174,144 +174,13 @@
     
   </nav>
   
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      Home
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../1%20Make%20an%20Adventurer/" class="md-tabs__link">
-      Your Character
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../2%20Equipment/" class="md-tabs__link">
-      Equipment
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3%20How%20to%20Play/" class="md-tabs__link">
-      How to Play
-    </a>
-  </li>
-
-      
-        
-  
-  
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Combat
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.2%20Damage/" class="md-tabs__link">
-      Damage
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.3%20Spells/" class="md-tabs__link">
-      Spells
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.4%20Advancement/" class="md-tabs__link">
-      Leveling Up
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../5%20Appendix/" class="md-tabs__link">
-      Appendix
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../4%20Attribution/" class="md-tabs__link">
-      Attribution
-    </a>
-  </li>
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -324,12 +193,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Dungeoneers RPG" class="md-nav__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -684,6 +549,184 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initiative" class="md-nav__link">
+    Initiative
+  </a>
+  
+    <nav class="md-nav" aria-label="Initiative">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-actions" class="md-nav__link">
+    Declaring Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determining-fast-and-slow-turns" class="md-nav__link">
+    Determining Fast and Slow Turns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-turn-order-and-resolving-actions" class="md-nav__link">
+    Setting Turn Order and Resolving Actions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    Attacks
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-damage" class="md-nav__link">
+    Bonus Damage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impaired-attacks" class="md-nav__link">
+    Impaired Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-hits" class="md-nav__link">
+    Critical Hits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-wielding" class="md-nav__link">
+    Dual-Wielding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attackers" class="md-nav__link">
+    Multiple Attackers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ranged-attacks" class="md-nav__link">
+    Ranged Attacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiming" class="md-nav__link">
+    Aiming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blast" class="md-nav__link">
+    Blast
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subdual" class="md-nav__link">
+    Subdual
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gambits" class="md-nav__link">
+    Gambits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantage-in-combat" class="md-nav__link">
+    Advantage in Combat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morale" class="md-nav__link">
+    Morale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disengaging" class="md-nav__link">
+    Disengaging
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -692,14 +735,14 @@
                   
 
 
-<h1 id="combat">Combat</h1>
-<h2 id="introduction">Introduction</h2>
+<h1 id="combat">Combat<a class="headerlink" href="#combat" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Combat is dangerous, and wise adventurers seek to avoid it.</p>
-<h2 id="initiative">Initiative</h2>
+<h2 id="initiative">Initiative<a class="headerlink" href="#initiative" title="Permanent link">&para;</a></h2>
 <p>When combat breaks out, a turn order must be established for the combatants.</p>
-<h3 id="declaring-actions">Declaring Actions</h3>
+<h3 id="declaring-actions">Declaring Actions<a class="headerlink" href="#declaring-actions" title="Permanent link">&para;</a></h3>
 <p>At the beginning of a round, the GM describes the actions likely taken by your opponents. You then declare your character’s intentions for the round before rolling any dice. </p>
-<h3 id="determining-fast-and-slow-turns">Determining Fast and Slow Turns</h3>
+<h3 id="determining-fast-and-slow-turns">Determining Fast and Slow Turns<a class="headerlink" href="#determining-fast-and-slow-turns" title="Permanent link">&para;</a></h3>
 <p>Next, all combatants determine whether their declared intentions involve a <em>fast</em> or <em>slow</em> turn.</p>
 <p>A <strong>fast</strong> turn consists of taking only a <strong>single action</strong>, such as:</p>
 <ul>
@@ -720,49 +763,49 @@
 <li>Concentrating on maintaining an ongoing spell</li>
 <li>Retrieving a weapon from a backpack, then attacking</li>
 </ul>
-<h3 id="setting-turn-order-and-resolving-actions">Setting Turn Order and Resolving Actions</h3>
+<h3 id="setting-turn-order-and-resolving-actions">Setting Turn Order and Resolving Actions<a class="headerlink" href="#setting-turn-order-and-resolving-actions" title="Permanent link">&para;</a></h3>
 <p>After determining who’s turns will be fast or slow, the order of resolving actions is as follows:</p>
 <ol>
 <li>Resolve all fast turns before slow turns.</li>
 <li>If players and opponents both take a fast turn, the player must make a DEX <em>or</em> WIL check to go first.</li>
 <li>If players and opponents both take a slow turn, the player must make a DEX <em>or</em> WIL check to go first.</li>
 </ol>
-<h2 id="actions">Actions</h2>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
 <p>On your turn in a combat round, your character can move to an adjacent zone and take an action. Actions can range from attacking, moving again, tripping or disarming an opponent, negotiating, or anything else within reason.</p>
-<h2 id="attacks">Attacks</h2>
+<h2 id="attacks">Attacks<a class="headerlink" href="#attacks" title="Permanent link">&para;</a></h2>
 <p><strong>Attacks always hit</strong>. Roll your weapon’s damage dice and do that much damage to an opponent minus their armor rating. Remember, this is also true for your opponents; their attacks always hit you.</p>
-<h3 id="bonus-damage">Bonus Damage</h3>
+<h3 id="bonus-damage">Bonus Damage<a class="headerlink" href="#bonus-damage" title="Permanent link">&para;</a></h3>
 <p>In some situations, attacks may receive an extra die, noted as +d6, +d8, etc. Roll the extra die with your weapon’s damage roll, keeping the <strong>best</strong> result. For example, wielding a sword with both hands adds +d8 bonus damage. </p>
-<h3 id="impaired-attacks">Impaired Attacks</h3>
+<h3 id="impaired-attacks">Impaired Attacks<a class="headerlink" href="#impaired-attacks" title="Permanent link">&para;</a></h3>
 <p>When an attack is <strong>impaired</strong>, such as firing at an opponent behind cover or fighting while your hands are bound, roll <strong>+d4</strong> damage and keep the <strong>worst</strong> result.</p>
-<h3 id="critical-hits">Critical Hits</h3>
+<h3 id="critical-hits">Critical Hits<a class="headerlink" href="#critical-hits" title="Permanent link">&para;</a></h3>
 <p>Rolling the <strong>maximum damage</strong> on a weapon’s die roll is a <strong>critical hit</strong>. A critical hit <strong>ignores</strong> the target’s armor rating and deals the total damage.</p>
-<h3 id="dual-wielding">Dual-Wielding</h3>
+<h3 id="dual-wielding">Dual-Wielding<a class="headerlink" href="#dual-wielding" title="Permanent link">&para;</a></h3>
 <p>If attacking with two weapons, one in your main hand and one offhand, the offhand weapon functions as a bonus damage die. Roll damage for both and choose the best result.</p>
-<h3 id="multiple-attackers">Multiple Attackers</h3>
+<h3 id="multiple-attackers">Multiple Attackers<a class="headerlink" href="#multiple-attackers" title="Permanent link">&para;</a></h3>
 <p>If multiple combatants attack the same target, all attackers roll their damage but keep only the best result. </p>
-<h3 id="ranged-attacks">Ranged Attacks</h3>
+<h3 id="ranged-attacks">Ranged Attacks<a class="headerlink" href="#ranged-attacks" title="Permanent link">&para;</a></h3>
 <p>Ranged weapons can’t be used if you’re in the same zone as your target.</p>
-<h3 id="aiming">Aiming</h3>
+<h3 id="aiming">Aiming<a class="headerlink" href="#aiming" title="Permanent link">&para;</a></h3>
 <p>Not moving and using an action to aim instead of attacking allows a character to ignore the target’s armor with a ranged weapon the next round.</p>
-<h3 id="blast">Blast</h3>
+<h3 id="blast">Blast<a class="headerlink" href="#blast" title="Permanent link">&para;</a></h3>
 <p>Attacks with the <em>blast</em> quality affect all targets in the zone, rolling damage separately for each affected combatant. Blast refers to anything from fireballs, massive sweeping onslaughts, and swarms of tiny creatures. If unsure how many targets can be affected in the zone, roll the weapon’s damage die for the number of targets affected.</p>
-<h3 id="subdual">Subdual</h3>
+<h3 id="subdual">Subdual<a class="headerlink" href="#subdual" title="Permanent link">&para;</a></h3>
 <p>Rather than inflicting grievous harm, you can attempt to <strong>subdue</strong> an opponent using a melee weapon. Ranged weapons can’t subdue. Declare that you’re trying to subdue and then attack as usual but halve the damage. An opponent who would suffer critical damage or death from a subdual attack is instead knocked unconscious.</p>
-<h3 id="gambits">Gambits</h3>
+<h3 id="gambits">Gambits<a class="headerlink" href="#gambits" title="Permanent link">&para;</a></h3>
 <p>Gambits are combat maneuvers such as stunning, shoving, disarming, tripping, or sundering armor. They’re resolved with an attribute check. Gambits can’t cause damage directly but may do so indirectly (for example, pushing an enemy off a ledge). </p>
-<h2 id="advantage-in-combat">Advantage in Combat</h2>
+<h2 id="advantage-in-combat">Advantage in Combat<a class="headerlink" href="#advantage-in-combat" title="Permanent link">&para;</a></h2>
 <p>Characters can gain an advantage in combat by attacking a target who’s on lower ground, off balance, disarmed, distracted, or tactically disadvantaged in any significant way. </p>
 <p>When a character has an advantage against an opponent, they can apply advantage to either their damage roll or a gambit attempt against that opponent. Alternatively, you can make both an attack and a gambit attempt against that opponent without an advantage in the same round.</p>
 <p>If you apply the advantage to your damage roll, roll only your weapon’s damage die twice, taking the best result. If you have any bonus damage dice, such as a +d12 for attacking an unaware opponent, bonus dice are not rolled twice. Bonus damage dice rolls are only ever rolled once and not modified by advantage.</p>
-<h2 id="morale">Morale</h2>
+<h2 id="morale">Morale<a class="headerlink" href="#morale" title="Permanent link">&para;</a></h2>
 <p>When you’re fighting a group of opponents, the opponents must pass a WIL check as a group to continue fighting after they take their first casualty and again after they lose half their numbers or their leader is defeated.</p>
 <p>Lone foes must pass a WIL check when reduced to 0 HP.</p>
 <div class="admonition note">
 <p class="admonition-title">Note<p>Morale checks don’t apply to players. You have to decide when it’s prudent to run away!</p>
 </p>
 </div>
-<h2 id="disengaging">Disengaging</h2>
+<h2 id="disengaging">Disengaging<a class="headerlink" href="#disengaging" title="Permanent link">&para;</a></h2>
 <p>If you want to retreat to an adjacent zone while an enemy occupies your zone, you must first make a successful STR <em>or</em> DEX check to disengage from the fight. If you fail, the enemy makes a free attack against you as you retreat from the zone.</p>
 
 
@@ -844,7 +887,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>

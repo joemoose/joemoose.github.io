@@ -41,10 +41,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Georgia:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Georgia";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -87,9 +89,7 @@
     
       
 
-  
-
-<header class="md-header md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Dungeoneers RPG" class="md-header__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -174,144 +174,13 @@
     
   </nav>
   
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      Home
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../1%20Make%20an%20Adventurer/" class="md-tabs__link">
-      Your Character
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../2%20Equipment/" class="md-tabs__link">
-      Equipment
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3%20How%20to%20Play/" class="md-tabs__link">
-      How to Play
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.1%20Combat/" class="md-tabs__link">
-      Combat
-    </a>
-  </li>
-
-      
-        
-  
-  
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Damage
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.3%20Spells/" class="md-tabs__link">
-      Spells
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../3.4%20Advancement/" class="md-tabs__link">
-      Leveling Up
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../5%20Appendix/" class="md-tabs__link">
-      Appendix
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../4%20Attribution/" class="md-tabs__link">
-      Attribution
-    </a>
-  </li>
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -324,12 +193,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Dungeoneers RPG" class="md-nav__button md-logo" aria-label="Dungeoneers RPG" data-md-component="logo">
       
@@ -560,6 +425,60 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-damage" class="md-nav__link">
+    Critical Damage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-loss-and-death" class="md-nav__link">
+    Attribute Loss and Death
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healing" class="md-nav__link">
+    Healing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -568,22 +487,22 @@
                   
 
 
-<h1 id="damage">Damage</h1>
-<h2 id="introduction">Introduction</h2>
+<h1 id="damage">Damage<a class="headerlink" href="#damage" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Damage is first dealt to your <strong>Hit Points</strong> (HP). HP represents your ability to avoid or shrug off harm.</p>
 <p>Once your HP is depleted, the damage is dealt to your <strong>STR attribute</strong>. Damage to STR is potentially grievous harm.</p>
 <p>After taking STR damage, you must make a STR check. If the check succeeds, you’re still in action and can continue fighting. If you fail, you take <strong>critical damage</strong>.</p>
-<h2 id="critical-damage">Critical Damage</h2>
+<h2 id="critical-damage">Critical Damage<a class="headerlink" href="#critical-damage" title="Permanent link">&para;</a></h2>
 <p>When you suffer critical damage, you’re knocked unconscious, incapacitated, and take a <em>Wounded</em> constraint. You remain incapacitated until revived by an ally. Even after you’re revived, the <em>Wounded</em> constraint remains until it’s cleared.</p>
 <p>If you’re left incapacitated for an hour, your character dies.</p>
-<h2 id="attribute-loss-and-death">Attribute Loss and Death</h2>
+<h2 id="attribute-loss-and-death">Attribute Loss and Death<a class="headerlink" href="#attribute-loss-and-death" title="Permanent link">&para;</a></h2>
 <p>If your STR is reduced to zero, your character is dead. If your DEX is reduced to zero, you’re paralyzed. If your WIL is reduced to zero, you fall into an unresponsive stupor. All attribute checks have a disadvantage if your LUCK is reduced to zero.</p>
 <p>If your character dies, create a new one. The GM will introduce them as quickly as possible. Alternatively, you can take over playing one of your hirelings. You can still create a new character later if you choose.</p>
 <div class="admonition note">
-<p class="admonition-title">Note<p>Attacks from some creatures or spells might damage other attributes besides STR. A critical damage roll is still required, though against the damaged attribute and not STR.</p>
+<p class="admonition-title">Note<p>Attacks from some creatures or spells may damage other attributes besides STR. A critical damage roll is required against the damaged attribute rather than STR.</p>
 </p>
 </div>
-<h2 id="healing">Healing</h2>
+<h2 id="healing">Healing<a class="headerlink" href="#healing" title="Permanent link">&para;</a></h2>
 <p>There are three ways for your character to rest and recover:</p>
 <ul>
 <li><strong>Short Rest</strong>: Resting for a complete turn restores all lost HP but may expose the party.</li>
@@ -671,7 +590,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.sections", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top", "header.autohide", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
