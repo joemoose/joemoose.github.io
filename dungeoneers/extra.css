@@ -11,12 +11,9 @@
 body {
   line-height: 1.5;
   font-family: Georgia, serif;
-  padding: 2rem 0;
+
 }
 
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
-}
 
 p,
 tr,
@@ -27,8 +24,5 @@ hr,
 .admonition.tip,
 li {
   max-width: 60ch;
-}
-
-
 }
 
