@@ -11,19 +11,13 @@
 body {
   line-height: 1.5;
   font-family: Georgia, serif;
-
 }
 
-
+.admonition,
 p,
 tr,
 td,
 hr,
-.admonition.info,
-.admonition.note,
-.admonition.tip,
-.admonition.quote,
 li {
   max-width: 60ch;
 }
-

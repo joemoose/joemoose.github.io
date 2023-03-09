@@ -846,9 +846,9 @@
 <li><strong>+1 armor rating</strong> can be combined with the base armor: cloth, light, heavy, or extreme.</li>
 <li><strong>Helmets</strong> provide an advantage on STR checks to avoid critical damage.</li>
 <li><strong>Shields</strong> have other uses besides a +1 armor rating:<ul>
-<li>Can be sundered to avoid all damage from an attack; the shield is then destroyed.</li>
+<li>Can be sundered to avoid all damage from an attack; the shield is destroyed.</li>
 <li>Can be used as a dual weapon (as cudgel) instead of providing +1 armor; declare its use as a weapon before a combat round begins.</li>
-<li>Multiply allies with shields can all take an action to interlock their shields and form a shield wall. Attacks against a shield wall are impaired. Coordinated movement or action requires a DEX <em>or</em> WIL check to maintain a shield wall. </li>
+<li>Multiply allies with shields can take a round to interlock their shields and form a shield wall. Attacks against a shield wall are impaired. Coordinated movement or action requires a DEX <em>or</em> WIL check to maintain a shield wall. </li>
 </ul>
 </li>
 <li><strong>Extreme Armor</strong> includes the benefit of a helmet (advantage on critical damage checks) as part of the base armor.</li>
@@ -885,7 +885,7 @@
 <tr>
 <td align="left">Cloth (Gambeson)</td>
 <td align="left">1 armor</td>
-<td align="left">One body slot</td>
+<td align="left">Two body slot</td>
 <td align="right">60</td>
 </tr>
 <tr>
@@ -924,14 +924,14 @@
 <li><em>STR</em>: Using the weapon requires the minimum STR score. If STR is less than the requirement, the damage is Impaired.</li>
 <li><em>Thrown</em>: This weapon can attack a target in the same zone or be thrown at a target in an adjacent zone.</li>
 <li><em>Two-handed</em>: This weapon takes up both hand slots.</li>
-<li><em>Versatile</em>: This weapon has two entries noted under damage; it deals the first wielded with one hand and adds a bonus damage die when wielded with two (roll both, take the best).</li>
+<li><em>Versatile</em>: This weapon has two entries noted under damage; it deals the first wielded with one hand and adds the bonus damage die when wielded with two (roll both, take the best).</li>
 </ul>
 <p><strong>Weapons List</strong></p>
 <table>
 <thead>
 <tr>
 <th align="left">Weapon</th>
-<th align="center">Damage Die</th>
+<th align="center">Damage</th>
 <th align="left">Notes</th>
 <th align="right">Coins</th>
 </tr>
@@ -1038,7 +1038,6 @@
 <ul>
 <li><em>Bulky</em>: requires two inventory slots.</li>
 <li><em>Load</em>: Number of inventory slots available for storing items.</li>
-<li><em>Ration</em>: It’s edible.</li>
 <li><em>Slow</em>: It takes minutes or more to use.</li>
 <li><em>Small</em>: Up to five small items can be stored in an inventory slot.</li>
 <li><em>n Uses</em>: It can only be used <em>n</em> times.</li>
@@ -1049,8 +1048,7 @@
 <tr>
 <th align="left">Item</th>
 <th align="left">Description</th>
-<th align="center">Uses</th>
-<th align="center">Notes</th>
+<th align="left">Notes</th>
 <th align="right">Coins</th>
 </tr>
 </thead>
@@ -1058,50 +1056,43 @@
 <tr>
 <td align="left">Adventuring Gear</td>
 <td align="left">A collection of useful mundane expeditionary items such as chalk, poles, spikes, ropes, lockpicks, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.</td>
-<td align="center">3</td>
-<td align="center">-</td>
+<td align="left">3 Uses</td>
 <td align="right">20</td>
 </tr>
 <tr>
 <td align="left">Antitoxin</td>
 <td align="left">When you drink antitoxin, you’re cured of one <em>Poisoned</em> constraint affecting you.</td>
-<td align="center">1</td>
-<td align="center">small</td>
+<td align="left">1 Use, Small</td>
 <td align="right">10</td>
 </tr>
 <tr>
 <td align="left">Bag of Books</td>
 <td align="left">When your bag contains just the right book for your research subject, name the book, mark off one use, and roll your WIL check with an advantage.</td>
-<td align="center">3</td>
-<td align="center">bulky</td>
+<td align="left">3 Uses, Bulky</td>
 <td align="right">100</td>
 </tr>
 <tr>
-<td align="left">Bandages and Herbal Poultices</td>
+<td align="left">Healer’s Kit</td>
 <td align="left">When you take a few minutes to treat someone else’s wounds or revive an incapacitated ally, heal all their HP damage and make a WIL check to restore 1 point of attribute damage.</td>
-<td align="center">3</td>
-<td align="center">slow, small</td>
+<td align="left">5 Uses, Slow</td>
 <td align="right">10</td>
 </tr>
 <tr>
 <td align="left">Keg of Stout Ale</td>
 <td align="left">When you open a keg of stout ale and let everyone drink freely, roll your carousing check with an advantage (roll 3d6 and take the best two). See the <a href="../advancement/">Leveling Up</a> section for information on carousing.</td>
-<td align="center">1</td>
-<td align="center">bulky</td>
+<td align="left">1 Use, Bulky</td>
 <td align="right">10</td>
 </tr>
 <tr>
 <td align="left">Pipeleaf</td>
 <td align="left">When you share pipeleaf with someone, expend two uses and roll your WIL check with an advantage when attempting to persuade or negotiate with them.</td>
-<td align="center">6</td>
-<td align="center">small</td>
+<td align="left">6 Uses, Small</td>
 <td align="right">5</td>
 </tr>
 <tr>
 <td align="left">Travel Rations</td>
 <td align="left">Not tasty, but not bad either.</td>
-<td align="center">3</td>
-<td align="center">ration</td>
+<td align="left">3 Uses</td>
 <td align="right">3</td>
 </tr>
 </tbody>
@@ -1116,7 +1107,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2023</span>
       
     
   </small>
