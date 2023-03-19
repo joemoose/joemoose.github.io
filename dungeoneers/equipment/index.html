@@ -933,21 +933,22 @@
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Consumable items have a specified number of <strong>uses</strong> to track resource consumption. After eating rations, for example, mark off one use. </p>
 <p>After all the uses are marked off, the item is depleted and removed from your inventory.</p>
-<p>Unless specified otherwise, all items have three uses. If other equipment is used in such a way that could break or deplete it, the GM may ask you to either mark one usage or roll <strong>d6</strong>; on a <strong>1 or 2</strong>, mark a use.</p>
-<p>Usage can be repaired on some gear, such as weapons and armor, for 10% of the original cost per point of use removed. </p>
+<p>Unless specified otherwise, all items have three uses. If other equipment is used in such a way that could damage or deplete it, the GM may ask you to either mark one usage or roll <strong>d6</strong>; on a <strong>1 or 2</strong>, mark a use.</p>
+<p>Usage can be repaired on most gear, such as weapons and armor, for 10% of the original cost per point of use removed. </p>
 <h2 id="armor">Armor<a class="headerlink" href="#armor" title="Permanent link">&para;</a></h2>
 <p>Armor reduces the damage you suffer from an attack. A player character can have up to a <strong>6 armor rating</strong> at most, even if items would increase it above this number. Anyone can strap on the best armor they can afford to enjoy its protective qualities.</p>
 <p><strong>Notes</strong>:</p>
 <ul>
-<li><strong>+1 armor rating</strong> items can be equipped along with a base armor: cloth, light, medium, heavy, or massive.</li>
+<li><strong><em>n</em> armor rating</strong> items are base armor. Only a single type of base armor can be equipped.</li>
+<li><strong>+1 armor rating</strong> items can be equipped along with base armor.</li>
 <li><strong>Helmets</strong> provide an advantage on STR checks to avoid critical damage.</li>
-<li><strong>Shields</strong> have other uses besides a +1 armor rating:<ul>
+<li><strong>Shields</strong> have other uses besides their +1 armor rating:<ul>
 <li>Can be sundered to avoid all damage from an attack; the shield is destroyed.</li>
 <li>Can be used as a dual weapon (as cudgel) instead of providing +1 armor; declare its use as a weapon before a combat round begins.</li>
 <li>Multiple allies with shields can take a round to interlock their shields and form a shield wall. Attacks against a shield wall are impaired. Coordinated movement or action requires a DEX <em>or</em> WIL check to maintain a shield wall. </li>
 </ul>
 </li>
-<li><strong>Extreme Armor</strong> includes the benefit of a helmet (advantage on STR checks to avoid ritical damage) as part of the base armor.</li>
+<li><strong>Extreme Armor</strong> includes the benefit of a helmet (advantage on STR checks to avoid critical damage) as part of the base armor.</li>
 </ul>
 <p><strong>Armor List</strong></p>
 <table>
@@ -1016,8 +1017,8 @@
 <li><em>Ammo</em>: Long- and short-range weapons require the listed ammunition to be carried in a body slot. </li>
 <li><em>Long-range</em>: This weapon can attack a target up to three zones away.</li>
 <li><em>Short-range</em>: This weapon can attack a target up to 2 zones away. Attacks 3 zones away are Impaired.</li>
-<li><em>Reach</em>: Can attack enemies from behind a shield wall. Does enhanced damage if mounted and charging or set to receive a charge. </li>
-<li><em>STR</em>: Using the weapon requires the minimum STR score. If STR is less than the requirement, the damage is Impaired.</li>
+<li><em>Reach</em>: Can attack opponent several feet away from a second rank or while behind a protective shield wall. Does enhanced damage if either mounted and charging an opponent or set to receive a charge from an opponent. </li>
+<li><em>STR</em>: Using the weapon requires the minimum STR score. If your STR is less than the requirement, the damage is Impaired.</li>
 <li><em>Thrown</em>: This weapon can attack a target in the same zone or be thrown at a target in an adjacent zone.</li>
 <li><em>Two-handed</em>: This weapon takes up both hand slots.</li>
 <li><em>Versatile</em>: This weapon has two entries noted under damage; it deals the first wielded with one hand and adds the bonus damage die when wielded with both hands (roll both, take the best).</li>
@@ -1151,7 +1152,7 @@
 <tbody>
 <tr>
 <td align="left">Adventuring Gear</td>
-<td align="left">A collection of useful mundane expeditionary items such as chalk, poles, spikes, ropes, lockpicks, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.</td>
+<td align="left">A collection of useful mundane expeditionary items such as chalk, lockpicks, poles, pry bars, ropes, spikes, etc. When you rummage through your adventuring gear for some useful mundane item, you find what you need and mark off a use.</td>
 <td align="left">3 Uses</td>
 <td align="right">20</td>
 </tr>
@@ -1163,7 +1164,7 @@
 </tr>
 <tr>
 <td align="left">Healer’s Kit</td>
-<td align="left">A collection of mundane treatments for injury and illness, such as bandages and herbal poultices. When you take a few minutes to treat someone else’s wounds, mark off a use, restore all HP, and make a WIL check to restore <strong>d3</strong> points of attribute damage.</td>
+<td align="left">A collection of mundane treatments for injury and illness, such as bandages and herbal poultices. When you take a few minutes to treat someone else’s wounds after a battle, mark off a use, restore all HP, and make a WIL check to restore <strong>d3</strong> points of attribute damage.</td>
 <td align="left">5 Uses, Slow</td>
 <td align="right">10</td>
 </tr>
@@ -1182,6 +1183,12 @@
 <tr>
 <td align="left">Travel Rations</td>
 <td align="left">Not tasty, but not bad either.</td>
+<td align="left">3 Uses</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Waterskin</td>
+<td align="left">If traveling in a hot and arid environment, the GM may ask that you track your water consumption. Otherwise, assume it’s included with your rations.</td>
 <td align="left">3 Uses</td>
 <td align="right">3</td>
 </tr>
@@ -1207,7 +1214,7 @@
 <li><strong>Water Barrel</strong> contains refills for a Waterskin.</li>
 </ul>
 <h3 id="cost">Cost<a class="headerlink" href="#cost" title="Permanent link">&para;</a></h3>
-<p>A new crate costs nine times that of the item it contains. For example, a <em>gear crate</em> costs 180 coins (9 x 20 coins for one Adventuring Gear). If a crate does not have a listed item cost, such as crafting and survival crates, the price is 200 coins.</p>
+<p>A new crate costs ten times that of the item it contains. For example, a <em>gear crate</em> costs 200 coins (10 x 20 coins for one Adventuring Gear). If a crate does not have a listed item cost, such as crafting and survival crates, the price is 200 coins.</p>
 <h3 id="uses">Uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h3>
 <p>Each crate is assigned a <em>Usage Die</em> to track its consumption. A full crate starts with a <strong>d10</strong> usage die.</p>
 <p>Roll the usage die each time an item is removed from a crate. On a roll <strong>1 or 2</strong>, the usage die drops in size to the next lowest value in the dice chain as follows: </p>
