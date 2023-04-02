@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://joemoose.github.io/tcp/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/tcp/Appendices/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/tcp/Attributions/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/tcp/License/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/tcp/Part%20One%20-%20Player%20Raccoons/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/tcp/Part%20Two%20-%20Raccoon%20Wrangler/</loc>
+         <lastmod>2023-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
