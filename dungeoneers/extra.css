@@ -14,10 +14,11 @@ body {
 }
 
 .admonition,
+hr,
+center,
 p,
 tr,
 td,
-hr,
 li {
   max-width: 60ch;
 }
