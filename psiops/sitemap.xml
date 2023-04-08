@@ -2,47 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://joemoose.github.io/psiops/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/advancement/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/attribution/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/psiops/branch%20table/</loc>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/character/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/combat/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/damage/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/gear/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/play/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/psionics/</loc>
-         <lastmod>2023-04-07</lastmod>
+         <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
