@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://joemoose.github.io/psiops/branch%20table/</loc>
-         <lastmod>2023-04-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://joemoose.github.io/psiops/character/</loc>
          <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +42,11 @@
     </url>
     <url>
          <loc>https://joemoose.github.io/psiops/psionics/</loc>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/psiops/skills/</loc>
          <lastmod>2023-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
