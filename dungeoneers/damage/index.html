@@ -360,12 +360,18 @@
     Critical Damage
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scars" class="md-nav__link">
-    Scars
+    <nav class="md-nav" aria-label="Critical Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wounds" class="md-nav__link">
+    Wounds
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -635,12 +641,18 @@
     Critical Damage
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scars" class="md-nav__link">
-    Scars
+    <nav class="md-nav" aria-label="Critical Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wounds" class="md-nav__link">
+    Wounds
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -689,70 +701,8 @@
 <p>After taking STR or DEX attribute damage, you must make an attribute check for the respective attribute. If the check succeeds, you’re still in the action and can continue fighting. If you fail, you take <strong>critical damage</strong>.</p>
 <h2 id="critical-damage">Critical Damage<a class="headerlink" href="#critical-damage" title="Permanent link">&para;</a></h2>
 <p>When you suffer critical damage, you’re knocked unconscious and take a <em>Wounded</em> constraint. Attempt a STR or WIL check at the beginning of each subsequent round to revive yourself. You can be revived by an ally as well. Even after you’re revived, your HP remains at zero (unless you received healing from an ally), and the <em>Wounded</em> constraint remains until it’s cleared.</p>
-<h2 id="scars">Scars<a class="headerlink" href="#scars" title="Permanent link">&para;</a></h2>
-<p>If either STR or DEX is reduced to zero, you suffer a potentially debilitating <strong>scar</strong>. Roll d6 and add the damage received, then consult the following table.</p>
-<table>
-<thead>
-<tr>
-<th align="center">d6+Damage</th>
-<th>Scar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">2-6</td>
-<td>No lasting scar.</td>
-</tr>
-<tr>
-<td align="center">7</td>
-<td><strong>Permanent Scar</strong>: Roll 1d6 for a location; 1: Arm, 2: Chest, 3: Hand, 4: Head, 5: Leg, 6: Neck.</td>
-</tr>
-<tr>
-<td align="center">8</td>
-<td><strong>Rattling Blow</strong>: You’re stunned, disoriented, and unable to act. Attempt a STR or WIL check before each subsequent round to shake it off and return to action.</td>
-</tr>
-<tr>
-<td align="center">9</td>
-<td><strong>Walloped</strong>: You’re sent flying, landing flat on your face, winded. Make a STR or DEX check to hold on to anything in your hands and add a <em>Fatigue</em> constraint.</td>
-</tr>
-<tr>
-<td align="center">10</td>
-<td><strong>Broken Limb</strong>: Roll 1d6; 1-2: Leg, 3-4: Arm, 5: Rib, 6: Skull. Add a <em>Wounded</em> constraint. After you heal, make a STR check. If you fail, reduce your maximum HP by one.</td>
-</tr>
-<tr>
-<td align="center">11</td>
-<td><strong>Infected</strong>: You have a revolting, uncomfortable, oozing wound. Add a <em>Wounded</em> constraint. After you heal and clear your wounds, make a STR check. If you fail, reduce your maximum HP by one.</td>
-</tr>
-<tr>
-<td align="center">12</td>
-<td><strong>Grievous Wound</strong>: Add a <em>Wounded</em> constraint. After you heal and clear your wounds, roll 1d6; 1–3: STR, 4–6: DEX. Make the corresponding attribute check. If you fail, reduce your maximum attribute score by one.</td>
-</tr>
-<tr>
-<td align="center">13</td>
-<td><strong>Hamstrung</strong>: You can’t walk until you heal and rest. Add a <em>Wounded</em> constraint. After you heal and clear your wounds, make a DEX check. If you fail, reduce your maximum DEX score by one.</td>
-</tr>
-<tr>
-<td align="center">14</td>
-<td><strong>Deafened</strong>: You cannot hear anything until you heal and rest. Add a <em>Dazed</em> constraint. After you heal, make a WIL check. If you fail, reduce your maximum WIL score by one.</td>
-</tr>
-<tr>
-<td align="center">15</td>
-<td><strong>Concussed</strong>: You suffer a severe blow to the head. Add a <em>Dazed</em> constraint and immediately make a WIL check. If you fail, reduce your maximum WIL score by one.</td>
-</tr>
-<tr>
-<td align="center">16</td>
-<td><strong>Sundered</strong>: An appendage is ripped off, crippled, or rendered useless. The GM will tell you which. Add a <em>Wounded</em> constraint. After you heal and clear your wounds, roll 1d6; 1–3: STR, 4–6: DEX. Make the corresponding attribute check. If you fail, reduce your maximum attribute score by one.</td>
-</tr>
-<tr>
-<td align="center">17</td>
-<td><strong>Mortal Wound</strong>: Add a <em>Wounded</em> constraint. You are incapacitated and out of the action. You will soon die unless stabilized or healed. After you heal and clear your wounds, make a STR check. If you fail, reduce your maximum HP by half, rounding up.</td>
-</tr>
-<tr>
-<td align="center">18+</td>
-<td><strong>Doomed</strong>: Death seemed imminent, but somehow, you survived. Add a <em>Deprived</em> constraint. If your next check against Critical Damage <strong>fails</strong>, you die immediately and horrifically.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="wounds">Wounds<a class="headerlink" href="#wounds" title="Permanent link">&para;</a></h3>
+<p>Wounds are constraints that take up an inventory slot. While wounded, STR and DEX checks have a disadvantage. A wound is cleared from your inventory after a long rest.</p>
 <h2 id="attribute-loss-and-death">Attribute Loss and Death<a class="headerlink" href="#attribute-loss-and-death" title="Permanent link">&para;</a></h2>
 <p>If any <strong>two</strong> attribute scores of STR, DEX, or WIL are reduced to <strong>zero</strong>, you <strong>die</strong>. Note that a zero LUCK is not life-threatening—your attribute checks instead have a disadvantage.</p>
 <p>If your character dies, create a new one. The GM will bring them into the game as quickly as possible. Alternatively, you can take over playing one of your hirelings. You can still create a new character later if you choose.</p>
