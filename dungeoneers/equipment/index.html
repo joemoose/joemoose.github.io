@@ -952,7 +952,7 @@
 <h2 id="coins">Coins<a class="headerlink" href="#coins" title="Permanent link">&para;</a></h2>
 <p>Your character can carry up to 100 coins freely in their pockets. After that, each additional 200 coins occupies one inventory slot.</p>
 <h2 id="constraints">Constraints<a class="headerlink" href="#constraints" title="Permanent link">&para;</a></h2>
-<p>Constraints are detrimental conditions your character endures, such as <em>Wounded</em> or <em>Frightened</em>. Constraints can result from injuries in combat, failed attribute checks, baleful spells, or events in the narrative.</p>
+<p>Constraints are detrimental conditions your character endures, such as <em>Wounded</em> or <em>Frightened</em>. Constraints can result from injuries in combat, failed attribute saves, baleful spells, or events in the narrative.</p>
 <p>Each constraint must be placed in an <strong>inventory slot</strong>. You can have multiple copies of the same constraint. </p>
 <p>Some constraints have additional adverse effects besides taking up inventory slots. These effects apply as long as the constraint remains in your inventory. </p>
 <p>Constraints can only be removed from your inventory by satisfying their cleared requirement, usually a short, long, or full rest.</p>
@@ -968,7 +968,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><em>Dazed</em></td>
-<td style="text-align: left;">Disadvantage on WIL checks</td>
+<td style="text-align: left;">Disadvantage on WIL saves</td>
 <td style="text-align: left;">Long rest</td>
 </tr>
 <tr>
@@ -983,19 +983,19 @@
 </tr>
 <tr>
 <td style="text-align: left;"><em>Frightened</em></td>
-<td style="text-align: left;">Make a WIL check to approach the source of fear</td>
+<td style="text-align: left;">Make a WIL save to approach the source of fear</td>
 <td style="text-align: left;">Short rest</td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>Wounded</em></td>
-<td style="text-align: left;">Disadvantage on STR and DEX checks</td>
+<td style="text-align: left;">Disadvantage on STR and DEX saves</td>
 <td style="text-align: left;">Full rest</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>See the <a href="../play/">How to Play</a> section for information about attribute checks and disadvantages and the <a href="../damage/">Damage</a> section for information about rests.</p>
+<p>See the <a href="../play/">How to Play</a> section for information about attribute saves and disadvantages and the <a href="../damage/">Damage</a> section for information about rests.</p>
 </div>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Consumable items have a specified number of <strong>uses</strong> to track resource consumption. After eating rations, for example, mark off one use. </p>
@@ -1009,11 +1009,11 @@
 <li><strong><em>n</em> armor rating</strong> items are the base armor. Only a single type of base armor can be equipped.</li>
 <li><strong>+1 armor rating</strong> items can be equipped with the base armor to increase the armor rating by one to a maximum armor rating of three.</li>
 <li><strong>Bulky</strong> armor requires two body inventory slots.</li>
-<li><strong>Helmets</strong> provide an advantage on attribute checks to avoid critical damage in addition to a +1 armor rating.</li>
+<li><strong>Helmets</strong> provide an advantage on attribute saves to avoid critical damage in addition to a +1 armor rating.</li>
 <li><strong>Shields</strong> have other uses in addition to a +1 armor rating:<ul>
 <li>Can be sundered to avoid all damage from an attack; the shield is destroyed.</li>
 <li>Can be used as a dual weapon (as cudgel) instead of providing +1 armor; declare its use as a weapon before a combat round begins.</li>
-<li>Multiple allies with shields can take a round to interlock their shields and form a shield wall. Attacks against a shield wall are impaired. Coordinated movement or action requires an attribute check of your choice to maintain a shield wall. </li>
+<li>Multiple allies with shields can take a round to interlock their shields and form a shield wall. Attacks against a shield wall are impaired. Coordinated movement or action requires an attribute save of your choice to maintain a shield wall. </li>
 </ul>
 </li>
 </ul>
@@ -1230,19 +1230,19 @@
 </tr>
 <tr>
 <td style="text-align: left;">Bag of Books</td>
-<td style="text-align: left;">When your bag contains just the right book for your research subject, name the book, mark off one use, and roll your WIL check with an advantage.</td>
+<td style="text-align: left;">When your bag contains just the right book for your research subject, name the book, mark off one use, and roll your WIL save with an advantage.</td>
 <td style="text-align: left;">3 Uses, Slow, Bulky</td>
 <td style="text-align: right;">100</td>
 </tr>
 <tr>
 <td style="text-align: left;">Healer’s Kit</td>
-<td style="text-align: left;">A collection of mundane treatments for injury and illness, such as bandages and herbal poultices. When you take a few minutes to treat someone else’s wounds after a battle, mark off a use, restore all HP, and make a WIL check to restore <strong>d3</strong> points of attribute damage.</td>
+<td style="text-align: left;">A collection of mundane treatments for injury and illness, such as bandages and herbal poultices. When you take a few minutes to treat someone else’s wounds after a battle, mark off a use, restore all HP, and make a WIL save to restore <strong>d3</strong> points of attribute damage.</td>
 <td style="text-align: left;">5 Uses, Slow</td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td style="text-align: left;">Pipeleaf</td>
-<td style="text-align: left;">When you share pipeleaf with someone, expend two uses and roll your WIL check with an advantage when attempting to persuade or negotiate with them.</td>
+<td style="text-align: left;">When you share pipeleaf with someone, expend two uses and roll your WIL save with an advantage when attempting to persuade or negotiate with them.</td>
 <td style="text-align: left;">6 Uses, Slow, Small</td>
 <td style="text-align: right;">5</td>
 </tr>
@@ -1274,8 +1274,8 @@
 </ul>
 <p>In addition to a daily wage, hirelings must be fed and provided lodging.</p>
 <p><strong>Morale</strong></p>
-<p>When a hireling faces a stressful situation, is made to go without pay or food, or is asked to do something more dangerous than what they signed on for, they must make a WIL check or desert their employment.</p>
-<p>Well-paid or loyal hirelings may make this check with an advantage.</p>
+<p>When a hireling faces a stressful situation, is made to go without pay or food, or is asked to do something more dangerous than what they signed on for, they must make a WIL save or desert their employment.</p>
+<p>Well-paid or loyal hirelings may make this save with an advantage.</p>
 
 
 
