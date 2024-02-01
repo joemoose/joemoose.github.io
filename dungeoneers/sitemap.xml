@@ -2,62 +2,167 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://joemoose.github.io/dungeoneers/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/appendix-a-reference/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/appendix-b-sundries/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/appendix-c-mounts/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/appendix-d-reputation/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/appendix-e-backgrounds/</loc>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/attribution/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/character/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/combat/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/damage/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/equipment/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/play/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://joemoose.github.io/dungeoneers/spells/</loc>
-         <lastmod>2024-01-31</lastmod>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/aurifex/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/barber-surgeon/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/beast-handler/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/bonekeeper/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/cutpurse/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/fieldwarden/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/fletchwind/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/foundling/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/fungal-forager/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/greenwise/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/half-witch/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/hexenbane/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/jongleur/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/kettlewright/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/marchguard/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/mountebank/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/outrider/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/prowler/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/rill-runner/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://joemoose.github.io/dungeoneers/backgrounds/scrivener/</loc>
+         <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
