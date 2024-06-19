@@ -20,7 +20,7 @@ p,
 tr,
 td,
 li {
-  max-width: 70ch;
+  max-width: 75ch;
 }
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
