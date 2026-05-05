@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap');
+
+:root {
+    --width: 720px;
+    --font-main: 'DM Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-secondary: Georgia, 'Times New Roman', serif;
+    --font-scale: 1.08em;
+    --background-color: #fafaf8;
+    --heading-color: #1a1a1a;
+    --text-color: #3a3a3a;
+    --link-color: #2b6cb0;
+    --visited-color: #6b94b8; /* same blue hue, desaturated — signals visited without a violet jump */
+    --code-background-color: #f0f0ee;
+    --code-color: #1a1a1a;
+    --blockquote-color: #555;
+    --border-color: #e0e0dc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #141414;
+        --heading-color: #eeeeee;
+        --text-color: #e0e0e0;
+        --link-color: #7db3e0;
+        --visited-color: #8aaecc; /* same blue hue, desaturated */
+        --code-background-color: #1e1e1e;
+        --code-color: #ddd;
+        --blockquote-color: #bbb;
+        --border-color: #2e2e2e;
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.7;
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.35em; }
+h3 { font-size: 1.15em; }
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+/* Keyboard focus indicator — visible only for keyboard navigation, not mouse clicks */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Scope color transition to users who haven't requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+    a {
+        transition: color 0.15s ease;
+    }
+}
+
+/* Skip navigation link — visually hidden until focused by keyboard */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: 0.5em 1em;
+    background-color: var(--background-color);
+    color: var(--link-color);
+    font-family: var(--font-main);
+    font-size: 0.9em;
+    border: 2px solid var(--link-color);
+    border-radius: 0 0 4px 0;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+nav a {
+    font-family: var(--font-main);
+    font-size: 0.9em;
+    margin-right: 12px;
+    letter-spacing: 0.01em;
+}
+
+strong, b {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+    font-family: var(--font-main);
+}
+
+time {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-size: 0.875em;
+    color: var(--blockquote-color);
+    letter-spacing: 0.01em;
+}
+
+main {
+    line-height: 1.7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+th {
+    font-family: var(--font-main);
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.5em 0.75em 0.5em 0;
+}
+
+td {
+    padding: 0.45em 0.75em 0.45em 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 2.5em 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.875em;
+    padding: 2px 5px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 4px;
+}
+
+blockquote {
+    border-left: 3px solid var(--border-color);
+    color: var(--blockquote-color);
+    padding: 0.5em 0 0.5em 1.25em;
+    margin: 1.5em 0;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0.4em 0;
+}
+
+blockquote p:first-child { margin-top: 0; }
+blockquote p:last-child  { margin-bottom: 0; }
+
+/* Visually identical to blockquote, but for internal/rhetorical asides
+   that aren't true quotations from external sources. Use in Markdown
+   via raw HTML: <div class="aside">...</div> */
+.aside {
+    border-left: 3px solid var(--border-color);
+    color: var(--blockquote-color);
+    padding: 0.5em 0 0.5em 1.25em;
+    margin: 1.5em 0;
+    font-style: italic;
+}
+
+.aside p {
+    margin: 0.4em 0;
+}
+
+.aside p:first-child { margin-top: 0; }
+.aside p:last-child  { margin-bottom: 0; }
+
+footer {
+    font-family: var(--font-main);
+    font-size: 0.875em;
+    padding: 25px 0;
+    text-align: center;
+    color: var(--blockquote-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3em;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1em 1.25em;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 6px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+    font-size: 0.875em;
+    line-height: 1.6;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0.25em 0;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+    font-family: var(--font-main);
+    font-size: 0.875em;
+    color: var(--blockquote-color);
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+/* =============================================================================
+   {{ next_post }} and {{ previous_post }} Generated Links
+   Replaces hardcoded "Next" / "Previous" text with the actual post titles,
+   pulled from the anchor's title attribute. Font family matches nav chrome.
+   ============================================================================= */
+a.previous-post,
+a.next-post {
+    font-family: var(--font-main);
+    font-size: 0;
+}
+
+a.previous-post::after {
+    content: attr(title) " →";
+    font-size: 1rem;
+}
+
+a.next-post::after {
+    content: "← " attr(title);
+    font-size: 1rem;
+}
