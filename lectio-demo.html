@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Reading on a Screen — Lectio</title>
+  <meta name="description" content="A demonstration of the Lectio Bear theme, exploring typography and legibility choices for on-screen reading.">
+  <link rel="stylesheet" href="lectio.css">
+</head>
+
+<body>
+
+  <header>
+    <a class="title" href="/">
+      <h1>Reading on a Screen</h1>
+    </a>
+  </header>
+
+  <main>
+
+    <p><em>This page demonstrates the <strong>Lectio</strong> Bear theme designed by Zachary Taylor.</em></p>
+    <p><em>Theme: <a href="https://github.com/joemoose/lectio">GitHub</a> · License: MIT</em></p>
+
+    <hr>
+
+    <h2>On-Screen Legibility</h2>
+
+    <p>How to make text easier and more comfortable to read on screens is not a settled issue. Designers have traditionally adapted print methods — column layouts, baseline grids, type scales — to organize digital text. However, because screens vary widely in size, lighting conditions, and viewing distance, a few fundamental principles are often more useful than relying on a single technique.</p>
+
+    <hr>
+
+    <h2>Typography</h2>
+
+    <p>The body copy uses <strong>Georgia</strong>, a typeface designed by Matthew Carter in 1993. Unlike many serif fonts adapted from print, Georgia was designed to remain clear and legible even at low resolutions.</p>
+
+    <p>Headings and all interface chrome use <strong>DM Sans</strong>, a geometric sans-serif with variable weights. This pairing is a classic choice: serif for extended reading and sans-serif for orientation and navigation.</p>
+
+    <p>A few properties that matter for long-form reading:</p>
+
+    <ul>
+      <li><strong>Line height</strong>: set to <code>1.7</code>, slightly above the conventional <code>1.5</code>. The extra leading gives the eye a clear path to follow.</li>
+      <li><strong>Measure</strong>: the column is capped at <code>720px</code>, approximately 70–75 characters per line at body size. Longer lines increase the distance the eye must travel between line ends, while shorter lines disrupt the rhythm.</li>
+      <li><strong>Font size</strong>: <code>1.08em</code> (~17.3px), a small but meaningful step up from the browser's 16px default.</li>
+    </ul>
+
+    <h3>Heading Levels</h3>
+
+    <p>This is an <code>h3</code>. It uses the same DM Sans typeface as <code>h1</code> and <code>h2</code>, scaled down proportionally. All headings include <code>letter-spacing: -0.02em</code> to tighten spacing and make it appear intentional rather than default at display sizes.</p>
+
+    <hr>
+
+    <h2>Blockquote</h2>
+
+    <blockquote>
+      <p>The book is a machine for reading.</p>
+      <p>— <em>Umberto Eco</em> (paraphrase)</p>
+    </blockquote>
+
+    <p>Blockquotes use a left border with <code>--border-color</code>, italicized text, and <code>--blockquote-color</code>. This slightly muted tone distinguishes quoted material from primary text without obscuring it.</p>
+
+    <hr>
+
+    <h2>Aside</h2>
+
+    <p>The theme includes a custom <code>.aside</code> class for notes that aren't quotations. The styling resembles a blockquote.</p>
+
+    <p>Using blockquotes for non-quotation text can cause accessibility issues for screen readers and other assistive technologies. The <code>.aside</code> class resolves this problem.</p>
+
+    <p>However, Markdown doesn't have an aside syntax element. Since BearBlog passes through HTML in Markdown, asides are created with an HTML block:</p>
+
+    <div class="aside">
+      <strong>Note</strong>: This principle applies to paragraph text. Display type follows different conventions.
+    </div>
+
+    <p><strong>Be aware</strong>: Because <code>.aside</code> is an HTML block, standard Markdown syntax such as <code>**bold**</code> is not processed within it. Use HTML inline elements instead: <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;code&gt;</code>, etc.</p>
+
+    <hr>
+
+    <h2>Table</h2>
+
+    <p>Several fonts widely used in the early web era now feel dated, while others still work well.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Typeface</th>
+          <th>Designer</th>
+          <th>Year</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Georgia</td>
+          <td>Matthew Carter</td>
+          <td>1993</td>
+          <td>Still an excellent screen serif</td>
+        </tr>
+        <tr>
+          <td>Verdana</td>
+          <td>Matthew Carter</td>
+          <td>1996</td>
+          <td>Optimized for low-res; feels too wide on modern displays</td>
+        </tr>
+        <tr>
+          <td>Trebuchet MS</td>
+          <td>Vincent Connare</td>
+          <td>1996</td>
+          <td>Holds up reasonably well at small sizes</td>
+        </tr>
+        <tr>
+          <td>Times New Roman</td>
+          <td>Monotype / Stanley Morison</td>
+          <td>1931</td>
+          <td>Adapted from print; not designed for screens</td>
+        </tr>
+        <tr>
+          <td>DM Sans</td>
+          <td>Colophon Foundry</td>
+          <td>2018</td>
+          <td>Variable; excellent at both display and UI sizes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Code</h2>
+
+    <p>Inline code uses a monospace font such as <code>SFMono-Regular</code>, <code>Consolas</code>, and <code>Menlo</code>, with a lightly tinted background to distinguish it from surrounding text.</p>
+
+    <p>Code blocks use the <code>.highlight</code> or <code>.code</code> class, and BearBlog automatically applies these classes to fenced code blocks:</p>
+
+    <div class="highlight">font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+font-size: 0.95em;
+padding: 2px 5px;</div>
+
+    <hr>
+
+    <h2>Lists</h2>
+
+    <p>An unordered list of principles that generally apply across most reading contexts:</p>
+
+    <ul>
+      <li>Line length matters more than most designers assume.</li>
+      <li>Contrast should be high but not absolute. Pure black on pure white is harsher than it needs to be.</li>
+      <li>The color of visited links is an underused feature.</li>
+      <li>Motion effects should be behind <code>prefers-reduced-motion</code>, since not all users want animated interfaces.</li>
+    </ul>
+
+    <p>An ordered list for a process or sequence:</p>
+
+    <ol>
+      <li>Define a type scale before adjusting individual element sizes</li>
+      <li>Set line height and measure before adjusting color</li>
+      <li>Test in both light and dark modes from the start, not as an afterthought</li>
+      <li>Check contrast ratios with a tool. Human perception is not a reliable instrument.</li>
+    </ol>
+
+    <hr>
+
+    <h2>Links and Visited State</h2>
+
+    <p>Links appear in <code>--link-color</code> (a restrained blue in light mode and a lighter version in dark mode). Visited links shift to <code>--visited-color</code>, a lighter shade. This distinction is intentional: it may be unfashionable, but it remains genuinely useful, particularly in online documentation.</p>
+
+    <p>You can see the difference between an <a href="#">unvisited link</a> and a <a href="#reading-on-screens">visited link</a>.</p>
+
+    <hr>
+
+    <h2>Horizontal Rule</h2>
+
+    <p>Used as a section separator, distinct from a heading change.</p>
+
+    <hr>
+
+    <h2>Strong and Emphasis</h2>
+
+    <p>Running text can include <strong>bold</strong> via <code>&lt;strong&gt;</code>, which uses <code>--heading-color</code> and <code>font-weight: 600</code>, making it slightly darker than body text. <em>Italic</em> inherits from the body. Georgia's italic is a true italic, not a sloped roman, and reads well at body sizes.</p>
+
+    <hr>
+
+    <h2>Dark Mode</h2>
+
+    <p>This theme responds automatically to <code>prefers-color-scheme: dark</code>. No JavaScript, no toggle, no class swap. If your OS is in dark mode while reading this, you are already seeing the alternate palette.</p>
+
+    <p>The dark background uses <code>#141414</code>, providing enough darkness to read easily in low light without feeling like a dark void. The text color is <code>#e0e0e0</code>, offering a subtle softness at the contrast edge rather than pure white.</p>
+
+  </main>
+
+  <footer>
+    <span>Lectio · <a href="https://github.com/joemoose/lectio">GitHub</a> · MIT License</span>
+  </footer>
+
+</body>
+</html>

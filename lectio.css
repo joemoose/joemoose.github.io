@@ -9,7 +9,7 @@
     --heading-color: #1a1a1a;
     --text-color: #3a3a3a;
     --link-color: #2b6cb0;
-    --visited-color: #6b94b8; /* same blue hue, desaturated — signals visited without a violet jump */
+    --visited-color: #6b94b8; /* same blue hue, desaturated, signals visited */
     --code-background-color: #f0f0ee;
     --code-color: #1a1a1a;
     --blockquote-color: #555;
@@ -73,7 +73,7 @@ a:visited {
     color: var(--visited-color);
 }
 
-/* Keyboard focus indicator — visible only for keyboard navigation, not mouse clicks */
+/* Keyboard focus indicator, visible only for keyboard navigation, not mouse clicks */
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--link-color);
@@ -88,7 +88,7 @@ button:focus-visible {
     }
 }
 
-/* Skip navigation link — visually hidden until focused by keyboard */
+/* Skip navigation link, visually hidden until focused by keyboard */
 .skip-link {
     position: absolute;
     left: -9999px;
@@ -137,7 +137,7 @@ button {
 time {
     font-family: var(--font-main);
     font-style: normal;
-    font-size: 0.875em;
+    font-size: 0.9em;
     color: var(--blockquote-color);
     letter-spacing: 0.01em;
 }
@@ -178,7 +178,7 @@ img {
 
 code {
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-    font-size: 0.875em;
+    font-size: 0.9em;
     padding: 2px 5px;
     background-color: var(--code-background-color);
     color: var(--code-color);
@@ -220,7 +220,7 @@ blockquote p:last-child  { margin-bottom: 0; }
 
 footer {
     font-family: var(--font-main);
-    font-size: 0.875em;
+    font-size: 0.9em;
     padding: 25px 0;
     text-align: center;
     color: var(--blockquote-color);
@@ -249,7 +249,7 @@ footer {
     margin-block-start: 1em;
     margin-block-end: 1em;
     overflow-x: auto;
-    font-size: 0.875em;
+    font-size: 0.9em;
     line-height: 1.6;
 }
 
@@ -269,31 +269,10 @@ ul.blog-posts li {
 ul.blog-posts li span {
     flex: 0 0 130px;
     font-family: var(--font-main);
-    font-size: 0.875em;
+    font-size: 0.9em;
     color: var(--blockquote-color);
 }
 
 ul.blog-posts li a:visited {
     color: var(--visited-color);
-}
-
-/* =============================================================================
-   {{ next_post }} and {{ previous_post }} Generated Links
-   Replaces hardcoded "Next" / "Previous" text with the actual post titles,
-   pulled from the anchor's title attribute. Font family matches nav chrome.
-   ============================================================================= */
-a.previous-post,
-a.next-post {
-    font-family: var(--font-main);
-    font-size: 0;
-}
-
-a.previous-post::after {
-    content: attr(title) " →";
-    font-size: 1rem;
-}
-
-a.next-post::after {
-    content: "← " attr(title);
-    font-size: 1rem;
 }
