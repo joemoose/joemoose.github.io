@@ -17,9 +17,10 @@
  *   Enable: Background graphics.
  *
  * KNOWN EXCEPTIONS (print-only layout with no Markdown equivalent):
- *   - Two-column RW random tables grid: print-only.
- *   - Title page full-page layout: handled in the standalone print HTML.
- *   These live only here, not in the source .md files.
+ *   - Two-column RW random tables grid: CSS classes .tables-grid /
+ *     .tables-grid-col / .table-unit are defined here and in tcp-print.html.
+ *     To use from MkDocs, add raw HTML blocks to rw.md wrapping the tables.
+ *   - Title page full-page layout: handled in the standalone tcp-print.html only.
  */
 
 /* ============================================================
@@ -213,6 +214,40 @@
   a[href^="#"]::after,
   .md-nav a::after {
     content: none;
+  }
+
+  /* ----------------------------------------------------------
+     TWO-COLUMN RANDOM TABLES GRID (RW section)
+     Float-based for cross-engine compatibility (Prince, WeasyPrint, browsers).
+     NOTE: There is no Markdown equivalent for this layout — it is print-only.
+     The .tables-grid, .tables-grid-col, and .table-unit classes must be
+     applied via raw HTML blocks in rw.md if MkDocs print output is needed.
+     ---------------------------------------------------------- */
+  .tables-grid       { width: 100%; overflow: hidden; }
+  .tables-grid-col   { float: left; width: 48%; }
+  .tables-grid-col:last-child { float: right; }
+  .tables-grid table { margin: 0 0 10pt; width: 100%; }
+
+  /* Keep each bold label glued to its table across page breaks */
+  .table-unit   { page-break-inside: avoid; break-inside: avoid; margin-bottom: 4pt; }
+  .table-unit p { margin-bottom: 0.2em; }
+
+  /* ----------------------------------------------------------
+     DETAILS / COLLAPSIBLE ADMONITIONS
+     WeasyPrint renders <details> as static HTML; a closed block
+     shows only the <summary> and hides body content. Force open.
+     ---------------------------------------------------------- */
+  details {
+    display: block;
+  }
+
+  details > *:not(summary) {
+    display: block;
+  }
+
+  /* Fix overflow on table wrappers (WeasyPrint has no scroll model) */
+  .md-typeset__scrollwrap {
+    overflow: visible;
   }
 
   /* ----------------------------------------------------------

@@ -7,10 +7,12 @@ body {
   overflow-wrap: break-word;
 }
 
-p,
-hr,
-li {
-  max-width: 66ch;
+@media screen {
+  p,
+  hr,
+  li {
+    max-width: 66ch;
+  }
 }
 
 /* Scrollable tables on narrow viewports */
