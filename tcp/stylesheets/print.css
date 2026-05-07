@@ -5,6 +5,10 @@
  * Screen styles are intentionally minimal; all heavy lifting is
  * inside @media print so the live MkDocs Material site is unaffected.
  *
+ * NOTE: @page :left and :right are not supported by Chrome's print engine.
+ * These rules are retained for compatibility with Firefox and WeasyPrint but
+ * have no effect when using Chrome's File → Print → Save as PDF workflow.
+ *
  * TO GENERATE PDF:
  *   Open the live site (or mkdocs serve) in Chrome.
  *   File → Print → Save as PDF.

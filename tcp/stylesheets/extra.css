@@ -1,191 +1,42 @@
-:root {
-  --size-300: 0.75rem;
-  --size-400: 1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
+.md-typeset {
+  line-height: 1.65;
 }
 
 body {
-  line-height: 1.5;
   font-family: Georgia, serif;
+  overflow-wrap: break-word;
 }
 
-.admonition,
-hr,
-center,
 p,
-tr,
-td,
+hr,
 li {
-  max-width: 60ch;
+  max-width: 66ch;
 }
+
+/* Scrollable tables on narrow viewports */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-min-width: 2rem;
-padding: 1em 1em;
+  min-width: 2rem;
   padding-top: 0.75em;
   padding-right: 1em;
   padding-bottom: 0.75em;
   padding-left: 1em;
+  font-variant-numeric: tabular-nums;
 }
 
-
-/* ============================================================
-   PRINT STYLES — US Letter, double-sided
-   To generate PDF: open in Chrome → File → Print → Save as PDF
-   Paper: US Letter | Margins: None | Enable: Background graphics
-   ============================================================ */
-@media print {
-
-  /* --- Page geometry --- */
-  @page {
-    size: letter portrait;
-    margin: 0.85in 0.75in 0.85in 1.0in;
+/* Respect reduced motion preference (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  @page :right {
-    margin-left:  1.0in;   /* binding gutter */
-    margin-right: 0.75in;
-  }
-  @page :left {
-    margin-left:  0.75in;
-    margin-right: 1.0in;   /* binding gutter */
-  }
-
-  /* --- Hide MkDocs Material chrome --- */
-  .md-header,
-  .md-sidebar,
-  .md-footer,
-  .md-tabs,
-  .md-search,
-  .md-top,
-  [data-md-component="skip"],
-  .headerlink,
-  a.md-content__button {
-    display: none !important;
-  }
-
-  .md-main__inner,
-  .md-content {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-  }
-
-  .md-content__inner {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* --- Base --- */
-  body {
-    font-size: 11pt;
-    line-height: 1.55;
-    color: #1a1a1a;
-    background: #fff;
-  }
-
-  /* --- Orphan/widow control --- */
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-
-  li {
-    orphans: 2;
-    widows: 2;
-    page-break-inside: avoid;
-    break-inside:      avoid;
-  }
-
-  /* --- Headings: never strand at bottom of page --- */
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-    break-after:      avoid;
-  }
-
-  h1 {
-    page-break-before: always;
-    break-before:      page;
-  }
-
-  /* --- Tables --- */
-  table {
-    page-break-inside: avoid;
-    break-inside:      avoid;
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 10pt;
-    margin: 1em 0 1.2em;
-  }
-
-  /* Repeat header row if table must span pages */
-  thead {
-    display: table-header-group;
-  }
-
-  /* Never split a row across a page break */
-  tr {
-    page-break-inside: avoid;
-    break-inside:      avoid;
-  }
-
-  th {
-    background: #1a1a1a !important;
-    color: #fff !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    padding: 5pt 8pt;
-    border: 1px solid #1a1a1a;
-  }
-
-  td {
-    padding: 4pt 8pt;
-    border: 1px solid #ccc;
-    vertical-align: top;
-  }
-
-  tr:nth-child(even) td {
-    background: #f5f4f0 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  /* --- Admonitions, blockquotes, images, code --- */
-  .admonition,
-  details,
-  blockquote,
-  pre,
-  img {
-    page-break-inside: avoid;
-    break-inside:      avoid;
-  }
-
-  blockquote {
-    orphans: 3;
-    widows: 3;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  hr {
-    page-break-after: avoid;
-    break-after:      avoid;
-  }
-
-  /* --- Print URLs after external links --- */
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 8pt;
-    color: #666;
-    word-break: break-all;
-  }
-  a[href^="#"]::after {
-    content: none;
-  }
-
-} /* end @media print */
+}
