@@ -1,0 +1,195 @@
+.md-typeset {
+  line-height: 1.65;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  overflow-wrap: break-word;
+}
+
+@media screen {
+  /* Exclude .admonition-title and details > summary: MkDocs Material
+     renders admonition title bars as <p class="admonition-title"> and
+     collapsible variants as <summary>. Applying max-width to those
+     elements clips the title background short of the block's right
+     border, leaving a visible gap. All other prose elements retain
+     the 68ch measure. */
+  p:not(.admonition-title),
+  hr,
+  li {
+    max-width: 68ch;
+  }
+
+  details > summary {
+    max-width: none;
+  }
+
+  /* ----------------------------------------------------------
+     FIGURES AND CAPTIONS
+     MkDocs Material applies text-align: center to figure,
+     which centers <img> as an inline element inside the full-
+     width figure container — wider than the prose column,
+     causing visual misalignment with surrounding text.
+     Setting text-align: left on figure aligns the image's
+     left edge with the prose margin. Making <img> a block
+     element removes inline-centering behavior entirely.
+     figcaption re-applies center explicitly so captions
+     remain centered beneath the image.
+     ---------------------------------------------------------- 
+  figure {
+    margin: 1.5em 0;
+    text-align: left;
+  }
+
+  figure img {
+    display: block;
+    max-width: 100%;
+  }
+
+  figcaption {
+    font-size: 0.85em;
+    color: var(--md-default-fg-color--light);
+    text-align: center;
+    margin-top: 0.4em;
+  }
+  */
+  
+  /* SVG <object> */
+
+figure {
+  margin: 1.5em 0;
+  text-align: left;
+}
+
+figcaption {
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+  /* ----------------------------------------------------------
+     DIAGRAM FIGURES — stylesheet-controlled render size
+     The zone-network SVG ships with a viewBox only: it carries
+     an intrinsic aspect ratio but no intrinsic width/height. An
+     <img> referencing it therefore has no natural size, and a
+     width of auto falls back to the 300x150 default object size
+     (the "tiny diagram" symptom). This rule is the single source
+     of truth for its rendered dimensions:
+       - width: 100%  supplies the definite width target the SVG
+         lacks, so the box resolves against the prose column
+         instead of the default object size.
+       - height: auto  lets the viewBox ratio derive the height,
+         keeping the vector art undistorted at any width.
+       - max-width  caps the upscale so the portrait diagram does
+         not dominate wide viewports. Tune to taste; remove it to
+         let the figure fill the full content column.
+     Scoped to .zone-diagram so screenshots and other figures keep
+     their own intrinsic sizing. The .md-typeset prefix brings
+     specificity to (0,2,1), clearing both the figure img rule
+     above (0,0,2) and Material's default image styling.
+     ---------------------------------------------------------- 
+  .md-typeset .zone-diagram img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+}
+*/
+
+/* SVG <object> */
+
+.zones-diagram .zones-svg {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.clocks-diagram .clocks-svg {
+  display: block;
+  width: 100%;
+  max-width: 360p\x;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Scrollable tables on narrow viewports */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  min-width: 2rem;
+  padding-top: 0.75em;
+  padding-right: 1em;
+  padding-bottom: 0.75em;
+  padding-left: 1em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ----------------------------------------------------------
+   DICE OUTCOME TABLES — screen display
+   Renders as a borderless two-column list: bold fixed-width
+   roll range on the left, outcome text on the right.
+   The Markdown-generated "Roll | Result" thead is hidden.
+
+   The .md-typeset prefix brings specificity to (0,2,2),
+   matching the existing table rules above. No !important
+   required; source order (declared after existing table
+   rules) resolves any ties in the cascade.
+   ---------------------------------------------------------- */
+
+.md-typeset div.roll-table table {
+  border-collapse: collapse;
+  border: none;
+  box-shadow: none;
+  /* font-size intentionally omitted: MkDocs Material's default table
+     sizing cascades through here, matching standard table font size.
+     print.css overrides to font-size: inherit for the print context. */
+}
+
+/* MkDocs Material wraps tables in a scroll container that can carry
+   its own border or shadow; suppress both for roll-table instances */
+.md-typeset div.roll-table .md-typeset__scrollwrap,
+.md-typeset div.roll-table .md-typeset__table {
+  border: none;
+  box-shadow: none;
+}
+
+.md-typeset div.roll-table thead {
+  display: none;
+}
+
+.md-typeset div.roll-table td {
+  border: none;
+  padding: 0.25em 0;
+  background: transparent;
+}
+
+.md-typeset div.roll-table tr:nth-child(even) td {
+  background: transparent;
+}
+
+/* Roll-range column: bold, fixed width, non-wrapping */
+.md-typeset div.roll-table td:first-child {
+  width: 5em;        /* slightly wider than print (4.5em) to accommodate screen font size */
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 1em;
+}
+
+/* Respect reduced motion preference (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

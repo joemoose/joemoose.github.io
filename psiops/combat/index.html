@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An Adventure Roleplaying Game of Paranormal Special Forces">
+        <meta name="description" content="An Action Roleplaying Game of Paranormal Special Forces">
       
       
         <meta name="author" content="Zachary Taylor">
@@ -15,25 +15,28 @@
         <link rel="canonical" href="https://joemoose.github.io/psiops/combat/">
       
       
-        <link rel="prev" href="../character/">
+        <link rel="prev" href="../playing/">
       
       
-        <link rel="next" href="../stress/">
+        <link rel="next" href="../zones/">
       
-      
-      <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
-    
-    
-      
-        <title>Combat - PSIOPS Operative's Guide</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Combat - PsiOps Field Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -44,21 +47,16 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
     
-      <link rel="stylesheet" href="../extra.css">
+      <link rel="stylesheet" href="../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="../css/print.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -96,20 +94,20 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PSIOPS Operative&#39;s Guide" class="md-header__button md-logo" aria-label="PSIOPS Operative's Guide" data-md-component="logo">
+    <a href=".." title="PsiOps Field Manual" class="md-header__button md-logo" aria-label="PsiOps Field Manual" data-md-component="logo">
       
-  <img src="../logo.png" alt="logo">
+  <img src="../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PSIOPS Operative's Guide
+            PsiOps Field Manual
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -131,7 +129,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -141,7 +139,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -149,30 +147,32 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -189,13 +189,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
-        <a href="https://github.com/joemoose/engigma/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/joemoose/psiops/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -228,19 +229,19 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PSIOPS Operative&#39;s Guide" class="md-nav__button md-logo" aria-label="PSIOPS Operative's Guide" data-md-component="logo">
+    <a href=".." title="PsiOps Field Manual" class="md-nav__button md-logo" aria-label="PsiOps Field Manual" data-md-component="logo">
       
-  <img src="../logo.png" alt="logo">
+  <img src="../img/logo.png" alt="logo">
 
     </a>
-    PSIOPS Operative's Guide
+    PsiOps Field Manual
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/joemoose/engigma/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/joemoose/psiops/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -260,29 +261,16 @@
       <a href=".." class="md-nav__link">
         
   
-  <span class="md-ellipsis">
-    Introduction
-  </span>
   
-
-      </a>
-    </li>
+  <span class="md-ellipsis">
+    
+  
+    Operational Preface
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../playing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Playing the Game
   </span>
+  
   
 
       </a>
@@ -300,9 +288,43 @@
       <a href="../character/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Your Character
+    
+  
+    Character
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -329,9 +351,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Combat
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -340,9 +369,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Combat
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -363,55 +399,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#combat-sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Combat Sequence
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initiative" class="md-nav__link">
+  <a href="#combat-rounds" class="md-nav__link">
     <span class="md-ellipsis">
-      Initiative
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#surprise" class="md-nav__link">
-    <span class="md-ellipsis">
-      Surprise
-    </span>
-  </a>
-  
-</li>
+        Combat Rounds
       
-        <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actions
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ranges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ranges
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ranges">
+    <nav class="md-nav" aria-label="Combat Rounds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#weapon-range-modifiers" class="md-nav__link">
+  <a href="#the-first-round-and-initiative-rolls" class="md-nav__link">
     <span class="md-ellipsis">
-      Weapon Range Modifiers
+      
+        The First Round and Initiative Rolls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-and-subsequent-rounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Second and Subsequent Rounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambushes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambushes
+      
     </span>
   </a>
   
@@ -423,28 +460,84 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dealing-damage" class="md-nav__link">
+  <a href="#declaring-actions" class="md-nav__link">
     <span class="md-ellipsis">
-      Dealing Damage
+      
+        Declaring Actions
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dealing Damage">
+    <nav class="md-nav" aria-label="Declaring Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupting-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interrupting Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Determining the Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attacking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#weapon-damage-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Weapon Damage Modifiers
+      
+        Weapon Damage Modifiers
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ammo" class="md-nav__link">
+  <a href="#blast-damage" class="md-nav__link">
     <span class="md-ellipsis">
-      Ammo
+      
+        Blast Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attackers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Attackers
+      
     </span>
   </a>
   
@@ -456,37 +549,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#taking-damage" class="md-nav__link">
+  <a href="#attack-roll-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Taking Damage
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#armor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Armor
-    </span>
-  </a>
-  
-</li>
+        Attack Roll Modifiers
       
-        <li class="md-nav__item">
-  <a href="#cover-and-suppression" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cover and Suppression
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cover and Suppression">
+    <nav class="md-nav" aria-label="Attack Roll Modifiers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#suppressing-fire" class="md-nav__link">
+  <a href="#range-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Suppressing Fire
+      
+        Range Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tactical-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tactical Modifiers
+      
     </span>
   </a>
   
@@ -498,36 +588,222 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiple-attackers" class="md-nav__link">
+  <a href="#expending-ammunition" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Attackers
+      
+        Expending Ammunition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expending Ammunition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resupply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resupply
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defending" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defending
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#blast-damage" class="md-nav__link">
+  <a href="#damage-wounds-and-dying" class="md-nav__link">
     <span class="md-ellipsis">
-      Blast Damage
+      
+        Damage, Wounds, and Dying
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage, Wounds, and Dying">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stabilizing-incapacitated-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stabilizing Incapacitated Team Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#injuries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Injuries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fatigue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-hit-points-and-fatigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering Hit Points and Fatigue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cover
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cover-ratings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cover Ratings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage-reduction-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage Reduction Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppressing-fire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing Fire
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#morale-checks" class="md-nav__link">
+  <a href="#neural-weapons" class="md-nav__link">
     <span class="md-ellipsis">
-      Morale Checks
+      
+        Neural Weapons
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Weapons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activating
+      
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#retreat" class="md-nav__link">
+  <a href="#free-fire-opportunities" class="md-nav__link">
     <span class="md-ellipsis">
-      Retreat
+      
+        Free-Fire Opportunities
+      
     </span>
   </a>
   
@@ -536,58 +812,31 @@
         <li class="md-nav__item">
   <a href="#mobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Mobs
+      
+        Mobs
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#damage-injuries-and-dying" class="md-nav__link">
+  <a href="#emergency-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Damage, Injuries, and Dying
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Damage, Injuries, and Dying">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#injuries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Injuries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#emergency-insertion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emergency Insertion
+        Emergency Deployment
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recovery" class="md-nav__link">
+  <a href="#rest-and-recovery" class="md-nav__link">
     <span class="md-ellipsis">
-      Recovery
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#deprivation-and-fatigue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deprivation and Fatigue
+        Rest and Recovery
+      
     </span>
   </a>
   
@@ -608,12 +857,100 @@
   
   
     <li class="md-nav__item">
+      <a href="../zones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../stress/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Stress
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equipment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -631,9 +968,16 @@
       <a href="../attribution/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Attribution
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -668,55 +1012,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#combat-sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Combat Sequence
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#initiative" class="md-nav__link">
+  <a href="#combat-rounds" class="md-nav__link">
     <span class="md-ellipsis">
-      Initiative
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#surprise" class="md-nav__link">
-    <span class="md-ellipsis">
-      Surprise
-    </span>
-  </a>
-  
-</li>
+        Combat Rounds
       
-        <li class="md-nav__item">
-  <a href="#actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actions
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ranges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ranges
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ranges">
+    <nav class="md-nav" aria-label="Combat Rounds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#weapon-range-modifiers" class="md-nav__link">
+  <a href="#the-first-round-and-initiative-rolls" class="md-nav__link">
     <span class="md-ellipsis">
-      Weapon Range Modifiers
+      
+        The First Round and Initiative Rolls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-second-and-subsequent-rounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Second and Subsequent Rounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambushes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambushes
+      
     </span>
   </a>
   
@@ -728,28 +1073,84 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dealing-damage" class="md-nav__link">
+  <a href="#declaring-actions" class="md-nav__link">
     <span class="md-ellipsis">
-      Dealing Damage
+      
+        Declaring Actions
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dealing Damage">
+    <nav class="md-nav" aria-label="Declaring Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupting-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interrupting Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determining-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Determining the Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attacking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#weapon-damage-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Weapon Damage Modifiers
+      
+        Weapon Damage Modifiers
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ammo" class="md-nav__link">
+  <a href="#blast-damage" class="md-nav__link">
     <span class="md-ellipsis">
-      Ammo
+      
+        Blast Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attackers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Attackers
+      
     </span>
   </a>
   
@@ -761,37 +1162,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#taking-damage" class="md-nav__link">
+  <a href="#attack-roll-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Taking Damage
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#armor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Armor
-    </span>
-  </a>
-  
-</li>
+        Attack Roll Modifiers
       
-        <li class="md-nav__item">
-  <a href="#cover-and-suppression" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cover and Suppression
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cover and Suppression">
+    <nav class="md-nav" aria-label="Attack Roll Modifiers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#suppressing-fire" class="md-nav__link">
+  <a href="#range-modifiers" class="md-nav__link">
     <span class="md-ellipsis">
-      Suppressing Fire
+      
+        Range Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tactical-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tactical Modifiers
+      
     </span>
   </a>
   
@@ -803,36 +1201,222 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiple-attackers" class="md-nav__link">
+  <a href="#expending-ammunition" class="md-nav__link">
     <span class="md-ellipsis">
-      Multiple Attackers
+      
+        Expending Ammunition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expending Ammunition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resupply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resupply
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defending" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defending
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#blast-damage" class="md-nav__link">
+  <a href="#damage-wounds-and-dying" class="md-nav__link">
     <span class="md-ellipsis">
-      Blast Damage
+      
+        Damage, Wounds, and Dying
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage, Wounds, and Dying">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stabilizing-incapacitated-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stabilizing Incapacitated Team Members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#injuries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Injuries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fatigue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovering-hit-points-and-fatigue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovering Hit Points and Fatigue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cover
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cover-ratings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cover Ratings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damage-reduction-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage Reduction Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppressing-fire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing Fire
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#morale-checks" class="md-nav__link">
+  <a href="#neural-weapons" class="md-nav__link">
     <span class="md-ellipsis">
-      Morale Checks
+      
+        Neural Weapons
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Weapons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activating
+      
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#retreat" class="md-nav__link">
+  <a href="#free-fire-opportunities" class="md-nav__link">
     <span class="md-ellipsis">
-      Retreat
+      
+        Free-Fire Opportunities
+      
     </span>
   </a>
   
@@ -841,58 +1425,31 @@
         <li class="md-nav__item">
   <a href="#mobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Mobs
+      
+        Mobs
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#damage-injuries-and-dying" class="md-nav__link">
+  <a href="#emergency-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Damage, Injuries, and Dying
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Damage, Injuries, and Dying">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#injuries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Injuries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#emergency-insertion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emergency Insertion
+        Emergency Deployment
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recovery" class="md-nav__link">
+  <a href="#rest-and-recovery" class="md-nav__link">
     <span class="md-ellipsis">
-      Recovery
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#deprivation-and-fatigue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deprivation and Fatigue
+        Rest and Recovery
+      
     </span>
   </a>
   
@@ -908,252 +1465,574 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
+
   
-    <a href="https://github.com/joemoose/engigma/blob/main/docs/combat.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/joemoose/psiops/edit/main/docs/combat.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.263 2.177a1.75 1.75 0 0 1 2.474 0l2.586 2.586a1.75 1.75 0 0 1 0 2.474L19.53 10.03l-.012.013L8.69 20.378a1.753 1.753 0 0 1-.699.409l-5.523 1.68a.748.748 0 0 1-.747-.188.748.748 0 0 1-.188-.747l1.673-5.5a1.75 1.75 0 0 1 .466-.756L14.476 4.963ZM4.708 16.361a.26.26 0 0 0-.067.108l-1.264 4.154 4.177-1.271a.253.253 0 0 0 .1-.059l10.273-9.806-2.94-2.939-10.279 9.813ZM19 8.44l2.263-2.262a.25.25 0 0 0 0-.354l-2.586-2.586a.25.25 0 0 0-.354 0L16.061 5.5Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.263 2.177a1.75 1.75 0 0 1 2.474 0l2.586 2.586a1.75 1.75 0 0 1 0 2.474L19.53 10.03l-.012.013L8.69 20.378a1.75 1.75 0 0 1-.699.409l-5.523 1.68a.75.75 0 0 1-.747-.188.75.75 0 0 1-.188-.747l1.673-5.5a1.75 1.75 0 0 1 .466-.756L14.476 4.963ZM4.708 16.361a.26.26 0 0 0-.067.108l-1.264 4.154 4.177-1.271a.25.25 0 0 0 .1-.059l10.273-9.806-2.94-2.939zM19 8.44l2.263-2.262a.25.25 0 0 0 0-.354l-2.586-2.586a.25.25 0 0 0-.354 0L16.061 5.5Z"/></svg>
     </a>
   
   
 
 
 <h1 id="combat">Combat<a class="headerlink" href="#combat" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Combat works the same way as doing anything else that's risky. Make an <em>action roll</em> to attack and to deal damage if you succeed. If you’re being attacked, make an <em>action roll</em> to dodge, block, parry, or otherwise avoid damage.</p>
-<h2 id="initiative">Initiative<a class="headerlink" href="#initiative" title="Permanent link">&para;</a></h2>
-<p>During the <strong>first round of combat</strong>, each player must make a +TACTICS roll to act before the opponents. Exceptional circumstances, items, or abilities may negate this requirement. Players who fail this roll <strong>lose their turn</strong> and do not act in the first round.</p>
-<p>The opposing side then takes its turn, and then the first round ends. The next round begins with all players taking their turn, followed by their opponents, and so on, until combat has ended with one side defeated or fled.</p>
-<p>The results of each side’s actions occur <strong>simultaneously</strong>. As a result, all players declare their actions for a turn before the results of those actions are determined.</p>
-<h2 id="surprise">Surprise<a class="headerlink" href="#surprise" title="Permanent link">&para;</a></h2>
-<p>Whether by chance or design, players and their opponents might sometimes get the drop on one another. If one side surprises the other, they take a free round of combat in which the other side can’t act. </p>
-<p>Opponents who are aware of their enemy’s position can’t be surprised. This means that characters attempting to ambush an opponent must be hidden or in darkness (assuming the opponent doesn’t have night vision capabilities).</p>
-<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
-<p>A combat round represents 6 seconds of in-game time during which characters can <strong>move</strong> and take <strong>one action</strong>. An <em>action</em> can be an attack, moving for a second time, using a psionic talent, or any similar activity that takes up to 6 seconds.</p>
-<p>Insignificant actions, such as shouting a command, opening a door, or dropping an item, are free actions.</p>
-<p>Details on specific actions follow:</p>
-<ul>
-<li><strong>Attacking</strong>: With a ready a weapon, make an <em>action roll</em> as described in the following Dealing Damage section. The <em>action roll</em> may be at a <em>disadvantage</em> based on the type of weapon used and the target range. See the Ranges section for details.</li>
-<li><strong>Attacks of opportunity</strong>: If a combatant engaged in <em>close range</em> (up to two meters away) attempts to retreat, their opponent can make a free melee attack if they have a melee weapon ready. To safely disengage from <em>close range</em>, a combatant must take an <em>action</em> to disengage and make a +REFLEXES roll to retreat without risk.</li>
-<li><strong>Falling prone</strong>: Falling to the ground behind low cover requires no <em>action</em> and can be done freely on the character’s turn. Getting up from a prone position takes an <em>action</em>.</li>
-<li><strong>Interrupting actions</strong>: You can hold your <em>action</em> and specify under what conditions you’ll act. For example, “I hold my action until I see an enemy come around the corner.” If the conditions are met, you can act instantly, interrupting the opponent’s action.</li>
-<li><strong>Movement</strong>: In-combat movement is abstracted to determine ranges to targets as described in the following Ranges section. However, having a more concrete measurement in some cases is helpful. When a character spends an <em>action</em> moving on foot, they move 10 meters.</li>
+<p>Combat is like any risky action: attacking requires an <em>action roll</em> to deal damage, and defending against an attack requires an <em>action check</em> to avoid damage. Details follow.</p>
+<h2 id="combat-sequence">Combat Sequence<a class="headerlink" href="#combat-sequence" title="Permanent link">&para;</a></h2>
+<p>Once combat begins, the game follows a set framework for each combat round:</p>
+<ol>
+<li>Roll initiative to determine whether you can act in the first round of combat.</li>
+<li>If you can act in the first round:<ul>
+<li>Declare actions</li>
+<li>Make required action rolls</li>
+<li>Apply the results</li>
 </ul>
-<p>Any action within reason is possible if it’s based on your character’s resources and situation and can be accomplished in six seconds of combat.</p>
-<h2 id="ranges">Ranges<a class="headerlink" href="#ranges" title="Permanent link">&para;</a></h2>
-<p>Distance in combat is simplified into four bands: Close, Nearby, Far, and Remote.</p>
-<ul>
-<li><strong>Close</strong>: Melee range, up to 2 meters away. A character can move this distance freely. Characters can whisper and be heard.</li>
-<li><strong>Nearby</strong>: Handgun range. A character can move anywhere within this distance by using one movement action. Characters can talk and be heard.</li>
-<li><strong>Far</strong>: Rifle range. A character must expend between 2 and 4 movement actions to traverse this distance at the GM’s discretion. Characters can shout and be heard.</li>
-<li><strong>Remote</strong>: Heavy weapons range. A character usually can't traverse such a distance within the short timespan of personal combat but, if required, will take 8 or more movement actions at the GM’s discretion. Too far away for verbal communication.</li>
+</li>
+<li>Start the next round of combat:<ul>
+<li>Declare actions</li>
+<li>Make required action rolls</li>
+<li>Apply the results</li>
 </ul>
-<h3 id="weapon-range-modifiers">Weapon Range Modifiers<a class="headerlink" href="#weapon-range-modifiers" title="Permanent link">&para;</a></h3>
-<p>Based on the type of weapon used and the target range, an attack <em>action roll</em> may incur a <em>disadvantage</em> or not be possible.</p>
+</li>
+<li>Repeat Step 3 until combat ends. </li>
+</ol>
+<p>Details on these steps follow.</p>
+<h2 id="combat-rounds">Combat Rounds<a class="headerlink" href="#combat-rounds" title="Permanent link">&para;</a></h2>
+<p>A <em>combat round</em> is about 6 seconds, enough time for you to <strong>move once</strong> and take <strong>1 action</strong>, such as firing at a target or moving again. </p>
+<p>Complex actions taking more than 6 seconds may require multiple combat rounds to complete. See <a href="../playing/#mission-clocks">Mission Clocks</a>. Minor actions, such as shouting, moving through a door, or dropping an item, are free and don't count as your 1 action.</p>
+<h3 id="the-first-round-and-initiative-rolls">The First Round and Initiative Rolls<a class="headerlink" href="#the-first-round-and-initiative-rolls" title="Permanent link">&para;</a></h3>
+<p>Whether you act before the enemy in the <strong>first</strong> round of combat is decided by an <em>initiative roll</em>. Roll <strong>2D6 + TACTICS</strong> and apply the following result:</p>
+<div class="roll-table">
 <table>
 <thead>
 <tr>
-<th>Weapon</th>
-<th style="text-align: center;">Close</th>
-<th style="text-align: center;">Near</th>
-<th style="text-align: center;">Far</th>
-<th style="text-align: center;">Distant</th>
+<th style="text-align: center;">Roll</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Assault Rifle</td>
-<td style="text-align: center;">disadvantage</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">impossible</td>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td>You <strong>do not</strong> act in the first round of combat. The hostiles get the drop on you, and you’ll have to wait until the <strong>second round</strong> to move or take any action.</td>
 </tr>
 <tr>
-<td>Handgun</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">disadvantage</td>
-<td style="text-align: center;">impossible</td>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td>You get the drop on the hostiles and act <strong>first</strong>, but you have a <em>disadvantage</em> on your next <em>action roll</em>.</td>
 </tr>
 <tr>
-<td>Heavy weapon</td>
-<td style="text-align: center;">impossible</td>
-<td style="text-align: center;">disadvantage</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td>You get the drop on the hostiles and act <strong>first</strong>.</td>
 </tr>
 <tr>
-<td>Melee</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">impossible</td>
-<td style="text-align: center;">impossible</td>
-<td style="text-align: center;">impossible</td>
-</tr>
-<tr>
-<td>Shotgun</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">disadvantage</td>
-<td style="text-align: center;">impossible</td>
-</tr>
-<tr>
-<td>Sniper Rifle</td>
-<td style="text-align: center;">impossible</td>
-<td style="text-align: center;">disadvantage</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">disadvantage</td>
-</tr>
-<tr>
-<td>Thrown</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">–</td>
-<td style="text-align: center;">impossible</td>
-<td style="text-align: center;">impossible</td>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td>You get the drop on the hostiles and act <strong>first</strong>. You gain an <em>advantage</em> on your next <em>action roll</em>.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="dealing-damage">Dealing Damage<a class="headerlink" href="#dealing-damage" title="Permanent link">&para;</a></h2>
-<p>When your character makes an <em>action roll</em> to attack an opponent, they deal damage as follows:</p>
-<ul>
-<li>On a <strong>6 or less</strong>, you deal no damage; the attack misses.</li>
-<li>On a <strong>7–9</strong>, you deal damage equal to the <strong>lowest D6 result</strong> + weapon damage modifier.</li>
-<li>On a <strong>10–12</strong>, you deal damage equal to the <strong>highest D6 result</strong> + weapon damage modifier.</li>
-<li>On a <strong>13 or greater</strong>, you deal damage equal to <strong>both dice results</strong> + weapon damage modifier.</li>
-</ul>
-<h3 id="weapon-damage-modifiers">Weapon Damage Modifiers<a class="headerlink" href="#weapon-damage-modifiers" title="Permanent link">&para;</a></h3>
-<p>Add the following damage modifier based on the type of weapon:</p>
-<ul>
-<li><strong>Unarmed</strong> attacks deal -1 damage.</li>
-<li><strong>Concealable</strong> weapons (shivs and slingshots) deal +0 damage. </li>
-<li><strong>Light</strong> weapons (pistols and knives) deal +1 damage.</li>
-<li><strong>Medium</strong> weapons (rifles, shotguns, and swords) deal +2 damage.</li>
-<li><strong>Heavy</strong> weapons (RPGs, miniguns, and sniper rifles) deal +3 damage.</li>
-<li><strong>Anomalous</strong> weapons (enchanted, alien, or divine) deal +4 damage.</li>
-</ul>
-<p>Some weapons with the <em>blast</em> quality, such as explosives, may damage all targets in a close area rather than a single target.</p>
-<h3 id="ammo">Ammo<a class="headerlink" href="#ammo" title="Permanent link">&para;</a></h3>
-<p>Ranged weapons have an <em>ammo</em> score set to 6 at the beginning of each mission. </p>
-<p><strong>Check off 1 ammo</strong> for all attack rolls of 9 or less. </p>
-<p>When <em>ammo</em> is reduced to 0, the weapon is out of ammunition and can’t be used until it’s restocked.</p>
-<ul>
-<li>Finding ammunition for a weapon during a mission increases <em>ammo</em> by 1.</li>
-<li>Choosing <em>resupply</em> during a rendezvous, as described in the Recovery section, can refill one weapon’s <em>ammo</em> to 6.</li>
-</ul>
-<h2 id="taking-damage">Taking Damage<a class="headerlink" href="#taking-damage" title="Permanent link">&para;</a></h2>
-<p>When your character makes an <em>action roll</em> to defend against damage, they take damage as follows:</p>
-<ul>
-<li>On a <strong>6 or less</strong>, you suffer damage equal to the <strong>highest D6 result</strong> + enemy damage modifier.</li>
-<li>On a <strong>7–9</strong>, you suffer damage equal to the <strong>lowest D6 result</strong> + enemy damage modifier.</li>
-<li>On a <strong>10–12</strong>, you suffer no damage.</li>
-<li>On a <strong>13 or greater</strong>, you suffer no damage, and your next <em>action roll</em> has an <em>advantage</em>.</li>
-</ul>
-<h2 id="armor">Armor<a class="headerlink" href="#armor" title="Permanent link">&para;</a></h2>
-<p>Before calculating damage to HP, subtract the target’s armor value from the result of damage rolls. You can have at most 3 points of armor.</p>
-<p>Worn armor is usually listed as Armor 1, Armor 2, etc. You only benefit from a secondary armor source if it's a bonus (for example, +1 Armor) or makes sense fictionally.</p>
-<p>Shields and helmets provide bonus defense (e.g., +1 Armor), but only while the item is held or worn.</p>
-<p>Items with an armor bonus can be voluntarily destroyed to block all damage from a single attack.</p>
-<h2 id="cover-and-suppression">Cover and Suppression<a class="headerlink" href="#cover-and-suppression" title="Permanent link">&para;</a></h2>
-<p>If you take cover behind something, you gain an armor bonus against attacks that your cover would block. Low, medium, and high cover grants 1, 2, and 3 armor, respectively. Attacks that ignore armor don’t ignore the armor bonus provided by cover. </p>
-<ul>
-<li><strong>Low</strong> cover does little to protect the body (for example, iron bars, thick foliage, or another person).</li>
-<li><strong>Medium</strong> cover protects at least half of the body and often requires crouching (for example, a car, a highway divider, or a barrel).</li>
-<li><strong>High</strong> cover protects the whole body and allows free positioning (for example, a wall, a thick tree trunk, or a train car).</li>
-</ul>
-<p>Characters who attack from behind cover should subtract the armor bonus that their cover grants from the damage they deal (this also applies to opponents).</p>
-<h3 id="suppressing-fire">Suppressing Fire<a class="headerlink" href="#suppressing-fire" title="Permanent link">&para;</a></h3>
-<p>When you deal damage with a ranged weapon to an enemy behind cover, you may choose to lay down <em>suppressing fire</em> instead. Suppressing fire checks off 1 use of <em>ammo</em> regardless of the attack roll.</p>
-<p>Suppressed targets who leave cover or perform a risky action, such as returning fire, take the damage of the suppressing attack without the armor benefit of cover.</p>
-<p>Unless fanatical or mindless, suppressed targets generally hide behind cover and remain pinned down until the suppressing fire ceases.</p>
-<h2 id="multiple-attackers">Multiple Attackers<a class="headerlink" href="#multiple-attackers" title="Permanent link">&para;</a></h2>
-<p>If multiple attackers target the same target, determine all damage and keep only the highest result each round.</p>
-<h2 id="blast-damage">Blast Damage<a class="headerlink" href="#blast-damage" title="Permanent link">&para;</a></h2>
-<p>Attacks with the <em>blast</em> quality affect all targets in the noted area. Blast refers to anything from explosions to massive cleaving onslaughts. If you're unsure how many targets can be affected, roll 1D6 plus the damage modifier.</p>
-<h2 id="morale-checks">Morale Checks<a class="headerlink" href="#morale-checks" title="Permanent link">&para;</a></h2>
-<p>Opponents must pass a morale check to avoid fleeing when they take their first casualty and again when they lose half their number. Morale checks are also required for opponents to be able to take any action under suppressing fire. Fanatical or mindless opponents don't check morale.</p>
-<p>An opponent’s morale is rated from 1, an untrained, scared rabble, to 6, a stolid trained professional. Roll 1D6; if the result equals or exceeds the opponent’s morale score, they rout or fail to act under suppressing fire.</p>
-<p>Some groups can use their leader’s morale in place of their own. Lone foes must save when they first take damage and again when they lose half of their HP. Morale doesn't affect player characters.</p>
-<h2 id="retreat">Retreat<a class="headerlink" href="#retreat" title="Permanent link">&para;</a></h2>
-<p>Running away from a dire situation always requires a successful roll +REFLEXES and a safe destination to run to.</p>
-<h2 id="mobs">Mobs<a class="headerlink" href="#mobs" title="Permanent link">&para;</a></h2>
-<p>When you're battling many relatively weak, identical enemies—such as zombies, thugs, or guard drones—the GM may group the opponents into a single unit or <em>mob</em>. </p>
-<p>HP for the mob equals the number of opponents in the mob. The size of the mob determines its armor, damage, and the number of attacks, as described in the following table:</p>
+</div>
+<p>Following the initiative check, all members of your unit who can act in the first round declare their moves and actions. The results of those actions are then determined. See the following sections for details. </p>
+<p>Afterward, the opposing force takes its actions. The first round of combat is now complete. </p>
+<h3 id="the-second-and-subsequent-rounds">The Second and Subsequent Rounds<a class="headerlink" href="#the-second-and-subsequent-rounds" title="Permanent link">&para;</a></h3>
+<p>In the second and subsequent rounds of combat, you <strong>no longer</strong> roll initiative. You and your unit always act first in each subsequent round, followed by the enemy, until one side is eliminated or withdraws.</p>
+<h3 id="ambushes">Ambushes<a class="headerlink" href="#ambushes" title="Permanent link">&para;</a></h3>
+<p>Circumstances or careful planning can sometimes determine which side acts first. If you <em>ambush</em> the enemy, your unit does not make an initiative check and instead acts first, gaining <em>advantage</em> on all action checks during the first combat round.</p>
+<p>Afterward, combat proceeds as usual: your unit takes actions, then the opposing force takes actions. An ambush lets you take two consecutive rounds of combat before your opponent can respond. </p>
+<p>If the enemy ambushes you, you do not make an initiative check and cannot act during the first round of combat. In subsequent rounds, combat proceeds as usual.</p>
+<h2 id="declaring-actions">Declaring Actions<a class="headerlink" href="#declaring-actions" title="Permanent link">&para;</a></h2>
+<p>In a combat round, your actions and your team members’ actions occur <strong>at the same time</strong>. Everyone declares their actions for the current combat round upfront, before any results are determined. Actions are not declared individually and then resolved one by one. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The GM will give you a general sense of what the enemy is doing to help with planning your actions. </p>
+</div>
+<h3 id="interrupting-actions">Interrupting Actions<a class="headerlink" href="#interrupting-actions" title="Permanent link">&para;</a></h3>
+<p>You may hold an action and specify a trigger, for example, “I wait until the enemy rounds the corner.” When the trigger occurs, you act immediately, interrupting the enemy’s turn.</p>
+<h2 id="determining-the-results">Determining the Results<a class="headerlink" href="#determining-the-results" title="Permanent link">&para;</a></h2>
+<p>As described in <a href="../playing/#actions">Actions</a>, the outcome of any <em>risky</em> or <em>uncertain</em> action you attempt is determined by an <em>action roll</em>. Because nearly every decision and action you make in combat is perilous, you’ll make an <em>action roll</em> whenever you declare an action during a combat round.</p>
+<p>The following sections provide details on specific combat-related <em>action rolls</em>, such as <em>attacking</em> and <em>defending</em>. Regardless of what you attempt in combat, all actions are resolved using the PsiOps core mechanic: <strong>2D6 + Attribute</strong> to determine the result.  </p>
+<h2 id="attacking">Attacking<a class="headerlink" href="#attacking" title="Permanent link">&para;</a></h2>
+<p>When you <strong>attack</strong> a target, make an <em>attack roll</em>. Roll <strong>2D6 + Applicable Attribute</strong> and apply the following result:</p>
+<div class="roll-table">
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">#/HP</th>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">The attack misses. You deal <strong>no damage</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">You deal damage equal to the <strong>lowest D6 roll</strong> plus your weapon's <strong>damage modifier</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">You deal damage equal to the <strong>highest D6 roll</strong> plus your weapon's <strong>damage modifier</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">You deal damage equal to the <strong>sum of both dice</strong> plus your weapon's <strong>damage modifier</strong>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note notes">
+<p class="admonition-title">Note</p>
+</div>
+<ul>
+<li>For help choosing the attack roll attribute, see <a href="../playing/#choose-an-applicable-attribute">Choosing an Applicable Attribute</a>. </li>
+<li><em>Advantage</em> or <em>disadvantage</em> may apply to your attack roll based on the range to your target. See the following <a href="#attack-roll-modifiers">Attack Roll Modifiers</a>.</li>
+</ul>
+<h3 id="weapon-damage-modifiers">Weapon Damage Modifiers<a class="headerlink" href="#weapon-damage-modifiers" title="Permanent link">&para;</a></h3>
+<p>Apply the damage modifiers to your attacks as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Weapon</th>
+<th style="text-align: left;">Examples</th>
+<th style="text-align: center;">Modifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Unarmed</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: center;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Concealable</strong></td>
+<td style="text-align: left;">boot knives, brass knuckles</td>
+<td style="text-align: center;">+0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Light</strong></td>
+<td style="text-align: left;">combat knives, sidearms</td>
+<td style="text-align: center;">+1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Medium</strong></td>
+<td style="text-align: left;">rifles, shotguns</td>
+<td style="text-align: center;">+2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Heavy</strong></td>
+<td style="text-align: left;">antiarmor missiles, sniper rifles</td>
+<td style="text-align: center;">+3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Anomalous</strong></td>
+<td style="text-align: left;">[REDACTED]</td>
+<td style="text-align: center;">+4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blast-damage">Blast Damage<a class="headerlink" href="#blast-damage" title="Permanent link">&para;</a></h3>
+<p>Attacks with the <em>blast</em> quality, such as explosives, can affect multiple targets in a confined area. To determine the number of targets, roll <strong>1D6 + the weapon's damage modifier</strong>. The result is the number of targets affected.</p>
+<h3 id="multiple-attackers">Multiple Attackers<a class="headerlink" href="#multiple-attackers" title="Permanent link">&para;</a></h3>
+<p>If you and other team members attack the same opponent, determine the damage for each attack separately, but apply only the <strong>highest value</strong>. The damage from multiple attackers is not cumulative.</p>
+<h2 id="attack-roll-modifiers">Attack Roll Modifiers<a class="headerlink" href="#attack-roll-modifiers" title="Permanent link">&para;</a></h2>
+<p>The effectiveness of your attacks is modified by weapon type, optimal engagement distance, and tactical situations. See the following tables for attack modifiers. </p>
+<h3 id="range-modifiers">Range Modifiers<a class="headerlink" href="#range-modifiers" title="Permanent link">&para;</a></h3>
+<p>Each weapon class has a distinct optimal engagement distance. Depending on your weapon type and the range to your target, your <em>attack roll</em> may be at <em>advantage</em>, <em>disadvantage</em>, or <em>impossible</em>. The range to your target is determined by the number of intervening zones. See <a href="../zones/">Tactical Zones</a>.</p>
+<p>| Weapon | Close | Near | Far | Distant | Exteme |
+| - | :-: | :-: | :-: | :-: |
+| <strong>Assault rifle</strong> | disadvantage | normal | normal | impossible | impossible |
+| <strong>Close-quarters combat</strong> | normal | impossible |  impossible | impossible | impossible |
+| <strong>Heavy weapon</strong> | impossible | disadvantage | normal | normal | disadvantge |
+| <strong>LMG</strong> | impossible | normal | normal |  disadvantage | disdvantage |
+| <strong>Shotgun</strong> | normal | normal | disadvantage |  impossible | impossible |
+| <strong>Sidearm</strong> | normal | advantage | disadvantage | impossible | impossible |
+| <strong>SMG</strong> | normal | advantage | disadvantage | impossible | impossible |
+| <strong>Sniper rifle</strong> | impossible | disadvantage | advantage | normal | normal |
+| <strong>Thrown</strong> | normal | normal |  impossible  |  impossible  | impossible |</p>
+<h3 id="tactical-modifiers">Tactical Modifiers<a class="headerlink" href="#tactical-modifiers" title="Permanent link">&para;</a></h3>
+<p>The following tactical decisions apply modifiers to your attacks.</p>
+<ul>
+<li><strong>Aiming</strong>: When you take an <em>action</em> to aim at a target, your subsequent <em>attack rolls</em> gain <em>advantage</em> unless you move or take an action other than continuing to attack the target.</li>
+<li><strong>Prone</strong>: When attacking from a prone position, you have <em>advantage</em>. Attacks against a prone target have <em>disadvantage</em>.</li>
+</ul>
+<h2 id="expending-ammunition">Expending Ammunition<a class="headerlink" href="#expending-ammunition" title="Permanent link">&para;</a></h2>
+<p>At the start of a mission, all your small arms are stocked with an <em>ammo rating</em> of <strong>6</strong>. </p>
+<p>Each time you attack, if your attack fails with an <em>action check</em> of <strong>6 or lower</strong>, reduce the weapon's <em>ammo rating</em> by <strong>1</strong>. When a weapon's <em>ammo rating</em> reaches <strong>0</strong>, it becomes unusable until you resupply it with ammunition.</p>
+<h3 id="resupply">Resupply<a class="headerlink" href="#resupply" title="Permanent link">&para;</a></h3>
+<p>You can resupply expended ammunition in several ways: carrying extra ammunition in your inventory, using up your <em>tactical supplies</em>, or restocking at a <em>laying-up point</em>. See <a href="./#rest-and-recovery">Rest and Recovery</a>.</p>
+<p>If you recover enemy ammunition during the mission, it increases the <em>ammo rating</em> of <strong>one</strong> of your weapons by <strong>1</strong> point.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some weapons are listed as <em>single-use</em>, such as antiarmor missiles. These weapons have no ammo rating and are removed from your inventory after use.</p>
+</div>
+<h2 id="defending">Defending<a class="headerlink" href="#defending" title="Permanent link">&para;</a></h2>
+<p>When you <strong>defend</strong> against an enemy attack, make a <em>defense roll</em>. Roll <strong>2D6 + Applicable Attribute</strong> and apply the result.</p>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">You take <strong>damage</strong> equal to the <strong>highest D6 result</strong> plus your enemy weapon’s damage modifier.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">You take <strong>damage</strong> equal to the <strong>lowest D6 result</strong> plus your enemy weapon's damage modifier.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">You take <strong>no</strong> damage.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">You take <strong>no</strong> damage, and your next <em>action check</em> has <em>advantage</em>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<ul>
+<li>For help choosing the defense roll attribute, see <a href="../playing/#choose-an-applicable-attribute">Choosing an Applicable Attribute</a>.</li>
+</ul>
+<h2 id="damage-wounds-and-dying">Damage, Wounds, and Dying<a class="headerlink" href="#damage-wounds-and-dying" title="Permanent link">&para;</a></h2>
+<h3 id="damage">Damage<a class="headerlink" href="#damage" title="Permanent link">&para;</a></h3>
+<p>Deduct all <em>damage</em> directly from your <em>hit points (HP)</em>. Keep track of your current HP. Your character sheet has a place to record it. If you have at least <strong>1 HP</strong> remaining after taking damage, you’re still combat-ready and in the fight.</p>
+<h3 id="wounds">Wounds<a class="headerlink" href="#wounds" title="Permanent link">&para;</a></h3>
+<p>If your current HP drops to <strong>0</strong> or <strong>below</strong>, into negative values, you’re <em>wounded</em>, possibly grievously. </p>
+<p>Immediately after being <em>wounded</em>, make a <em>wound roll</em>. Roll <strong>2D6 + STRENGTH</strong> and <strong>subtract</strong> the number of hit points you’ve dropped below zero. Then apply the following result:</p>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">You're <strong>dead</strong>. Roll up a new operator.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">You're <em>incapacitated</em> at <strong>0 HP</strong>. Take <strong>2</strong> <em>injuries</em>, <strong>2</strong> <em>fatigue</em>, and <strong>2</strong> <em>stress</em>. You'll die unless <em>stabilized</em>. See the following section.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">You’re <em>knocked down</em>, unconscious but stable at <strong>1 HP</strong>. Take <strong>1</strong> <em>injury</em>, <strong>1</strong> <em>fatigue</em>, and <strong>1</strong> <em>stress</em>. A team member can revive you by spending 1 action.<br/><br/><strong>Note</strong>: If you’re wearing a helmet, you’re still knocked down but not unconscious. Spend 1 action to climb to your feet.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">You take <strong>1</strong> <em>injury</em>, but you’re <strong>relentless</strong> with <strong>1D6 current HP</strong>, up to your maximum. You are one tough SOB.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See <a href="#injuries">Injuries</a>, <a href="#fatigue">Fatigue</a>, and <a href="../stress/#reaching-maximum-stress">Stress</a> for details on the additional wound effects.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An operator with 2 STRENGTH and 2 current HP is in a firefight. They are attacked for 3 points of damage. The operator now has –1 HP. They must make a <em>wound check</em> because their current HP is zero or below.</p>
+<p>They roll <em>2D6</em> + <em>2</em> (STRENGTH) and subtract <em>1</em> (the number of current HP points below zero), getting 4 and 5. The total is 4 + 5 + 2 - 1 = 10. The operator is <em>knocked down</em>. They add 1 <em>injury</em>, 1 <em>fatigue</em>, 1 <em>stress</em>, and increase current HP to 1. </p>
+<p>But they aren’t <em>unconscious</em> because they’re wearing a <em>helmet</em>. The operator spends their action to return to a firing position. They’re injured, growing tired, and a little more stressed, but not yet out of the fight. </p>
+</div>
+<h3 id="stabilizing-incapacitated-team-members">Stabilizing Incapacitated Team Members<a class="headerlink" href="#stabilizing-incapacitated-team-members" title="Permanent link">&para;</a></h3>
+<p>Stabilizing an <em>incapacitated</em> operator first requires a unit of medical supplies, such as the IFAK in your basic kit. If your unit has medical supplies, you automatically stabilize an incapacitated team member <strong>after</strong> combat ends.</p>
+<p>If you attempt to stabilize an incapacitated team member <strong>during</strong> combat, the action is complex and risky. The GM then uses a <em>mission clock</em> to track your progress. See <a href="../playing/#mission-clocks">Mission Clocks</a>.</p>
+<p>To <strong>stabilize a team member in combat</strong>, move a unit of medical supplies into your hand, then make a <em>stabilization roll</em>. Roll <strong>2D6 + TACTICS</strong>. Apply the result as follows:</p>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>6–</strong></td>
+<td>A segment on the mission clock is <strong>not</strong> marked off, and you <strong>use up</strong> your unit of medical supplies. Remove it from your inventory.<br/>You’ll need to find more medical supplies to continue making <em>stabilization rolls</em>.</td>
+</tr>
+<tr>
+<td><strong>7–9</strong></td>
+<td>Mark off <strong>1</strong> segment on the mission clock.</td>
+</tr>
+<tr>
+<td><strong>10–12</strong></td>
+<td>Mark off <strong>2</strong> segments on the mission clock.</td>
+</tr>
+<tr>
+<td><strong>13+</strong></td>
+<td>Mark off <strong>3</strong> segments on the mission clock.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Once all segments are marked off the clock, the incapacitated team member is stabilized. They are conscious and back on their feet, though at <strong>0 HP</strong>. Any damage will immediately reduce their HP below zero, triggering a <em>wound check</em>.</p>
+<h3 id="injuries">Injuries<a class="headerlink" href="#injuries" title="Permanent link">&para;</a></h3>
+<p>Each <em>injury</em> you sustain reduces your <strong><em>maximum HP</em>* by </strong>1<strong> and </strong>cannot** be healed in the field. Your current HP is not affected unless it exceeds the reduced maximum HP. If it does, your current HP is lowered to the new maximum. Injuries require medical treatment at base between missions. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Injuries cause permanent HP loss until treated at base. If multiple injuries reduce maximum HP to <strong>0</strong>, the operator <strong>dies</strong>.</p>
+</div>
+<h3 id="fatigue">Fatigue<a class="headerlink" href="#fatigue" title="Permanent link">&para;</a></h3>
+<p>All <em>fatigue</em> you sustain must be stored in your <strong>inventory</strong> as an abstract item. Each unit of fatigue occupies 1 slot. If your inventory is full, drop enough equipment to free up slots for the fatigue.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Accumulated fatigue is debilitating. If inventory reaches <strong>12</strong> units of fatigue, the operator <strong>dies</strong>.</p>
+</div>
+<h3 id="recovering-hit-points-and-fatigue">Recovering Hit Points and Fatigue<a class="headerlink" href="#recovering-hit-points-and-fatigue" title="Permanent link">&para;</a></h3>
+<p>Lost <em>hit points</em> can be restored, and <em>fatigue</em> removed by resting at a <em>laying-up point</em>. See <a href="#rest-and-recovery">Rest and Recovery</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Experimental or anomalous medical restoratives are rumored to exist. </p>
+</div>
+<h2 id="cover">Cover<a class="headerlink" href="#cover" title="Permanent link">&para;</a></h2>
+<p>Hiding behind an object provides <em>cover</em>, reducing the damage you take from attacks. Cover blocks <strong>all</strong> damage types, including those that would bypass ballistic body armor. </p>
+<p>The damage blocked by your cover is in <strong>addition</strong> to your personal protective system's <em>armor rating</em>. The maximum damage reduction from armor is capped at <strong>3</strong>, but when defending behind cover, damage reduction includes <strong>both</strong> your armor rating and the cover bonus.</p>
+<p>See <a href="../equipment/#personal-protective-system">Personal Protective Systems</a> for details on armor ratings.</p>
+<h3 id="cover-ratings">Cover Ratings<a class="headerlink" href="#cover-ratings" title="Permanent link">&para;</a></h3>
+<p>Cover is rated as <em>low</em>, <em>medium</em>, or <em>high</em>. A description of each rating and the damage it blocks follows.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Cover</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Examples</th>
+<th style="text-align: center;">Block Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Low</td>
+<td style="text-align: left;">Minimal protection and might require lying prone.</td>
+<td style="text-align: left;">Thick foliage, another person</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">Protects at least half the body and might require crouching.</td>
+<td style="text-align: left;">Car hood, highway divider</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">High</td>
+<td style="text-align: left;">Protects the whole body.</td>
+<td style="text-align: left;">Concrete wall, AFV hull</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="damage-reduction-summary">Damage Reduction Summary<a class="headerlink" href="#damage-reduction-summary" title="Permanent link">&para;</a></h3>
+<p>You can reduce the damage you take when hit by using both body armor and cover as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Protection Source</th>
+<th style="text-align: center;">Reduction</th>
+<th>Stacks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base armor</td>
+<td style="text-align: center;">1–3</td>
+<td>Yes, with secondary</td>
+</tr>
+<tr>
+<td>Secondary armor</td>
+<td style="text-align: center;">+1</td>
+<td>Capped at 3 total</td>
+</tr>
+<tr>
+<td>Cover</td>
+<td style="text-align: center;">1–3</td>
+<td>Yes, independent of armor</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An operator crouches behind a 55-gallon drum. The cover is rated medium, blocking 2 points of damage. The operator wears tier-3 ballistic body armor (3 armor rating) and a helmet (+1 armor), resulting in a damage reduction of 3 rather than 4 because the helmet’s +1 bonus to the armor rating exceeds the maximum 3-point damage reduction allowed for a personal protective system. If hit by hostile fire, the total damage reduction would be 2 (cover) + 3 (armor) = 5 points.</p>
+<p>Continuing the example, assume the operator is attacked with a flamethrower. Ballistic body armor and helmets do not reduce this type of damage, but cover still does. The total damage reduction would be 2 points. </p>
+</div>
+<h2 id="suppressing-fire">Suppressing Fire<a class="headerlink" href="#suppressing-fire" title="Permanent link">&para;</a></h2>
+<p>When you attack an enemy with a ranged weapon, you can instead lay down <em>suppressing fire</em>. This consumes <strong>1 ammo</strong>, deals no damage, and forces the target to dive for cover and remain pinned down until their next combat round.</p>
+<p>If a suppressed enemy takes any action that makes them visible to you, you can make an immediate <strong>free attack</strong> with <em>advantage</em> that interrupts their turn. This free attack’s damage isn’t reduced by cover. Unless opponents are fanatical or mindless, suppressed targets generally remain pinned down behind cover.</p>
+<h2 id="neural-weapons">Neural Weapons<a class="headerlink" href="#neural-weapons" title="Permanent link">&para;</a></h2>
+<p><em>Neural weapons</em> are among your unit’s most lethal assets. When a neural weapon is brought to bear, it produces a tactical effect: precise, controlled, and potentially decisive.</p>
+<h3 id="activating">Activating<a class="headerlink" href="#activating" title="Permanent link">&para;</a></h3>
+<p>To activate your neural weapon, make a <em>neural attack roll</em>. Roll <strong>2D6 + WILLPOWER</strong> and apply the result as follows:</p>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">Your neural weapon <strong>doesn’t activate</strong>, and you take <strong>1</strong> <em>fatigue</em>. See <a href="#fatigue">Fatigue</a>.<br/>You can also <strong>no longer</strong> activate this neural weapon during the mission unless you rest at a <em>laying-up point</em>. See <a href="#rest-and-recovery">Rest and Recovery</a>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">The power <strong>manifests</strong>, but you take <strong>1</strong> <em>fatigue</em>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">The power <strong>manifests</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">The power <strong>manifests</strong>. The effect is greater than expected. Work with the GM to specify what else happens.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="ongoing">Ongoing<a class="headerlink" href="#ongoing" title="Permanent link">&para;</a></h3>
+<p>Neural weapons described as <em>ongoing</em> require concentration to keep the power active after it’s manifested.</p>
+<ul>
+<li>You must spend an <em>action</em> each combat round to maintain concentration and keep the power active.</li>
+<li>If you take damage while concentrating, your focus is disrupted, and the neural weapon’s effect ends.</li>
+</ul>
+<h2 id="free-fire-opportunities">Free-Fire Opportunities<a class="headerlink" href="#free-fire-opportunities" title="Permanent link">&para;</a></h2>
+<p>Withdrawing from a fight while engaged in combat may leave the retreating force vulnerable to further attack.</p>
+<ul>
+<li>If your <strong>opponents</strong> retreat, you can immediately make a free attack against them before they move.</li>
+<li>If <strong>you</strong> retreat, roll <strong>2D6 + REFLEXES</strong> and apply the result as follows:</li>
+</ul>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">Your opponent makes a <strong>free attack</strong> immediately against you.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">You disengage, but you suffer a <em>complication</em>.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">You disengage without mishap.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">You make a <strong>free attack</strong> against your opponent, then disengage without mishap.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="mobs">Mobs<a class="headerlink" href="#mobs" title="Permanent link">&para;</a></h2>
+<p>When facing many weak, similar opponents, such as untrained guards or street thugs, the GM can merge them into a <em>mob</em> treated as a single opponent in combat.</p>
+<p>The <strong>number of opponents</strong> in a mob determines its <em>hit points</em>, <em>armor</em>, and <em>attacks per round</em>, as shown in the table below. A mob’s attacks deal <strong>+1 damage</strong>.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Number</th>
 <th style="text-align: center;">Armor</th>
-<th style="text-align: center;">Damage</th>
 <th style="text-align: center;">Attacks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">1–4</td>
+<td style="text-align: center;">1–4</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">-1</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: left;">5–8</td>
+<td style="text-align: center;">5–8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">9–12</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">+0</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">9–12</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">+1</td>
 <td style="text-align: center;">3</td>
 </tr>
 <tr>
-<td style="text-align: left;">13–16</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">+2</td>
+<td style="text-align: center;">13–16</td>
+<td style="text-align: center;">2</td>
 <td style="text-align: center;">4</td>
 </tr>
 <tr>
-<td style="text-align: left;">17–20</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">+3</td>
+<td style="text-align: center;">17–20+</td>
+<td style="text-align: center;">3</td>
 <td style="text-align: center;">5</td>
 </tr>
 </tbody>
 </table>
-<p>Damage to the mob’s HP reduces the mob’s size and stats—each HP of damage reduces the mob’s number by 1.</p>
-<p>For example, you’re up against a mob of 14 opponents. With 14 HP, 3 ARMOR, and +2 DAMAGE, this mob can attack up to 4 targets. After 5 HP of damage, the new stats for the mob would be 9 HP, 2 ARMOR, and +1 DAMAGE, and it can now attack up to 3 targets.</p>
-<h2 id="damage-injuries-and-dying">Damage, Injuries, and Dying<a class="headerlink" href="#damage-injuries-and-dying" title="Permanent link">&para;</a></h2>
-<p>If you take damage but have at least 1 HP remaining, you’re still on your feet and in the fight. However, if you drop to 0 or less HP, you must roll <strong>2D6 + STRENGTH</strong> <em>minus</em> any damage past zero to see how bad it is:</p>
+<p>Each point of damage reduces the <strong>number</strong> of hostiles in the mob by <strong>1</strong>, which in turn lowers the mob’s related stats.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An operator faces a mob of 14 enemies. The mob’s stats are 14 HP and 2 ARMOR. Each round, the mob can attack up to 4 opponents. After taking 5 damage, the mob’s size drops to 9, and its stats become 9 HP and 1 ARMOR. Consequently, the mob can now attack up to 3 targets each round.</p>
+</div>
+<h2 id="emergency-deployment">Emergency Deployment<a class="headerlink" href="#emergency-deployment" title="Permanent link">&para;</a></h2>
+<p>If your character dies, create a new one while the game continues. When you’re ready to rejoin, the GM will ask you to make a <em>deployment roll</em>. Roll <strong>2D6 + TACTICS</strong> and apply the result as follows: </p>
+<div class="roll-table">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Roll</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6–</strong></td>
+<td style="text-align: left;">Your deployment encounters a <strong>complication</strong>. The GM will let you know.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7–9</strong></td>
+<td style="text-align: left;">You deploy normally.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10–12</strong></td>
+<td style="text-align: left;">You deploy normally and gain <strong>one extra</strong> tactical supply.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>13+</strong></td>
+<td style="text-align: left;">You deploy normally, gain <strong>one extra</strong> tactical supply, and your next <em>action roll</em> has <em>advantage</em>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="rest-and-recovery">Rest and Recovery<a class="headerlink" href="#rest-and-recovery" title="Permanent link">&para;</a></h2>
+<p>Once per mission, your unit can <em>rally</em>. The GM then designates a nearby <em>laying-up position (LUP)</em> and describes any obstacles to reaching it. Arriving at the LUP lets your unit rest and reorganize. Your LUP is always concealed and defensible. You can rally once per mission. </p>
+<p>Reaching the LUP has the following effects:</p>
 <ul>
-<li>On a <strong>6 or less</strong>, for a lethal attack, such as a gunshot, you’re <strong>dead</strong>. If not, you’re at 0 HP, incapacitated, and gain an <em>injury</em> and 1 point of <em>stress</em>. Incapacitated characters will die in 10 minutes if left unattended. </li>
-<li>On a <strong>7-12</strong>, you remain alive with 1 HP and gain an <em>injury</em> and 1 point of <em>stress</em>. You must make a successful <strong>+STRENGTH</strong> roll or be knocked unconscious. An ally can revive unconscious characters.</li>
-<li>On a <strong>13 or more</strong>, you gain an <em>injury</em> and 1 point of <em>stress</em>, but rally with HP equal to the lowest D6 rolled, up to your maximum HP.</li>
+<li>Your <em>momentum</em> resets to its initial value of <strong>2</strong> points.</li>
+<li>Reactivate any <em>neural weapons</em> that are no longer usable.</li>
+<li>Remove all <em>panicked</em> and <em>locked-in</em> effects.</li>
 </ul>
-<h3 id="injuries">Injuries<a class="headerlink" href="#injuries" title="Permanent link">&para;</a></h3>
-<p>Each <em>injury</em> that you receive reduces your maximum HP by 1. Injuries can’t be healed in the field and require medical attention back at base between missions.</p>
-<p>If accumulated injuries reduce your maximum HP to 0, your character dies. </p>
-<h2 id="emergency-insertion">Emergency Insertion<a class="headerlink" href="#emergency-insertion" title="Permanent link">&para;</a></h2>
-<p>If your character dies, create a new character while the play continues. When you’re ready to deploy, jump into the fray and roll <strong>2D6 + Attribute</strong>:</p>
+<p>Additionally, choose <strong>one</strong> benefit from the following list:</p>
 <ul>
-<li>On a <strong>6 or less</strong>, your deployment suffers a complication.</li>
-<li>On a <strong>7–9</strong>, you deploy normally.</li>
-<li>On a <strong>10–12</strong>, you deploy normally with an extra tactical supply.</li>
-<li>On a <strong>13 or greater</strong>, you deploy normally with an extra tactical supply, and your next <em>action roll</em> has an <em>advantage</em>.</li>
+<li><strong>INTEL</strong>: Ask a single question about the mission, and the GM will reply with a “yes” or “no.”</li>
+<li><strong>PATCH UP</strong>: Recover <strong>1D6 HP</strong>.</li>
+<li><strong>RECUPERATE</strong>: Remove <strong>1D6</strong> <em>stress points</em> and <strong>1D3</strong> <em>fatigue</em>.</li>
+<li><strong>RESUPPLY</strong>: Add <strong>one</strong> unit of tactical supplies to your inventory.</li>
 </ul>
-<h2 id="recovery">Recovery<a class="headerlink" href="#recovery" title="Permanent link">&para;</a></h2>
-<p>Once per mission, the team can send a <em>rendezvous signal</em>. When the signal is activated, the GM describes a nearby rendezvous point and the obstacles to reaching it.</p>
-<p>Players are safe as long as they remain at the rendezvous point. Each player at the point chooses <strong>one</strong> of the following bonuses:</p>
-<ul>
-<li><strong>HEAL</strong>: Recover 1D6 HP.</li>
-<li><strong>INTEL</strong>: Receive one useful fact about the mission from the GM.</li>
-<li><strong>REST</strong>: Remove 1D6 <em>stress</em> and 1 <em>fatigue</em>.</li>
-<li><strong>RESUPPLY</strong>: Restock either one limited-use item or <em>ammo</em> for a single ranged weapon.</li>
-</ul>
-<h2 id="deprivation-and-fatigue">Deprivation and Fatigue<a class="headerlink" href="#deprivation-and-fatigue" title="Permanent link">&para;</a></h2>
-<p>A character can’t heal HP when recovering at a rendezvous point if deprived of a crucial need (such as food, water, or warmth). Anyone deprived for more than a day adds <em>fatigue</em> to their inventory, one unit of <em>fatigue</em> each day. </p>
-<p>Characters can also gain <em>fatigue</em> during play, such as from ability use, specific events in the narrative, or failed <em>action rolls</em>. Each unit of <em>fatigue</em> occupies one inventory slot and lasts until the character rests at a rendezvous point or between missions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You <strong>cannot</strong> patch up and recover hit points without medical supplies, such as an IFAK in your basic kit.</p>
+</div>
 
 
 
@@ -1176,7 +2055,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Back to top
 </button>
         
@@ -1189,35 +2068,35 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../character/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Your Character">
+          <a href="../playing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Operations">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
               <div class="md-ellipsis">
-                Your Character
+                Operations
               </div>
             </div>
           </a>
         
         
           
-          <a href="../stress/" class="md-footer__link md-footer__link--next" aria-label="Next: Stress">
+          <a href="../zones/" class="md-footer__link md-footer__link--next" aria-label="Next: Zones">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Stress
+                Zones
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
             </div>
           </a>
         
@@ -1246,10 +2125,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "content.action.edit", "navigation.footer", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.tooltips", "header.autohide", "navigation.footer", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

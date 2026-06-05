@@ -1,0 +1,332 @@
+/*
+ * PSIOPS Operative's Guide — Print Stylesheet
+ * ----------------------------------------
+ * Loaded via extra_css in mkdocs.yml.
+ * Screen styles are intentionally minimal; all heavy lifting is
+ * inside @media print so the live MkDocs Material site is unaffected.
+ *
+ * NOTE: @page :left and :right are not supported by Chrome's print engine.
+ * These rules are retained for compatibility with Firefox and WeasyPrint but
+ * have no effect when using Chrome's File → Print → Save as PDF workflow.
+ *
+ * TO GENERATE PDF:
+ *   Open the live site (or mkdocs serve) in Chrome.
+ *   File → Print → Save as PDF.
+ *   Paper: US Letter, Portrait.
+ *   Margins: None (this file handles all margins).
+ *   Enable: Background graphics.
+ *
+ * KNOWN EXCEPTIONS (print-only layout with no Markdown equivalent):
+ *   - Two-column RW random tables grid: CSS classes .tables-grid /
+ *     .tables-grid-col / .table-unit are defined here and in tcp-print.html.
+ *     To use from MkDocs, add raw HTML blocks to rw.md wrapping the tables.
+ *   - Title page full-page layout: handled in the standalone tcp-print.html only.
+ */
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+
+  /* ----------------------------------------------------------
+     PAGE GEOMETRY — US Letter, double-sided
+     ---------------------------------------------------------- */
+  @page {
+    size: letter portrait;
+    margin: 0.85in 0.75in 0.85in 1.0in; /* top outer bottom inner */
+  }
+
+  /* Recto (right / odd pages): binding gutter on left */
+  @page :right {
+    margin-left:  1.0in;
+    margin-right: 0.75in;
+  }
+
+  /* Verso (left / even pages): binding gutter on right */
+  @page :left {
+    margin-left:  0.75in;
+    margin-right: 1.0in;
+  }
+
+  /* ----------------------------------------------------------
+     HIDE MKDOCS MATERIAL CHROME
+     ---------------------------------------------------------- */
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-tabs,
+  .md-search,
+  .md-top,
+  [data-md-component="skip"],
+  .headerlink,
+  a.md-content__button {
+    display: none !important;
+  }
+
+  /* Remove Material's left-margin offset for the sidebar */
+  .md-main__inner,
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ----------------------------------------------------------
+     BASE TYPOGRAPHY
+     ---------------------------------------------------------- */
+  body {
+    font-family: Georgia, serif;  /* override screen system-ui stack for print */
+    font-size: 11pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    background: #fff;
+  }
+
+  /* ----------------------------------------------------------
+     ORPHAN / WIDOW CONTROL — the core fix
+     ---------------------------------------------------------- */
+  p {
+    orphans: 3;
+    widows: 3;
+    margin-bottom: 0.7em;
+  }
+
+  li {
+    orphans: 2;
+    widows: 2;
+    page-break-inside: avoid;
+    break-inside:      avoid;
+  }
+
+  /* ----------------------------------------------------------
+     HEADINGS — never strand a heading at the bottom of a page
+     ---------------------------------------------------------- */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after:      avoid;
+  }
+
+  /* H1 (Part breaks) always start on a fresh page */
+  h1 {
+    page-break-before: always;
+    break-before:      page;
+  }
+
+  /* ----------------------------------------------------------
+     TABLES — the other main pain point
+     ---------------------------------------------------------- */
+  table {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin: 1em 0 1.2em;
+  }
+
+  /* If a table MUST span pages, repeat the header row */
+  thead {
+    display: table-header-group;
+  }
+
+  /* Individual rows must never split across a page break */
+  tr {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+  }
+
+  th {
+    background: #1a1a1a !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 5pt 8pt;
+    text-align: left;
+    border: 1px solid #1a1a1a;
+    font-weight: 700;
+  }
+
+  td {
+    padding: 4pt 8pt;
+    border: 1px solid #ccc;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: #f5f4f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ----------------------------------------------------------
+     DICE OUTCOME TABLES (div.roll-table)
+     Renders as a borderless two-column list: bold fixed-width
+     roll range on the left, outcome text on the right.
+     The Markdown-generated "Roll | Result" thead is hidden.
+
+     SPECIFICITY NOTE: extra.css declares
+       .md-typeset table:not([class]) td  (specificity 0,2,2)
+     which outranks div.roll-table td (0,1,2) and would otherwise
+     apply its padding to roll-table cells in print. The !important
+     flags below override it, consistent with the pattern already
+     used for th backgrounds and alternating-row shading above.
+     ---------------------------------------------------------- */
+  div.roll-table {
+    margin: 0.4em 0 0.9em;
+    page-break-inside: avoid;
+    break-inside:      avoid;
+  }
+
+  div.roll-table table {
+    border-collapse: collapse;
+    border:          none;
+    width:           100%;
+    font-size:       inherit;  /* 11pt body, not the 10pt table default */
+    margin:          0;
+    page-break-inside: avoid;
+    break-inside:      avoid;
+  }
+
+  /* Hide the auto-generated "Roll | Result" column header row */
+  div.roll-table thead {
+    display: none;
+  }
+
+  div.roll-table td {
+    border:         none !important;
+    padding:        2pt 0 !important;
+    background:     transparent !important;
+    vertical-align: top;
+  }
+
+  /* Suppress the alternating-row shading from the global tr rule */
+  div.roll-table tr:nth-child(even) td {
+    background: transparent !important;
+  }
+
+  /* Roll-range column: bold, fixed width, non-wrapping */
+  div.roll-table td:first-child {
+    width:         4.5em;
+    font-weight:   700;
+    white-space:   nowrap;
+    padding-right: 6pt !important;
+  }
+
+  /* ----------------------------------------------------------
+     ADMONITIONS (Material callout blocks)
+     ---------------------------------------------------------- */
+  .admonition,
+  details {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+    border-left-width: 4px;
+    margin: 0.9em 0;
+  }
+
+  /* ----------------------------------------------------------
+     BLOCKQUOTES
+     ---------------------------------------------------------- */
+  blockquote {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* ----------------------------------------------------------
+     IMAGES
+     ---------------------------------------------------------- */
+  img {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+    max-width: 100%;
+  }
+
+  figure {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+    margin: 1em 0;
+  }
+
+  figcaption {
+    font-size: 9pt;
+    color: #444;
+    text-align: center;
+    margin-top: 4pt;
+  }
+
+  /* ----------------------------------------------------------
+     CODE BLOCKS
+     ---------------------------------------------------------- */
+  pre, code {
+    page-break-inside: avoid;
+    break-inside:      avoid;
+  }
+
+  /* ----------------------------------------------------------
+     LINKS — print the URL inline for reference
+     ---------------------------------------------------------- */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* Suppress URL expansion for anchor links and nav */
+  a[href^="#"]::after,
+  .md-nav a::after {
+    content: none;
+  }
+
+  /* ----------------------------------------------------------
+     TWO-COLUMN RANDOM TABLES GRID (RW section)
+     Float-based for cross-engine compatibility (Prince, WeasyPrint, browsers).
+     NOTE: There is no Markdown equivalent for this layout — it is print-only.
+     The .tables-grid, .tables-grid-col, and .table-unit classes must be
+     applied via raw HTML blocks in rw.md if MkDocs print output is needed.
+     ---------------------------------------------------------- */
+  .tables-grid     { width: 100%; overflow: hidden; }
+  .tables-grid-col { float: left; width: 48%; }
+  .tables-grid-col:last-child { float: right; }
+  .tables-grid table { margin: 0 0 10pt; width: 100%; }
+
+  /* Keep each bold label glued to its table across page breaks */
+  .table-unit   { page-break-inside: avoid; break-inside: avoid; margin-bottom: 4pt; }
+  .table-unit p { margin-bottom: 0.2em; }
+
+  /* ----------------------------------------------------------
+     DETAILS / COLLAPSIBLE ADMONITIONS
+     WeasyPrint renders <details> as static HTML; a closed block
+     shows only the <summary> and hides body content. Force open.
+     ---------------------------------------------------------- */
+  details {
+    display: block;
+  }
+
+  details > *:not(summary) {
+    display: block;
+  }
+
+  /* Fix overflow on table wrappers (WeasyPrint has no scroll model) */
+  .md-typeset__scrollwrap {
+    overflow: visible;
+  }
+
+  /* ----------------------------------------------------------
+     HORIZONTAL RULES
+     ---------------------------------------------------------- */
+  hr {
+    page-break-after: avoid;
+    break-after:      avoid;
+    border: none;
+    border-top: 1px solid #888;
+    margin: 1.5em 0;
+  }
+
+} /* end @media print */
