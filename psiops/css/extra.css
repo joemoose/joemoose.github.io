@@ -101,16 +101,16 @@ figcaption {
 
 .zones-diagram .zones-svg {
   display: block;
-  width: 100%;
   max-width: 360px;
+  width: auto;
   height: auto;
   margin: 0 auto;
 }
 
 .clocks-diagram .clocks-svg {
   display: block;
-  width: 100%;
-  max-width: 360p\x;
+  max-width: 490px;
+  width: auto;
   height: auto;
   margin: 0 auto;
 }
