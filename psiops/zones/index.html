@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -126,9 +126,19 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -136,9 +146,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -797,16 +807,8 @@
 <h3 id="zones-example">Zones Example<a class="headerlink" href="#zones-example" title="Permanent link">&para;</a></h3>
 <p>For example, the GM divides your objective area, a research facility, into several interconnected tactical zones, as shown in the following diagram.</p>
 <figure class="zones-diagram">
-
-  <object
-    class="zones-svg"
-    type="image/svg+xml"
-    data="../img/zones.svg"
-    aria-label="A series of index cards labeled with zone names representing significant areas of the research facility. Each card has connecting lines to indicate adjacent zones.">
-  </object>
-
-  <figcaption>Tactical Zones Example</figcaption>
-
+<svg viewBox="14 57 703 857" xmlns="http://www.w3.org/2000/svg" class="zones-svg" role="img" aria-label="A series of index cards labeled with zone names representing significant areas of the research facility. Each card has connecting lines to indicate adjacent zones." font-family="'Architects Daughter', cursive"><defs><filter id="vs1ryjik__boxShadow" width="160%" height="160%" x="-30%" y="-30%"><feDropShadow dx="3" dy="3" flood-color="#000" flood-opacity=".3" stdDeviation="3.5"/></filter><style>@import url(https://fonts.googleapis.com/css2?family=Architects+Daughter&amp;display=swap);.vs1ryjik__box{fill:var(--diagram-surface,#fff);stroke:currentColor;stroke-width:3;filter:url(#vs1ryjik__boxShadow)}.vs1ryjik__lbl{font-family:&quot;Architects Daughter&quot;,cursive;font-size:28px;fill:currentColor;text-anchor:middle;dominant-baseline:middle}</style></defs><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="m298 200-102 85m5 84-27 88m171 36 67-20m-232 67 12 79m165 40 55 9m-171 36 73 73m226-54-110 56"/><path d="M209 83h291v117H209z" class="vs1ryjik__box"/><text x="355" y="141" class="vs1ryjik__lbl">Forest edge</text><path d="M58 286h293v83H58z" class="vs1ryjik__box"/><text x="205" y="328" class="vs1ryjik__lbl">Kill Zone</text><path d="M40 457h305v83H40z" class="vs1ryjik__box"/><text x="192" y="498" class="vs1ryjik__lbl">Loading Dock</text><path d="M412 430h262v91H412z" class="vs1ryjik__box"/><text x="543" y="476" class="vs1ryjik__lbl">Catwalk</text><path d="M52 619h305v85H52z" class="vs1ryjik__box"/><text x="205" y="662" class="vs1ryjik__lbl">Office</text><path d="M412 619h268v104H412z" class="vs1ryjik__box"/><text x="546" y="655" class="vs1ryjik__lbl">Generator</text><text x="546" y="687" class="vs1ryjik__lbl">Room</text><path d="M217 777h280v100H217z" class="vs1ryjik__box"/><text x="357" y="811" class="vs1ryjik__lbl">Research</text><text x="357" y="843" class="vs1ryjik__lbl">Facility</text></svg>
+<figcaption>Tactical Zones Example</figcaption>
 </figure>
 
 <table>

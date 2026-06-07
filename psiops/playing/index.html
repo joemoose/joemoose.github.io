@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -126,9 +126,19 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -136,9 +146,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -417,6 +427,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#consequences-and-complications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -428,10 +449,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#action-check-results-example" class="md-nav__link">
+  <a href="#example-action-check-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Action Check Results Example
+        Example Action Check Results
       
     </span>
   </a>
@@ -907,6 +928,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#consequences-and-complications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -918,10 +950,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#action-check-results-example" class="md-nav__link">
+  <a href="#example-action-check-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Action Check Results Example
+        Example Action Check Results
       
     </span>
   </a>
@@ -1243,7 +1275,13 @@
 <p>When a specific attribute is required for an action check, the description specifies it. </p>
 <h3 id="roll-the-dice">Roll the Dice<a class="headerlink" href="#roll-the-dice" title="Permanent link">&para;</a></h3>
 <p>When you created your character, you assigned a <em>score</em> to each of your character’s <em>attributes</em>, with higher scores indicating greater ability. These scores increase your chances of success on <em>action rolls</em>.</p>
-<p>To make an <em>action check</em>, roll <strong>2D6 + the attribute’s score</strong>. The sum of the dice roll and the attribute’s score determines how well you succeed at your action, as shown in the following list. </p>
+<p>To make an <em>action roll</em>, roll <strong>2D6 + the ATTRIBUTE score</strong>. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If the roll is <strong>2D6 + STRENGTH</strong> and your Strength attribute is <em>3</em>, you would roll 2D6 + 3.</p>
+</div>
+<h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
+<p>The <strong>sum</strong> of the <em>dice roll</em> and the attribute <em>score</em> determines how well you succeed at your action, as shown in the following Results list:</p>
 <div class="roll-table">
 <table>
 <thead>
@@ -1255,11 +1293,11 @@
 <tbody>
 <tr>
 <td style="text-align: center;"><strong>6–</strong></td>
-<td style="text-align: left;">It's a <strong>failure</strong>. You don't achieve your goal and suffer a <em>consequence</em>.<br/>See  <a href="#consequences-and-complications">Consequences and Complications</a>.</td>
+<td style="text-align: left;">It's a <strong>failure</strong>. You don't achieve your goal and suffer an additional <em>consequence</em>. See the following section.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>7–9</strong></td>
-<td style="text-align: left;">It's a <strong>partial success</strong>. You achieve your goal, but with an unexpected <em>complication</em>. <br/>See <a href="#consequences-and-complications">Consequences and Complications</a>.</td>
+<td style="text-align: left;">It's a <strong>partial success</strong>. You achieve your goal, but with an unexpected <em>complication</em>. See the following section.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>10–12</strong></td>
@@ -1267,24 +1305,24 @@
 </tr>
 <tr>
 <td style="text-align: center;"><strong>13+</strong></td>
-<td style="text-align: left;">It's a <strong>critical success</strong>. You achieve your goal, and the result is <strong>better</strong> than you expected.</td>
+<td style="text-align: left;">It's a <strong>critical success</strong>. You achieve your goal, and the result <em>exceeds</em> your expectations. Work with your GM to determine what else happens.</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h3 id="consequences-and-complications">Consequences and Complications<a class="headerlink" href="#consequences-and-complications" title="Permanent link">&para;</a></h3>
-<p><em>Consequences</em> and <em>complications</em> arise when the results of your actions aren’t fully successful. Consequences stem from failure, while complications stem from partial success.</p>
-<h4 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h4>
-<p>Something goes wrong, with a detriment to your tactical situation or combat readiness. You could be injured, damage equipment, trigger a new threat, or become separated from your unit. Your situation worsens, and circumstances turn against you. </p>
-<h4 id="complications">Complications<a class="headerlink" href="#complications" title="Permanent link">&para;</a></h4>
+<p><em>Consequences</em> and <em>complications</em> arise when the results of your actions aren’t a complete success. Consequences stem from failure, whereas complications stem from partial success.</p>
+<h4 id="consequences-of-failing">Consequences of Failing<a class="headerlink" href="#consequences-of-failing" title="Permanent link">&para;</a></h4>
+<p>You don’t achieve what you intended. In addition, something else goes wrong, with a detriment to your tactical situation or combat readiness. You could be injured, damage equipment, trigger a new threat, or become separated from your unit. Your situation worsens, and circumstances turn against you. </p>
+<h4 id="complications-of-partial-success">Complications of Partial Success<a class="headerlink" href="#complications-of-partial-success" title="Permanent link">&para;</a></h4>
 <p>You accomplish what you intended, but at a cost, such as a difficult choice or reduced impact on the outcome. Your tactical situation is likely to become more complicated.</p>
-<h3 id="action-check-results-example">Action Check Results Example<a class="headerlink" href="#action-check-results-example" title="Permanent link">&para;</a></h3>
+<h3 id="example-action-check-results">Example Action Check Results<a class="headerlink" href="#example-action-check-results" title="Permanent link">&para;</a></h3>
 <p>To compare the four types of results from an action roll, consider the following example.</p>
-<p>“<strong>You try to quietly pick a lock. Roll 2D6 + REFLEXES. The result is…</strong>”</p>
+<p>“<strong>You try to quietly pick a door lock. Roll 2D6 + REFLEXES. The result is…</strong>”</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Roll</th>
+<th style="text-align: center;">Sum</th>
 <th style="text-align: left;">Result</th>
 <th style="text-align: left;">GM’s Description</th>
 </tr>
@@ -1293,12 +1331,12 @@
 <tr>
 <td style="text-align: center;"><strong>6–</strong></td>
 <td style="text-align: left;">Failure</td>
-<td style="text-align: left;">“You can’t pick the lock, and the door stays <em>locked</em>. You hear someone approaching your position. You’re trapped in the hallway.”</td>
+<td style="text-align: left;">“You can’t pick the lock, and the door remains <em>locked</em>. You hear someone approaching your position. You’re trapped in the hallway.”</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>7–9</strong></td>
 <td style="text-align: left;">Partial Success</td>
-<td style="text-align: left;">“The door is now <em>unlocked</em>. No one hears you, but you <em>break</em> your lock pick. Remove it from your inventory. ”</td>
+<td style="text-align: left;">“The door is now <em>unlocked</em>. No one hears you, but you break your lock pick. Remove it from your inventory.”</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>10–12</strong></td>
@@ -1308,7 +1346,7 @@
 <tr>
 <td style="text-align: center;"><strong>13+</strong></td>
 <td style="text-align: left;">Critical Success</td>
-<td style="text-align: left;">“The door is now <em>unlocked</em>. No one hears you. You’re good to go. You peek around the door and spot the guard asleep at a security console.”</td>
+<td style="text-align: left;">“The door is now <em>unlocked</em>. No one hears you. You’re good to go. You peek around the door and spot a guard asleep at a security console.”</td>
 </tr>
 </tbody>
 </table>
@@ -1422,34 +1460,12 @@
 </ul>
 <p>For details on combat, see the <a href="../combat/">Combat section</a>.</p>
 <h4 id="evade">Evade<a class="headerlink" href="#evade" title="Permanent link">&para;</a></h4>
-<p>Spend <strong>4 momentum</strong> to avoid the consequence of a failed <em>action roll</em>. Roll <strong>2D6 + Applicale Attribute</strong> and apply the result. See <a href="#choose-an-applicable-attribute">Choose an Applicable Attribute</a> to determine which attribute score to select. </p>
-<div class="roll-table">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Roll</th>
-<th style="text-align: left;">Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>6–</strong></td>
-<td style="text-align: left;">You do not avoid the consequence, and it <strong>still happens</strong>.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>7–9</strong></td>
-<td style="text-align: left;">The consequence is <strong>less severe</strong> than expected.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>10–12</strong></td>
-<td style="text-align: left;">The consequence is <strong>entirely avoided</strong>.</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>13+</strong></td>
-<td style="text-align: left;">The consequence is <strong>entirely avoided</strong>, and your next <em>action check</em> has <em>advantage</em>.</td>
-</tr>
-</tbody>
-</table>
+<p>Spend <strong>4 momentum</strong> points to avoid the <em>consequence</em> of a failed <em>action roll</em>. Your action still <strong>fails</strong>. However, you no longer incur the extra <em>consequence</em> of a failed result.</p>
+<p>See <a href="#consequences-of-failing">Consequences of Failing</a>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>While being pursued by the enemy, you attempt to scale a wall. Your REFLEXES action roll fails. You not only fail to climb the wall, but you also land flat on your back and drop your weapon, as described by the GM.</p>
+<p>You can spend 4 momentum to evade this consequence. You still won't make it over the wall, but at least you’re on your feet, combat-ready, with your rifle in hand. </p>
 </div>
 <h4 id="flashback">Flashback<a class="headerlink" href="#flashback" title="Permanent link">&para;</a></h4>
 <p>Spend <strong>6 momentum</strong> points to establish that you did something before deployment. The flashback retroactively adds those preparations to the current mission. For example, you might have prepared a weapons cache, forged a document, or arranged a contact at a location. </p>
@@ -1468,16 +1484,67 @@
 <p>Complex tasks that require multiple actions to complete or impending threats to your unit are tracked on mission clocks. The GM will typically divide the mission clock into 4, 6, or 8 segments. The more complex the task or the more time available before the threat, the more segments the clock has. Progress is tracked by marking off segments on the mission clock. </p>
 <h3 id="example-clocks">Example Clocks<a class="headerlink" href="#example-clocks" title="Permanent link">&para;</a></h3>
 <figure class="clocks-diagram">
+<svg viewBox="-50 216 820 535" xmlns="http://www.w3.org/2000/svg" class="clocks-svg" role="img" aria-label="Two segmented progress clocks. The left clock, labeled Task, shows 2 of 6 segments filled and reads In Progress. The right clock, labeled Threat, shows 3 of 4 segments filled and reads Danger Imminent." font-family="'Architects Daughter', cursive">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&amp;display=swap');
+      .clocks-svg text { font-family: 'Architects Daughter', cursive; fill: currentColor; }
+      .clocks-svg .hdr { font-size: 38px; text-anchor: middle; }
+      .clocks-svg .sub { font-size: 24px; text-anchor: middle; }
+      .clocks-svg .foot { font-size: 28px; text-anchor: middle; }
+      .clocks-svg .num { font-size: 30px; text-anchor: middle; dominant-baseline: middle; }
+      /* numbers sitting on a filled (colored) segment stay light in both modes */
+      .clocks-svg .num.on-fill { fill: var(--diagram-on-fill, #F0EFEA); }
+    </style>
+    <filter id="boxShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2.5" dy="3" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <text x="140.00" y="270" class="hdr">Task</text>
+  <text x="140.00" y="305" class="sub">6 segments &#183; 2 of 6 filled</text>
+  <circle cx="140.00" cy="500" r="160" fill="var(--diagram-surface,#fff)" filter="url(#boxShadow)"/>
+  <path d="M 140.00,500 L 140.00,340.00 A 160,160 0 0,1 278.56,420.00 Z" fill="#2F6A3A"/>
+  <path d="M 140.00,500 L 278.56,420.00 A 160,160 0 0,1 278.56,580.00 Z" fill="#2F6A3A"/>
+  <path d="M 140.00,500 L 278.56,580.00 A 160,160 0 0,1 140.00,660.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 140.00,660.00 A 160,160 0 0,1 1.44,580.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 1.44,580.00 A 160,160 0 0,1 1.44,420.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 1.44,420.00 A 160,160 0 0,1 140.00,340.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <line x1="140.00" y1="500" x2="140.00" y2="340.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="278.56" y2="420.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="278.56" y2="580.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="140.00" y2="660.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="1.44" y2="580.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="1.44" y2="420.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="140.00" cy="500" r="160" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="140.00" cy="500" r="6" fill="#5a5a5a"/>
+  <text x="189.60" y="414.09" class="num on-fill">1</text>
+  <text x="239.20" y="500.00" class="num on-fill">2</text>
+  <text x="189.60" y="585.91" class="num">3</text>
+  <text x="90.40" y="585.91" class="num">4</text>
+  <text x="40.80" y="500.00" class="num">5</text>
+  <text x="90.40" y="414.09" class="num">6</text>
+  <text x="140.00" y="720" class="foot">In Progress</text>
+  <text x="580.00" y="270" class="hdr">Threat</text>
+  <text x="580.00" y="305" class="sub">4 segments &#183; 3 of 4 filled</text>
+  <circle cx="580.00" cy="500" r="160" fill="var(--diagram-surface,#fff)" filter="url(#boxShadow)"/>
+  <path d="M 580.00,500 L 580.00,340.00 A 160,160 0 0,1 740.00,500.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 740.00,500.00 A 160,160 0 0,1 580.00,660.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 580.00,660.00 A 160,160 0 0,1 420.00,500.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 420.00,500.00 A 160,160 0 0,1 580.00,340.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <line x1="580.00" y1="500" x2="580.00" y2="340.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="740.00" y2="500.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="580.00" y2="660.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="420.00" y2="500.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="580.00" cy="500" r="160" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="580.00" cy="500" r="6" fill="#5a5a5a"/>
+  <text x="650.14" y="429.86" class="num on-fill">1</text>
+  <text x="650.14" y="570.14" class="num on-fill">2</text>
+  <text x="509.86" y="570.14" class="num on-fill">3</text>
+  <text x="509.86" y="429.86" class="num">4</text>
+  <text x="580.00" y="720" class="foot">Danger Imminent</text>
+</svg>
 
-  <object
-    class="clocks-svg"
-    type="image/svg+xml"
-    data="../img/clocks.svg"
-    aria-label="Two mission clocks: a 6-segment clock tracking a task's progress, and a 4-segment clock counting down an imminent threat">
-  </object>
-
-  <figcaption>Example Mission Clocks</figcaption>
-
+<figcaption>Mission Clocks Example</figcaption>
 </figure>
 
 <h3 id="track-complex-tasks">Track Complex Tasks<a class="headerlink" href="#track-complex-tasks" title="Permanent link">&para;</a></h3>
