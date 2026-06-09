@@ -1,0 +1,59 @@
+<svg viewBox="-50 216 820 535" xmlns="http://www.w3.org/2000/svg" class="clocks-svg" role="img" aria-label="Two segmented progress clocks. The left clock, labeled Task, shows 2 of 6 segments filled and reads In Progress. The right clock, labeled Threat, shows 3 of 4 segments filled and reads Danger Imminent." font-family="'Architects Daughter', cursive">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&amp;display=swap');
+      .clocks-svg text { font-family: 'Architects Daughter', cursive; fill: currentColor; }
+      .clocks-svg .hdr { font-size: 38px; text-anchor: middle; }
+      .clocks-svg .sub { font-size: 24px; text-anchor: middle; }
+      .clocks-svg .foot { font-size: 28px; text-anchor: middle; }
+      .clocks-svg .num { font-size: 30px; text-anchor: middle; dominant-baseline: middle; }
+      /* numbers sitting on a filled (colored) segment stay light in both modes */
+      .clocks-svg .num.on-fill { fill: var(--diagram-on-fill, #F0EFEA); }
+    </style>
+    <filter id="boxShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2.5" dy="3" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <text x="140.00" y="270" class="hdr">Task</text>
+  <text x="140.00" y="305" class="sub">6 segments &#183; 2 of 6 filled</text>
+  <circle cx="140.00" cy="500" r="160" fill="var(--diagram-surface,#fff)" filter="url(#boxShadow)"/>
+  <path d="M 140.00,500 L 140.00,340.00 A 160,160 0 0,1 278.56,420.00 Z" fill="#2F6A3A"/>
+  <path d="M 140.00,500 L 278.56,420.00 A 160,160 0 0,1 278.56,580.00 Z" fill="#2F6A3A"/>
+  <path d="M 140.00,500 L 278.56,580.00 A 160,160 0 0,1 140.00,660.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 140.00,660.00 A 160,160 0 0,1 1.44,580.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 1.44,580.00 A 160,160 0 0,1 1.44,420.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <path d="M 140.00,500 L 1.44,420.00 A 160,160 0 0,1 140.00,340.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <line x1="140.00" y1="500" x2="140.00" y2="340.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="278.56" y2="420.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="278.56" y2="580.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="140.00" y2="660.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="1.44" y2="580.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140.00" y1="500" x2="1.44" y2="420.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="140.00" cy="500" r="160" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="140.00" cy="500" r="6" fill="#5a5a5a"/>
+  <text x="189.60" y="414.09" class="num on-fill">1</text>
+  <text x="239.20" y="500.00" class="num on-fill">2</text>
+  <text x="189.60" y="585.91" class="num">3</text>
+  <text x="90.40" y="585.91" class="num">4</text>
+  <text x="40.80" y="500.00" class="num">5</text>
+  <text x="90.40" y="414.09" class="num">6</text>
+  <text x="140.00" y="720" class="foot">In Progress</text>
+  <text x="580.00" y="270" class="hdr">Threat</text>
+  <text x="580.00" y="305" class="sub">4 segments &#183; 3 of 4 filled</text>
+  <circle cx="580.00" cy="500" r="160" fill="var(--diagram-surface,#fff)" filter="url(#boxShadow)"/>
+  <path d="M 580.00,500 L 580.00,340.00 A 160,160 0 0,1 740.00,500.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 740.00,500.00 A 160,160 0 0,1 580.00,660.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 580.00,660.00 A 160,160 0 0,1 420.00,500.00 Z" fill="#DA7A6E"/>
+  <path d="M 580.00,500 L 420.00,500.00 A 160,160 0 0,1 580.00,340.00 Z" fill="var(--diagram-empty,#F0EFEA)"/>
+  <line x1="580.00" y1="500" x2="580.00" y2="340.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="740.00" y2="500.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="580.00" y2="660.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="580.00" y1="500" x2="420.00" y2="500.00" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="580.00" cy="500" r="160" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="580.00" cy="500" r="6" fill="#5a5a5a"/>
+  <text x="650.14" y="429.86" class="num on-fill">1</text>
+  <text x="650.14" y="570.14" class="num on-fill">2</text>
+  <text x="509.86" y="570.14" class="num on-fill">3</text>
+  <text x="509.86" y="429.86" class="num">4</text>
+  <text x="580.00" y="720" class="foot">Danger Imminent</text>
+</svg>
