@@ -264,7 +264,7 @@
     z-index: 9999;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
   }
   #dice-overlay.rolling{ opacity: 1; }
   #dice-overlay canvas{
@@ -546,7 +546,7 @@
         clearTimeout(overlayTimer);
         overlayEl.classList.add('rolling');
         await diceBox.roll(qty + 'd6@' + diceValues.join(','));
-        overlayTimer = setTimeout(() => overlayEl.classList.remove('rolling'), 2500);
+        overlayTimer = setTimeout(() => overlayEl.classList.remove('rolling'), 3000);
       } catch (err) {
         console.warn('Dice animation failed (roll still counts):', err);
         overlayEl.classList.remove('rolling');
