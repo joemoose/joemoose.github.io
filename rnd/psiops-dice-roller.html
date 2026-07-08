@@ -156,8 +156,26 @@
     color: var(--text-dim);
     margin-bottom: 10px;
     display:flex;
+    align-items:center;
     justify-content:space-between;
   }
+
+  .log-header .right{ display:flex; align-items:center; gap:10px; }
+
+  .clear-btn{
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .clear-btn:hover{ color: var(--miss); border-color: var(--miss); }
+  .clear-btn:disabled{ opacity: 0.4; cursor: default; }
 
   .entry{
     display:flex;
@@ -279,7 +297,10 @@
 
   <div class="log-header">
     <span>Recent rolls</span>
-    <span id="roll-count"></span>
+    <span class="right">
+      <span id="roll-count"></span>
+      <button class="clear-btn" id="clear-btn" title="Clear all rolls in this room, for everyone">Clear</button>
+    </span>
   </div>
   <div id="log"></div>
   <div class="empty" id="empty-state">No rolls yet in this room.</div>
@@ -292,8 +313,8 @@
   // 2. Run the SQL from SETUP.md in the Supabase SQL editor
   // 3. Settings -> API: copy the Project URL and anon public key below
   // ---------------------------------------------------------------
-  const SUPABASE_URL = 'https://krlvnqewikgcgpdmwvyu.supabase.co';
-  const SUPABASE_ANON_KEY = 'sb_publishable_2Ob8SVggXrxPGL8oUN99HQ_NcnqhK9v';
+  const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+  const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
   document.getElementById('room-name').textContent = ROOM;
@@ -303,6 +324,7 @@
   if (!configured) {
     document.getElementById('config-warning').style.display = 'block';
     document.getElementById('roll-btn').disabled = true;
+    document.getElementById('clear-btn').disabled = true;
   }
 
   const PLAYER_KEY = 'pbta-roller-player-name';
@@ -362,6 +384,7 @@
 
     const entry = document.createElement('div');
     entry.className = 'entry';
+    entry.dataset.id = row.id;
 
     const diceHtml = row.dice.map(v => {
       const isDropped = row.dropped !== null && v === row.dropped;
@@ -381,6 +404,15 @@
     } else {
       logEl.appendChild(entry);
     }
+  }
+
+  function removeEntry(id){
+    const el = logEl.querySelector(`[data-id="${id}"]`);
+    if (!el) return;
+    el.remove();
+    rollCount = Math.max(0, rollCount - 1);
+    countEl.textContent = rollCount || '';
+    if (rollCount === 0) emptyEl.style.display = 'block';
   }
 
   function escapeHtml(str){
@@ -407,13 +439,21 @@
       console.error(error);
       document.getElementById('status-text').textContent = 'error loading history';
     } else {
-      data.reverse().forEach(row => renderEntry(row, false));
+      data.forEach(row => renderEntry(row, false));
     }
 
     sb.channel('room-' + ROOM)
       .on('postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'rolls', filter: `room=eq.${ROOM}` },
         payload => renderEntry(payload.new, true)
+      )
+      .on('postgres_changes',
+        // No room filter here: Postgres only includes the primary key in the
+        // "old row" payload for deletes by default, so filtering on `room`
+        // wouldn't match. Matching by id client-side instead is a no-op for
+        // rows from other rooms, so this is safe either way.
+        { event: 'DELETE', schema: 'public', table: 'rolls' },
+        payload => removeEntry(payload.old.id)
       )
       .subscribe((status) => {
         const el = document.getElementById('status');
@@ -446,6 +486,25 @@
     });
 
     if (error) console.error(error);
+  });
+
+  document.getElementById('clear-btn').addEventListener('click', async () => {
+    const ok = confirm('Clear all rolls in room "' + ROOM + '" for everyone? This can\'t be undone.');
+    if (!ok) return;
+
+    const { error } = await sb.from('rolls').delete().eq('room', ROOM);
+    if (error) {
+      console.error(error);
+      alert('Could not clear the log: ' + error.message);
+      return;
+    }
+
+    // Optimistic local clear — the DELETE events above will also arrive and
+    // no-op harmlessly against an already-empty log.
+    logEl.innerHTML = '';
+    rollCount = 0;
+    countEl.textContent = '';
+    emptyEl.style.display = 'block';
   });
 </script>
 </body>
