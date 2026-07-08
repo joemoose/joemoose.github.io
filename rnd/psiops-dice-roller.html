@@ -262,7 +262,10 @@
     inset: 0;
     z-index: 9999;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
+  #dice-overlay.rolling{ opacity: 1; }
   #dice-overlay canvas{
     width: 100%;
     height: 100%;
@@ -355,43 +358,45 @@
     document.querySelectorAll('#mode-toggle button').forEach(b => b.classList.toggle('active', b === btn));
   });
 
-  // 3D dice are local-only: the physics roll happens on this device, and its
-  // outcome becomes the value that gets logged to Supabase for everyone.
-  // Other players never see the 3D animation — only the resulting number in
-  // the log, same as always. If the assets fail to load (offline, older
-  // device, blocked CDN) diceBoxReady just stays false and rolls silently
-  // fall back to a plain random number, so the roller keeps working either way.
+  // 3D dice are local-only visual flavor. The roll values are generated
+  // first with the same RNG as always, logged to Supabase as the result,
+  // and THEN the dice are animated with a predetermined outcome — the
+  // dice-box-threejs library tumbles them so they land exactly on the
+  // values we already decided. The animation is therefore guaranteed to
+  // match the log; it cannot disagree by construction. If the library
+  // fails to load, rolls simply happen without animation.
   let diceBox = null;
   let diceBoxReady = false;
+  let overlayTimer = null;
+  const overlayEl = document.getElementById('dice-overlay');
 
   (async () => {
     try {
-      const { default: DiceBox } = await import(
-        'https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/dice-box.es.min.js'
+      const mod = await import(
+        'https://cdn.jsdelivr.net/npm/@3d-dice/dice-box-threejs@0.0.12/+esm'
       );
-      diceBox = new DiceBox({
-        container: '#dice-overlay',
-        id: 'dice-canvas',
-        assetPath: 'assets/',
-        origin: 'https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/',
-        theme: 'default',
-        themeColor: '#ffb000',
-        // Slightly smaller dice with gentler throws: each die's value is
-        // locked the moment the physics engine considers it settled, so a
-        // still-tumbling die bumping an already-settled one can change the
-        // visible face without changing the recorded value. Less energy and
-        // less crowding make that much rarer. If it ever still happens, the
-        // log is the authoritative result.
-        scale: 4,
-        throwForce: 4,
-        spinForce: 3,
-        gravity: 1,
-        settleTimeout: 5000
+      const DiceBox = mod.default;
+      diceBox = new DiceBox('#dice-overlay', {
+        sounds: false,
+        shadows: true,
+        light_intensity: 0.8,
+        gravity_multiplier: 400,
+        // Dice size — raise or lower to taste (default 100)
+        baseScale: 90,
+        strength: 1.5,
+        theme_customColorset: {
+          background: '#ffb000',
+          foreground: '#1a1400',
+          texture: 'none',
+          material: 'plastic'
+        }
       });
-      await diceBox.init();
+      if (typeof diceBox.initialize === 'function') {
+        await diceBox.initialize();
+      }
       diceBoxReady = true;
     } catch (err) {
-      console.warn('3D dice unavailable, using plain rolls instead:', err);
+      console.warn('3D dice unavailable, rolling without animation:', err);
       diceBoxReady = false;
     }
   })();
@@ -531,18 +536,20 @@
     const modifier = parseInt(document.getElementById('modifier').value, 10) || 0;
     const qty = mode === 'normal' ? 2 : 3;
 
-    let diceValues;
+    // The values are decided here, before any animation. These are what
+    // gets logged; the 3D dice are then told to land on exactly these.
+    const diceValues = Array.from({ length: qty }, rollDie);
+
     if (diceBoxReady) {
       try {
-        const results = await diceBox.roll(qty + 'd6');
-        diceValues = results[0].rolls.map(r => r.value);
-        setTimeout(() => diceBox.clear(), 2500);
+        clearTimeout(overlayTimer);
+        overlayEl.classList.add('rolling');
+        await diceBox.roll(qty + 'd6@' + diceValues.join(','));
+        overlayTimer = setTimeout(() => overlayEl.classList.remove('rolling'), 2500);
       } catch (err) {
-        console.warn('3D roll failed, using a plain roll instead:', err);
-        diceValues = Array.from({ length: qty }, rollDie);
+        console.warn('Dice animation failed (roll still counts):', err);
+        overlayEl.classList.remove('rolling');
       }
-    } else {
-      diceValues = Array.from({ length: qty }, rollDie);
     }
 
     const { dice, dropped, kept } = resolveRoll(diceValues, mode);
