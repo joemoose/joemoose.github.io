@@ -318,7 +318,7 @@
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
   document.getElementById('room-name').textContent = ROOM;
-  document.title = 'PSIOPS Roller — ' + ROOM;
+  document.title = 'PSIOPS Roller (lite) — ' + ROOM;
 
   const configured = SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 20;
   if (!configured) {
@@ -386,8 +386,13 @@
     entry.className = 'entry';
     entry.dataset.id = row.id;
 
+    // Only one die was actually dropped, so strike through exactly one —
+    // the first die matching the dropped value — even when several dice
+    // share that value (e.g. rolling 6,1,1 with advantage drops one 1).
+    let droppedShown = false;
     const diceHtml = row.dice.map(v => {
-      const isDropped = row.dropped !== null && v === row.dropped;
+      const isDropped = row.dropped !== null && v === row.dropped && !droppedShown;
+      if (isDropped) droppedShown = true;
       return `<span class="die${isDropped ? ' dropped' : ''}">${v}</span>`;
     }).join('');
 

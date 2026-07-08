@@ -326,7 +326,7 @@
   // 2. Run the SQL from SETUP.md in the Supabase SQL editor
   // 3. Settings -> API: copy the Project URL and publishable key below
   // ---------------------------------------------------------------
-const SUPABASE_URL = 'https://krlvnqewikgcgpdmwvyu.supabase.co';
+  const SUPABASE_URL = 'https://krlvnqewikgcgpdmwvyu.supabase.co';
   const SUPABASE_ANON_KEY = 'sb_publishable_2Ob8SVggXrxPGL8oUN99HQ_NcnqhK9v';
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
@@ -376,7 +376,15 @@ const SUPABASE_URL = 'https://krlvnqewikgcgpdmwvyu.supabase.co';
         origin: 'https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/',
         theme: 'default',
         themeColor: '#ffb000',
-        scale: 6,
+        // Slightly smaller dice with gentler throws: each die's value is
+        // locked the moment the physics engine considers it settled, so a
+        // still-tumbling die bumping an already-settled one can change the
+        // visible face without changing the recorded value. Less energy and
+        // less crowding make that much rarer. If it ever still happens, the
+        // log is the authoritative result.
+        scale: 4,
+        throwForce: 4,
+        spinForce: 3,
         gravity: 1,
         settleTimeout: 5000
       });
@@ -433,8 +441,13 @@ const SUPABASE_URL = 'https://krlvnqewikgcgpdmwvyu.supabase.co';
     entry.className = 'entry';
     entry.dataset.id = row.id;
 
+    // Only one die was actually dropped, so strike through exactly one —
+    // the first die matching the dropped value — even when several dice
+    // share that value (e.g. rolling 6,1,1 with advantage drops one 1).
+    let droppedShown = false;
     const diceHtml = row.dice.map(v => {
-      const isDropped = row.dropped !== null && v === row.dropped;
+      const isDropped = row.dropped !== null && v === row.dropped && !droppedShown;
+      if (isDropped) droppedShown = true;
       return `<span class="die${isDropped ? ' dropped' : ''}">${v}</span>`;
     }).join('');
 
