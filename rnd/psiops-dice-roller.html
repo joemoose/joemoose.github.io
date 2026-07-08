@@ -297,7 +297,7 @@
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
   document.getElementById('room-name').textContent = ROOM;
-  document.title = 'PbtA Roller — ' + ROOM;
+  document.title = 'PSIOPS Roller — ' + ROOM;
 
   const configured = SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 20;
   if (!configured) {
