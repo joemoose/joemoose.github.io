@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSIOPS Roller</title>
+<title>PSIOPS Dice Roller</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,7 +280,7 @@
 
   <header>
     <div class="stamp-label">// transmission log</div>
-    <h1 id="room-title">PSIOPS Roller</h1>
+    <h1 id="room-title">PSIOPS Dice Roller</h1>
     <div class="room-tag">room: <span id="room-name"></span></div>
     <div class="status" id="status"><span class="dot"></span><span id="status-text">connecting</span></div>
   </header>
@@ -335,7 +335,7 @@
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
   document.getElementById('room-name').textContent = ROOM;
-  document.title = 'PSIOPS Roller — ' + ROOM;
+  document.title = 'PSIOPS Dice Roller — ' + ROOM;
 
   const configured = SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 20;
   if (!configured) {
