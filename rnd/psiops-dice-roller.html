@@ -321,8 +321,6 @@
 </main>
 
 <script type="module">
-  import DiceBox from "https://unpkg.com/@3d-dice/[email protected]/dist/dice-box.es.min.js";
-
   // ---------------------------------------------------------------
   // 1. Create a free project at https://supabase.com
   // 2. Run the SQL from SETUP.md in the Supabase SQL editor
@@ -368,11 +366,14 @@
 
   (async () => {
     try {
+      const { default: DiceBox } = await import(
+        'https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/dice-box.es.min.js'
+      );
       diceBox = new DiceBox({
         container: '#dice-overlay',
         id: 'dice-canvas',
         assetPath: 'assets/',
-        origin: 'https://unpkg.com/@3d-dice/[email protected]/dist/',
+        origin: 'https://unpkg.com/@3d-dice/dice-box@1.1.4/dist/',
         theme: 'default',
         themeColor: '#ffb000',
         scale: 6,
