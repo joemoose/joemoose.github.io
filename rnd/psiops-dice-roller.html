@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSIOPS Dice Roller</title>
+<title>PSIOPS Roller</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,6 +150,25 @@
   .roll-btn:active{ transform: translateY(1px); }
   .roll-btn:disabled{ opacity: 0.5; cursor: default; }
 
+  .reset-btn{
+    padding: 14px 18px;
+    background: var(--bg-well);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: 'Special Elite', monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .reset-btn:hover{ color: var(--text); border-color: var(--text-dim); }
+
+  .mode-toggle button:disabled{ opacity: 0.35; cursor: default; }
+  input:disabled{ opacity: 0.35; }
+
+  .badge.d3, .badge.d6, .badge.d66{ color: var(--text-dim); }
+
   .log-header{
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -264,7 +283,7 @@
     z-index: 9999;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
   }
   #dice-overlay.rolling{ opacity: 1; }
   #dice-overlay canvas{
@@ -280,7 +299,7 @@
 
   <header>
     <div class="stamp-label">// transmission log</div>
-    <h1 id="room-title">PSIOPS Dice Roller</h1>
+    <h1 id="room-title">PSIOPS Roller</h1>
     <div class="room-tag">room: <span id="room-name"></span></div>
     <div class="status" id="status"><span class="dot"></span><span id="status-text">connecting</span></div>
   </header>
@@ -302,6 +321,14 @@
       </div>
     </div>
 
+    <label>Dice</label>
+    <div class="mode-toggle" id="kind-toggle" style="margin-bottom:14px;">
+      <button data-kind="2d6" class="active">2d6</button>
+      <button data-kind="d3">d3</button>
+      <button data-kind="d6">d6</button>
+      <button data-kind="d66">d66</button>
+    </div>
+
     <label>Roll type</label>
     <div class="mode-toggle" id="mode-toggle">
       <button data-mode="disadvantage">Disadvantage</button>
@@ -309,7 +336,10 @@
       <button data-mode="advantage">Advantage</button>
     </div>
 
-    <button class="roll-btn" id="roll-btn" style="margin-top:16px;">Roll</button>
+    <div style="display:flex; gap:10px; margin-top:16px;">
+      <button class="roll-btn" id="roll-btn" style="margin-top:0; flex:1;">Roll</button>
+      <button class="reset-btn" id="reset-btn" title="Reset modifier to 0, roll type to Normal, dice to 2d6">Reset</button>
+    </div>
   </div>
 
   <div class="log-header">
@@ -335,7 +365,7 @@
 
   const ROOM = new URLSearchParams(location.search).get('room') || 'lobby';
   document.getElementById('room-name').textContent = ROOM;
-  document.title = 'PSIOPS Dice Roller — ' + ROOM;
+  document.title = 'PSIOPS Roller — ' + ROOM;
 
   const configured = SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 20;
   if (!configured) {
@@ -355,8 +385,34 @@
   document.getElementById('mode-toggle').addEventListener('click', (e) => {
     const btn = e.target.closest('button[data-mode]');
     if (!btn) return;
+    if (btn.disabled) return;
     mode = btn.dataset.mode;
     document.querySelectorAll('#mode-toggle button').forEach(b => b.classList.toggle('active', b === btn));
+  });
+
+  let kind = '2d6';
+  const modifierInput = document.getElementById('modifier');
+
+  function setKind(k){
+    kind = k;
+    document.querySelectorAll('#kind-toggle button').forEach(b => b.classList.toggle('active', b.dataset.kind === k));
+    // d66 is a straight table lookup: no modifier, no advantage/disadvantage
+    const lookup = (k === 'd66');
+    modifierInput.disabled = lookup;
+    document.querySelectorAll('#mode-toggle button').forEach(b => b.disabled = lookup);
+  }
+
+  document.getElementById('kind-toggle').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-kind]');
+    if (!btn) return;
+    setKind(btn.dataset.kind);
+  });
+
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    modifierInput.value = 0;
+    mode = 'normal';
+    document.querySelectorAll('#mode-toggle button').forEach(b => b.classList.toggle('active', b.dataset.mode === 'normal'));
+    setKind('2d6');
   });
 
   // 3D dice are local-only visual flavor. The roll values are generated
@@ -403,6 +459,7 @@
   })();
 
   function rollDie(){ return 1 + Math.floor(Math.random() * 6); }
+  function rollD3(){ return 1 + Math.floor(Math.random() * 3); }
 
   // Turns a plain array of already-rolled d6 values into the kept/dropped
   // result for the current mode. Used for both the 3D physics results and
@@ -425,7 +482,9 @@
   }
 
   function bandLabel(band){
-    return { miss: 'Fail', partial: 'Partial', hit: 'Success' }[band];
+    // miss/partial/hit are 2d6 PbtA result bands; d3/d6/d66 are plain
+    // dice-type tags for rolls where those bands don't apply
+    return { miss: 'Fail', partial: 'Partial', hit: 'Success', d3: 'D3', d6: 'D6', d66: 'D66' }[band] || band;
   }
 
   function formatTime(iso){
@@ -458,10 +517,14 @@
     }).join('');
 
     const modSign = row.modifier >= 0 ? '+' + row.modifier : row.modifier;
+    // d66 is a lookup (tens/ones), so no modifier is shown in its readout
+    const readout = row.band === 'd66'
+      ? `${diceHtml}<span>=</span><span class="total">${row.total}</span>`
+      : `${diceHtml}<span class="mod">${modSign}</span><span>=</span><span class="total">${row.total}</span>`;
 
     entry.innerHTML = `
       <div class="who">${escapeHtml(row.player)}<span class="time">${formatTime(row.created_at)}</span></div>
-      <div class="dice-readout">${diceHtml}<span class="mod">${modSign}</span><span>=</span><span class="total">${row.total}</span></div>
+      <div class="dice-readout">${readout}</div>
       <div class="badge ${row.band}">${bandLabel(row.band)}</div>
     `;
 
@@ -534,28 +597,57 @@
   document.getElementById('roll-btn').addEventListener('click', async () => {
     const player = nameInput.value.trim() || 'Operative';
     localStorage.setItem(PLAYER_KEY, player);
-    const modifier = parseInt(document.getElementById('modifier').value, 10) || 0;
-    const qty = mode === 'normal' ? 2 : 3;
+    const modifier = kind === 'd66' ? 0 : (parseInt(modifierInput.value, 10) || 0);
 
-    // The values are decided here, before any animation. These are what
-    // gets logged; the 3D dice are then told to land on exactly these.
-    const diceValues = Array.from({ length: qty }, rollDie);
+    // Values are decided here, before any animation; these are what gets
+    // logged. The 3D dice (where shown) animate to land on exactly these.
+    let dice, dropped, kept, total, band, animValues = null;
 
-    if (diceBoxReady) {
+    if (kind === '2d6') {
+      const qty = mode === 'normal' ? 2 : 3;
+      const values = Array.from({ length: qty }, rollDie);
+      ({ dice, dropped, kept } = resolveRoll(values, mode));
+      total = kept[0] + kept[1] + modifier;
+      band = computeBand(total);
+      animValues = dice;
+    } else if (kind === 'd6' || kind === 'd3') {
+      const die = kind === 'd3' ? rollD3 : rollDie;
+      if (mode === 'normal') {
+        dice = [die()];
+        dropped = null;
+        kept = dice;
+      } else {
+        // Advantage/disadvantage on a single die: roll two, keep high/low
+        dice = [die(), die()];
+        const hi = Math.max(dice[0], dice[1]), lo = Math.min(dice[0], dice[1]);
+        if (mode === 'advantage') { kept = [hi]; dropped = lo; }
+        else { kept = [lo]; dropped = hi; }
+      }
+      total = kept[0] + modifier;
+      band = kind;
+      // No physical d3 die model exists, so d3 rolls skip the 3D animation
+      // rather than show a d6 face that wouldn't match the logged value
+      animValues = kind === 'd6' ? dice : null;
+    } else {
+      // d66: first die is tens, second is ones, read as 11-66
+      dice = [rollDie(), rollDie()];
+      dropped = null;
+      total = dice[0] * 10 + dice[1];
+      band = 'd66';
+      animValues = dice;
+    }
+
+    if (diceBoxReady && animValues) {
       try {
         clearTimeout(overlayTimer);
         overlayEl.classList.add('rolling');
-        await diceBox.roll(qty + 'd6@' + diceValues.join(','));
-        overlayTimer = setTimeout(() => overlayEl.classList.remove('rolling'), 3000);
+        await diceBox.roll(animValues.length + 'd6@' + animValues.join(','));
+        overlayTimer = setTimeout(() => overlayEl.classList.remove('rolling'), 2500);
       } catch (err) {
         console.warn('Dice animation failed (roll still counts):', err);
         overlayEl.classList.remove('rolling');
       }
     }
-
-    const { dice, dropped, kept } = resolveRoll(diceValues, mode);
-    const total = kept[0] + kept[1] + modifier;
-    const band = computeBand(total);
 
     const { error } = await sb.from('rolls').insert({
       room: ROOM,
@@ -564,7 +656,7 @@
       dropped,
       modifier,
       total,
-      mode,
+      mode: kind === 'd66' ? 'normal' : mode,
       band
     });
 
