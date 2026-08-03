@@ -20,6 +20,27 @@ both and let people choose:
 All the setup below applies to both files identically — same SQL, same credentials,
 same deployment. Fill the credentials into whichever file(s) you deploy.
 
+## Landing page
+
+`psiops-dice-landing.html` is an optional front door: a Create Room button that opens
+the roller with a random 6-digit room code, and a Join Room field for entering an
+existing code. It needs no Supabase credentials of its own — it just builds a
+`?room=` URL and navigates.
+
+Two things to know:
+
+- **It must be deployed in the same directory as `psiops-dice-roller.html`** — it
+  links to the roller by relative path, so the pair works together wherever they live.
+- **"Join" and "create" are the same thing underneath.** Rooms don't exist as objects
+  anywhere; a room is just a name in the URL, and it springs into being the first time
+  someone rolls in it. So joining a code nobody is using simply starts a fresh, empty
+  room at that code — exactly the intended behavior. Non-numeric room names (like an
+  existing `?room=psiopscampaign`) still work fine by direct URL; the landing page just
+  generates and accepts 6-digit codes.
+
+The roller pages also have a **Copy Link** button next to the room name that copies
+the room's full URL to the clipboard for sharing.
+
 ## 1. Create a Supabase project
 
 Go to https://supabase.com, sign up free, create a new project. Free tier is more
