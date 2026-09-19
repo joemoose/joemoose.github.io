@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blades in the Dark Pool Probabilities</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #f4f4f4;
+    --panel-bg: #e8e8e8;
+    --panel-border: #999;
+    --text: #1a1a1a;
+    --subtext: #555;
+    --grid: #c9c9c9;
+    --tooltip-bg: #ffffff;
+    --tooltip-border: #999;
+    --fail: #1a1a1a;
+    --partial: #d99b2b;
+    --success: #6fb3e0;
+    --critical: #4fa87a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181a;
+      --panel-bg: #202226;
+      --panel-border: #3a3d42;
+      --text: #eaeaea;
+      --subtext: #a8adb5;
+      --grid: #35383d;
+      --tooltip-bg: #26282c;
+      --tooltip-border: #45484f;
+      --fail: #d8d8d8;
+      --partial: #e3ab3f;
+      --success: #7ec1ec;
+      --critical: #5cc290;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181a;
+    --panel-bg: #202226;
+    --panel-border: #3a3d42;
+    --text: #eaeaea;
+    --subtext: #a8adb5;
+    --grid: #35383d;
+    --tooltip-bg: #26282c;
+    --tooltip-border: #45484f;
+    --fail: #d8d8d8;
+    --partial: #e3ab3f;
+    --success: #7ec1ec;
+    --critical: #5cc290;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 32px;
+    gap: 16px;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 900px;
+  }
+  h1 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 2px;
+  }
+  p.sub {
+    margin: 0 0 18px;
+    color: var(--subtext);
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+  .chart-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 16px 16px 8px;
+    overflow-x: auto;
+  }
+  .chart-inner {
+    position: relative;
+    min-width: 480px;
+    height: 60vw;
+    max-height: 480px;
+    min-height: 300px;
+  }
+  .legend-note {
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: var(--subtext);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Blades in the Dark Dice Pool — Outcome Probabilities</h1>
+    <p class="sub">Highest die of the pool determines the result: 1&ndash;4 fail, 5 partial success, 6 success, two or more 6s critical. Hover or tap any point for exact odds.</p>
+    <div class="chart-panel">
+      <div class="chart-inner">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <div class="legend-note">0d uses Blades' desperate-roll rule: the lower of 2d6, which can never crit.</div>
+  </div>
+
+<script>
+(function () {
+  // Data: P(highest of n d6 = k) recast into fail(1-4)/partial(5)/success(exactly one 6)/critical(2+ sixes)
+  // 0d follows Blades' "desperate" rule: take the lower of 2d6 as a single die (never crits).
+  const labels = ["0d","1d","2d","3d","4d","5d","6d","7d","8d"];
+
+  const data = {
+    fail:     [88.889, 66.667, 44.444, 29.630, 19.753, 13.169,  8.779,  5.859,  3.907],
+    partial:  [ 8.333, 16.667, 25.000, 28.241, 28.549, 26.973, 24.712, 22.056, 19.372],
+    success:  [ 2.778, 16.667, 27.778, 34.722, 38.580, 40.188, 40.188, 39.070, 37.209],
+    critical: [ 0.000,  0.000,  2.778,  7.407, 13.117, 19.670, 26.320, 33.014, 39.512]
+  };
+
+  function themeColor(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function buildDatasets() {
+    return [
+      { key: "fail",     label: "Fail",     color: themeColor("--fail") },
+      { key: "partial",  label: "Partial",  color: themeColor("--partial") },
+      { key: "success",  label: "Success",  color: themeColor("--success") },
+      { key: "critical", label: "Critical", color: themeColor("--critical") }
+    ].map(function (d) {
+      return {
+        label: d.label,
+        data: data[d.key],
+        borderColor: d.color,
+        backgroundColor: d.color,
+        pointBackgroundColor: d.color,
+        pointBorderColor: d.color,
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        tension: 0.25,
+        fill: false
+      };
+    });
+  }
+
+  const ctx = document.getElementById("chart").getContext("2d");
+  let chart;
+
+  function render() {
+    const gridColor = themeColor("--grid");
+    const textColor = themeColor("--text");
+    const tooltipBg = themeColor("--tooltip-bg");
+    const tooltipBorder = themeColor("--tooltip-border");
+
+    if (chart) chart.destroy();
+    chart = new Chart(ctx, {
+      type: "line",
+      data: { labels: labels, datasets: buildDatasets() },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "nearest", intersect: false, axis: "x" },
+        plugins: {
+          legend: {
+            position: "top",
+            align: "end",
+            labels: { color: textColor, usePointStyle: true, pointStyle: "rectRounded", boxWidth: 14, padding: 14 }
+          },
+          tooltip: {
+            backgroundColor: tooltipBg,
+            titleColor: textColor,
+            bodyColor: textColor,
+            borderColor: tooltipBorder,
+            borderWidth: 1,
+            padding: 10,
+            callbacks: {
+              label: function (item) {
+                return item.dataset.label + ": " + item.parsed.y.toFixed(1) + "%";
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: gridColor },
+            ticks: { color: textColor }
+          },
+          y: {
+            min: 0,
+            max: 90,
+            grid: { color: gridColor },
+            ticks: {
+              color: textColor,
+              stepSize: 22.5,
+              callback: function (v) { return v.toFixed(2) + "%"; }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  render();
+
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  }
+  window.addEventListener("resize", function () {
+    if (chart) chart.resize();
+  });
+})();
+</script>
+</body>
+</html>
