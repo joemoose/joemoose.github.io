@@ -62,6 +62,8 @@ button:focus-visible, svg:focus-visible, summary:focus-visible { outline: 2px so
 table { border-collapse: collapse; width: 100%; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
 th, td { padding: 7px 10px; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
 th:first-child, td:first-child { text-align: left; }
+/* Center all columns in the score-range/modifier table. */
+#bands th, #bands td, #bands th:first-child, #bands td:first-child { text-align: center; }
 thead th { color: var(--ink2); font-weight: 600; font-size: 0.78rem; }
 td .sw { display: inline-block; vertical-align: middle; margin-right: 8px; }
 .gap { margin-top: 24px; }
@@ -71,7 +73,8 @@ details[open] summary { margin-bottom: 12px; }
 .notes b { color: var(--ink); font-weight: 600; }
 h2 { font-size: 1rem; margin: 0; font-weight: 650; }
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header>
     <h1>Ability Score Curves</h1>
@@ -352,5 +355,5 @@ $('svg').addEventListener('keydown', e => {
 if (window.ResizeObserver) new ResizeObserver(() => render()).observe($('plot'));
 buildLegend(); buildTables(); render();
 </script>
-
+</body>
 </html>
