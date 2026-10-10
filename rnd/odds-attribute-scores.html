@@ -75,7 +75,7 @@ h2 { font-size: 1rem; margin: 0; font-weight: 650; }
 <div class="wrap">
   <header>
     <h1>Ability Score Curves</h1>
-    <p class="lede">Exact probabilities for six ways to generate a 3&ndash;18 attribute score, computed by enumerating every dice outcome. Click a method to hide it, hover or use the arrow keys to compare scores.</p>
+    <p class="lede">Exact probabilities for seven ways to generate a 3&ndash;18 attribute score, computed by enumerating every dice outcome. Click a method to hide it, hover or use the arrow keys to compare scores.</p>
   </header>
 
   <section class="panel" aria-label="Probability chart">
@@ -117,6 +117,7 @@ h2 { font-size: 1rem; margin: 0; font-weight: 650; }
       <li><b>Tatterdemalion's Tampering</b> Roll a d5 and 3d7. On 1&ndash;2 count each 7 as a 1; on 3 reroll 7s (identical to 3d6); on 4&ndash;5 count each 7 as a 6. The curve is the weighted mix 2/5, 1/5, 2/5.</li>
       <li><b>2d10, clamped</b> Sum of two d10, with results below 3 set to 3 and results above 18 set to 18.</li>
       <li><b>d16+2</b> One d16 plus 2, so every score from 3 to 18 is equally likely.</li>
+      <li><b>2d6+6</b> Sum of two d6 plus 6, giving scores from 8 to 18 only.</li>
     </ul>
   </section>
 </div>
@@ -160,6 +161,7 @@ const pmSez = dropLowest(faces(7, 6), 4);
 const pmTat = mix([[2 / 5, sumDice(faces(7, 1), 3)], [1 / 5, pm3d6], [2 / 5, sumDice(faces(7, 6), 3)]]);
 const pm2d10 = toPmf(put => enumerate(faces(10, 10), 2, (d, p) => put(Math.min(18, Math.max(3, d[0] + d[1])), p)));
 const pm16 = toPmf(put => { for (let i = 1; i <= 16; i++) put(i + 2, 1 / 16); });
+const pm2d6p6 = toPmf(put => enumerate(faces(6, 6), 2, (d, p) => put(d[0] + d[1] + 6, p)));
 // DIST-END
 
 const METHODS = [
@@ -169,6 +171,7 @@ const METHODS = [
   { key: 'mtat', name: "Tatterdemalion's Tampering", pmf: pmTat },
   { key: 'm2d10', name: '2d10, clamped 3\u201318', pmf: pm2d10 },
   { key: 'm16', name: 'd16+2', pmf: pm16 },
+  { key: 'm2d6', name: '2d6+6', pmf: pm2d6p6 },
 ].map((m, i) => {
   m.i = i;
   m.cum = SCORES.map((_, j) => m.pmf.slice(j).reduce((a, b) => a + b, 0));
