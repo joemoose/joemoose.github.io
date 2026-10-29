@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playbook attribute odds</title>
+<style>
+:root{--bg:#eef1f4;--card:#fff;--ink:#1b2733;--mute:#5d6b7a;--line:#d3dae1;--b0:#a23b5b;--b1:#c5ced7;--b2:#5b8db8;--b3:#2e6f73;--b4:#e0a526;--acc:#1b2733}
+@media (prefers-color-scheme:dark){:root{--bg:#141b22;--card:#1d2731;--ink:#e6ebf0;--mute:#97a5b3;--line:#33414f;--b0:#d0698a;--b1:#46566a;--b2:#6fa3cf;--b3:#4aa3a8;--b4:#e8b84a;--acc:#e6ebf0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:24px 16px 48px}
+main{max-width:920px;margin:0 auto}
+h1{font:600 30px/1.15 "Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 20px;max-width:64ch}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+button{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:7px 13px;cursor:pointer}
+button[aria-pressed=true]{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+button:focus-visible{outline:3px solid var(--b2);outline-offset:2px}
+.views button{border-radius:0;margin-right:-1px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mute);margin:0 0 14px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.row{display:grid;grid-template-columns:64px 1fr 56px;gap:12px;align-items:center;margin:10px 0}
+.row .n{font-weight:600}.row .n small{display:block;font-weight:400;color:var(--mute);font-size:12px}
+.stack{display:flex;height:34px;border-radius:4px;overflow:hidden;background:var(--line)}
+.seg{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#fff;min-width:0;overflow:hidden;white-space:nowrap}
+.seg.s1{color:var(--ink)}.seg.s4{color:#1b2733}
+.av{text-align:right;font-variant-numeric:tabular-nums;color:var(--mute);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.hist h3{margin:0 0 8px;font:600 15px system-ui}.hist h3 span{font-weight:400;color:var(--mute);font-size:13px;margin-left:6px}
+.cols{display:flex;align-items:flex-end;height:110px;gap:3px;border-bottom:1px solid var(--line)}
+.col{flex:1;border-radius:2px 2px 0 0;min-height:1px}
+.xl{display:flex;gap:3px;font-size:11px;color:var(--mute);margin-top:3px}.xl i{flex:1;text-align:center;font-style:normal}
+table{border-collapse:collapse;width:100%}
+th,td{padding:9px 6px;text-align:center;font-variant-numeric:tabular-nums}
+th{font-weight:600;font-size:13px;color:var(--mute)}th:first-child,td:first-child{text-align:left;font-weight:600}
+td.c{border:2px solid var(--card);border-radius:4px}
+#info{min-height:22px;margin:12px 0 0;font-size:14px;color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:16px;max-width:76ch}
+</style></head><body><main>
+<h1>Playbook attribute odds</h1>
+<p class="sub">Final attribute scores and bonuses for the five character playbooks, after all seven tables, the neighbor’s random +1 and the cap at 18.</p>
+<div class="bar views" id="views" role="group" aria-label="View"></div>
+<div class="bar" id="classes" role="group" aria-label="Playbook"></div>
+<div class="card" id="out"></div>
+<p id="info" aria-live="polite">Hover or tap a bar for exact odds.</p>
+<p class="note">Bonus ranges: ≤8 = −1, 9–12 = +0, 13–15 = +1, 16–17 = +2, 18 = +3. Scores above 18 count as 18. The neighbor’s +1 from the fourth gain table is treated as equally likely to land on any of the six attributes. Figures are exact, not simulated.</p>
+</main>
+<script>
+const D={"Barbarian":{"start":["Str","Con"],"attrs":{"Str":{"mean":14.134,"bands":[0,21.73,53.25,19.07,5.95],"dist":[0,0,2.01,6.9,12.82,17.8,19.02,16.44,11.92,7.15,5.95],"emod":1.092},"Dex":{"mean":11.79,"bands":[2.51,63.37,29.95,3.66,0.51],"dist":[2.51,10.09,15.1,19.8,18.38,14.84,9.63,5.48,2.59,1.07,0.51],"emod":0.363},"Con":{"mean":14.006,"bands":[0,24.35,52.05,17.75,5.84],"dist":[0,0,3.01,8.34,13.0,18.55,17.27,16.24,10.63,7.12,5.84],"emod":1.051},"Int":{"mean":10.5,"bands":[9.42,79.04,11.2,0.33,0.01],"dist":[9.42,20.09,24.49,20.75,13.71,7.15,3.02,1.02,0.27,0.05,0.01],"emod":0.025},"Wis":{"mean":11.041,"bands":[7.33,71.54,19.56,1.45,0.12],"dist":[7.33,14.55,20.18,20.53,16.28,10.84,5.94,2.78,1.09,0.36,0.12],"emod":0.155},"Cha":{"mean":10.875,"bands":[7.03,75.53,16.56,0.84,0.04],"dist":[7.03,16.02,22.04,21.37,16.09,9.74,4.83,1.98,0.66,0.18,0.04],"emod":0.113}}},"Sellsword":{"start":["Str","Cha"],"attrs":{"Str":{"mean":13.399,"bands":[0,36.54,47.29,12.81,3.36],"dist":[0,0,8.04,9.51,19.0,17.23,17.73,12.33,8.37,4.44,3.36],"emod":0.83},"Dex":{"mean":11.747,"bands":[5.86,59.9,29.21,4.31,0.71],"dist":[5.86,8.37,16.61,16.8,18.12,13.57,10.0,5.65,3.03,1.28,0.71],"emod":0.341},"Con":{"mean":11.748,"bands":[3.77,62.5,29.74,3.53,0.46],"dist":[3.77,9.17,15.62,19.39,18.32,14.83,9.45,5.46,2.48,1.05,0.46],"emod":0.344},"Int":{"mean":10.583,"bands":[9.42,77.4,12.68,0.49,0.02],"dist":[9.42,19.15,23.42,20.68,14.14,7.83,3.54,1.31,0.39,0.09,0.02],"emod":0.043},"Wis":{"mean":11.624,"bands":[3.35,66.07,27.51,2.76,0.31],"dist":[3.35,9.54,17.1,20.45,18.98,14.16,8.78,4.57,2.01,0.75,0.31],"emod":0.306},"Cha":{"mean":13.204,"bands":[0,37.04,52.77,8.93,1.26],"dist":[0,0,4.02,12.46,20.57,22.45,18.41,11.92,6.25,2.68,1.26],"emod":0.744}}},"Sorcerer":{"start":["Int","Wis"],"attrs":{"Str":{"mean":10.25,"bands":[13.56,77.53,8.7,0.2,0.0],"dist":[13.56,21.7,24.9,19.05,11.89,5.74,2.26,0.7,0.17,0.03,0.0],"emod":-0.045},"Dex":{"mean":11.249,"bands":[6.28,69.06,22.43,2.02,0.21],"dist":[6.28,12.56,19.28,20.04,17.18,11.93,7.0,3.5,1.48,0.54,0.21],"emod":0.208},"Con":{"mean":11.333,"bands":[3.14,72.44,22.66,1.64,0.13],"dist":[3.14,11.93,20.09,21.9,18.51,12.51,6.91,3.23,1.24,0.4,0.13],"emod":0.232},"Int":{"mean":14.2,"bands":[0,23.06,48.97,20.22,7.75],"dist":[0,0,3.77,5.65,13.64,15.0,18.75,15.22,12.58,7.63,7.75],"emod":1.127},"Wis":{"mean":14.324,"bands":[0,20.04,50.74,21.18,8.03],"dist":[0,0,2.51,5.9,11.63,16.04,18.13,16.57,12.85,8.33,8.03],"emod":1.172},"Cha":{"mean":10.958,"bands":[6.28,75.28,17.52,0.88,0.04],"dist":[6.28,14.76,21.91,21.76,16.85,10.27,5.15,2.09,0.7,0.18,0.04],"emod":0.131}}},"Temple Keeper":{"start":["Int","Wis"],"attrs":{"Str":{"mean":10.125,"bands":[17.58,74.13,8.08,0.21,0.0],"dist":[17.58,20.97,24.62,17.49,11.05,5.27,2.13,0.68,0.17,0.03,0.0],"emod":-0.091},"Dex":{"mean":10.417,"bands":[13.19,75.28,11.11,0.41,0.01],"dist":[13.19,18.84,24.19,18.96,13.29,6.86,3.15,1.1,0.33,0.07,0.01],"emod":-0.012},"Con":{"mean":11.375,"bands":[2.26,73.62,22.76,1.31,0.06],"dist":[2.26,10.78,20.0,22.64,20.21,12.75,7.13,2.88,1.05,0.26,0.06],"emod":0.233},"Int":{"mean":14.652,"bands":[0,13.6,53.02,24.34,9.04],"dist":[0,0,1.0,3.2,9.4,15.38,19.06,18.58,14.7,9.63,9.04],"emod":1.288},"Wis":{"mean":14.241,"bands":[0,21.65,50.38,20.24,7.72],"dist":[0,0,2.68,6.3,12.67,16.13,18.3,15.95,12.38,7.87,7.72],"emod":1.14},"Cha":{"mean":11.416,"bands":[5.02,67.6,24.86,2.29,0.22],"dist":[5.02,11.3,18.18,19.83,18.29,12.92,8.01,3.94,1.71,0.58,0.22],"emod":0.251}}},"Thief":{"start":["Dex","Cha"],"attrs":{"Str":{"mean":10.25,"bands":[15.07,75.35,9.3,0.27,0.01],"dist":[15.07,20.85,24.11,18.58,11.82,5.98,2.48,0.84,0.22,0.05,0.01],"emod":-0.052},"Dex":{"mean":14.206,"bands":[0,21.91,50.97,20.0,7.12],"dist":[0,0,2.93,5.65,13.33,16.01,19.05,15.91,12.46,7.54,7.12],"emod":1.123},"Con":{"mean":11.083,"bands":[6.28,72.26,19.94,1.41,0.11],"dist":[6.28,14.44,20.09,21.2,16.53,11.19,5.95,2.81,1.06,0.35,0.11],"emod":0.168},"Int":{"mean":11.707,"bands":[3.77,63.52,28.86,3.4,0.45],"dist":[3.77,9.48,16.07,19.46,18.5,14.37,9.34,5.15,2.42,0.97,0.45],"emod":0.333},"Wis":{"mean":11.665,"bands":[4.19,63.99,27.95,3.39,0.48],"dist":[4.19,9.42,17.04,18.93,18.6,13.77,9.22,4.96,2.42,0.97,0.48],"emod":0.32},"Cha":{"mean":13.365,"bands":[0,34.9,51.81,11.05,2.24],"dist":[0,0,4.19,11.72,18.99,20.94,18.19,12.69,7.42,3.63,2.24],"emod":0.806}}}},AT=["Str","Dex","Con","Int","Wis","Cha"],CL=Object.keys(D);
+const BL=["−1 (≤8)","+0 (9–12)","+1 (13–15)","+2 (16–17)","+3 (18)"],BC=["--b0","--b1","--b2","--b3","--b4"];
+const bandOf=s=>s<=8?0:s<=12?1:s<=15?2:s<=17?3:4;
+let view="bonus",cls=CL[0],metric="mean";
+const $=id=>document.getElementById(id),f=(x,d=1)=>x.toFixed(d),sg=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(2);
+function tabs(id,items,cur,fn){const e=$(id);e.innerHTML="";items.forEach(([k,l])=>{const b=document.createElement("button");b.textContent=l;b.setAttribute("aria-pressed",k===cur);b.onclick=()=>{fn(k);draw()};e.appendChild(b)})}
+function info(t){$("info").textContent=t}
+function legend(){return '<div class="legend">'+BL.map((l,i)=>`<span><i class="sw" style="background:var(${BC[i]})"></i>${l}</span>`).join("")+'</div>'}
+function bonus(){const c=D[cls];let h=legend();
+AT.forEach(a=>{const d=c.attrs[a];const st=c.start.includes(a);
+h+=`<div class="row"><div class="n">${a}<small>${st?"starts 10":"starts 8"}</small></div><div class="stack">`+
+d.bands.map((p,i)=>`<div class="seg s${i}" style="width:${p}%;background:var(${BC[i]})" data-t="${cls} ${a}: ${f(p,1)}% chance of a ${BL[i]} bonus" tabindex="0">${p>=7?f(p,0)+"%":""}</div>`).join("")+
+`</div><div class="av" title="Average bonus">${sg(d.emod)}</div></div>`});
+$("out").innerHTML=h+'<p class="note" style="margin-top:6px">Right-hand figure: average bonus.</p>'}
+function score(){const c=D[cls];let mx=0;AT.forEach(a=>c.attrs[a].dist.forEach(p=>mx=Math.max(mx,p)));
+let h=legend()+'<div class="grid">';
+AT.forEach(a=>{const d=c.attrs[a];
+h+=`<div class="hist"><h3>${a}<span>mean ${f(d.mean,1)}</span></h3><div class="cols">`+
+d.dist.map((p,i)=>`<div class="col" style="height:${p/mx*100}%;background:var(${BC[bandOf(i+8)]})" data-t="${cls} ${a}: ${f(p,1)}% chance of ${i+8===18?"18+":i+8}" tabindex="0"></div>`).join("")+
+'</div><div class="xl">'+d.dist.map((_,i)=>`<i>${i+8}</i>`).join("")+"</div></div>"});
+$("out").innerHTML=h+"</div>"}
+function compare(){const M={mean:["Average score",a=>a.mean,x=>f(x,1)],emod:["Average bonus",a=>a.emod,sg],hi:["Chance of +2 or better",a=>a.bands[3]+a.bands[4],x=>f(x,0)+"%"]};
+const [lab,get,fmt]=M[metric];let vals=[];CL.forEach(c=>AT.forEach(a=>vals.push(get(D[c].attrs[a]))));
+const lo=Math.min(...vals),hi=Math.max(...vals);
+let h='<div class="bar" id="mt"></div><table><tr><th>Playbook</th>'+AT.map(a=>`<th>${a}</th>`).join("")+"</tr>";
+CL.forEach(c=>{h+=`<tr><td>${c}</td>`+AT.map(a=>{const v=get(D[c].attrs[a]),t=(v-lo)/(hi-lo),
+bg=`color-mix(in srgb,var(--b3) ${Math.round(t*85)}%,var(--card))`;
+return `<td class="c" style="background:${bg};color:${t>.55?"#fff":"var(--ink)"}" data-t="${c} ${a}: ${lab.toLowerCase()} ${fmt(v)}">${fmt(v)}</td>`}).join("")+"</tr>"});
+$("out").innerHTML=h+"</table>";
+tabs("mt",Object.entries(M).map(([k,v])=>[k,v[0]]),metric,k=>metric=k);
+$("mt").querySelectorAll("button").forEach(b=>b.style.fontSize="13px")}
+function draw(){tabs("views",[["bonus","Bonus ranges"],["score","Score spread"],["compare","Compare playbooks"]],view,k=>view=k);
+$("classes").style.display=view==="compare"?"none":"flex";
+if(view!=="compare")tabs("classes",CL.map(c=>[c,c]),cls,k=>cls=k);
+({bonus,score,compare})[view]();info("Hover or tap a bar for exact odds.")}
+document.addEventListener("mouseover",e=>{const t=e.target.closest("[data-t]");if(t)info(t.dataset.t)});
+document.addEventListener("click",e=>{const t=e.target.closest("[data-t]");if(t)info(t.dataset.t)});
+document.addEventListener("focusin",e=>{const t=e.target.closest("[data-t]");if(t)info(t.dataset.t)});
+draw();
+</script></body></html>
