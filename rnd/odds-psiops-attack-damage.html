@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PSIOPS Attack &amp; Damage Probabilities</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1d1b;--mut:#6b6a63;--line:#dcd9cf;--grid:#e8e5dc;--a:#d9822b;--b:#2a7f8f;--fail:#a9a79d;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--card:#1e2026;--ink:#ecebe6;--mut:#a09f97;--line:#33363e;--grid:#2a2d35;--a:#f0a050;--b:#52b7c8;--fail:#5d5f68;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15161a;--card:#1e2026;--ink:#ecebe6;--mut:#a09f97;--line:#33363e;--grid:#2a2d35;--a:#f0a050;--b:#52b7c8;--fail:#5d5f68;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--mut);margin:0 0 18px;font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.row{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+label{font-size:.85rem;color:var(--mut)}
+.mod{flex:1 1 260px}
+.mod b{color:var(--ink);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--a)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+button{font:inherit;font-size:.85rem;color:var(--ink);background:transparent;border:0;padding:7px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+.ghost{border:1px solid var(--line);border-radius:8px}
+.cfg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
+.cfg div{border-left:4px solid;padding:2px 0 2px 10px}
+.cfg strong{display:block;font-size:.9rem}
+.cfg input{width:56px;font:inherit;font-size:.9rem;padding:3px 6px;margin:0 10px 0 4px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.legend button{border:1px solid var(--line);border-radius:999px;display:flex;align-items:center;gap:7px}
+.legend button[aria-pressed="false"]{opacity:.45}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.chart{position:relative}
+svg{width:100%;height:auto;display:block;touch-action:manipulation}
+svg text{fill:var(--mut);font:11px system-ui,sans-serif}
+svg .val{font-size:9.5px;fill:var(--ink)}
+svg .ax{font-size:12px}
+.bar{transition:opacity .12s}
+.bar:hover{opacity:.8}
+#tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--card);padding:6px 9px;border-radius:7px;font-size:.8rem;line-height:1.35;white-space:nowrap;display:none;z-index:2}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.stat{border-top:4px solid}
+.stat h2{font-size:1rem;margin:0 0 8px}
+.tier{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:6px 0 4px}
+.tier span{display:block;height:100%}
+.tl{display:flex;justify-content:space-between;font-size:.78rem;color:var(--mut);margin-bottom:10px}
+dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:3px 12px;font-size:.9rem}
+dt{color:var(--mut)}dd{margin:0;font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:.82rem;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PSIOPS Attack &amp; Damage Probabilities</h1>
+  <p class="sub">One roll sets both quality and severity: success deals the higher die, a partial deals the lower die, a failure deals nothing.</p>
+
+  <div class="card">
+    <div class="row">
+      <div class="mod">
+        <label for="mod">Attack modifier: <b id="modv">+0</b></label>
+        <input id="mod" type="range" min="-3" max="6" step="1" value="0">
+      </div>
+      <div class="seg" role="group" aria-label="Chart view">
+        <button id="v-exact" aria-pressed="true">Exact damage</button>
+        <button id="v-cum" aria-pressed="false">N or more</button>
+      </div>
+      <button class="ghost" id="reset">Reset</button>
+    </div>
+    <div class="cfg" id="cfg"></div>
+  </div>
+
+  <div class="card">
+    <div class="legend" id="legend"></div>
+    <div class="chart" id="chart"><div id="tip"></div></div>
+    <p class="note" style="margin:8px 0 0">Hover or tap a bar for the exact figure. Click a legend item to show or hide a system.</p>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <p class="note" style="margin-top:14px">Every possible roll is enumerated (36 for 2d6, 100 for 2d10), so these are exact probabilities, not simulations. The modifier is added to the dice total before the bands are applied.</p>
+</div>
+
+<script>
+(function(){
+  var DEF=[
+    {name:"PSIOPS 2d6",sides:6,tS:10,tP:7,v:"--a"},
+    {name:"Kult-band 2d10",sides:10,tS:15,tP:10,v:"--b"}
+  ];
+  var S=JSON.parse(JSON.stringify(DEF)), mod=0, view="exact", show=[true,true];
+  var $=function(id){return document.getElementById(id)};
+  var pct=function(x){return (Math.round(x*10)/10).toFixed(1)};
+
+  function dist(s){
+    var N=s.sides,c=[],i,a,b,f=0,p=0,u=0;
+    for(i=0;i<=N;i++)c.push(0);
+    for(a=1;a<=N;a++)for(b=1;b<=N;b++){
+      var t=a+b+mod,hi=Math.max(a,b),lo=Math.min(a,b);
+      if(t>=s.tS){c[hi]++;u++}
+      else if(t>=s.tP){c[lo]++;p++}
+      else f++;
+    }
+    c[0]=f;
+    var tot=N*N,sum=0;
+    for(i=1;i<=N;i++)sum+=i*c[i];
+    var hits=u+p;
+    return {c:c,tot:tot,f:f,p:p,u:u,avg:sum/tot,avgHit:hits?sum/hits:0};
+  }
+
+  function buildCfg(){
+    $("cfg").innerHTML=S.map(function(s,i){
+      return '<div style="border-color:var('+s.v+')"><strong>'+s.name+'</strong>'+
+        '<label>Success ≥<input type="number" data-i="'+i+'" data-k="tS" value="'+s.tS+'"></label>'+
+        '<label>Partial ≥<input type="number" data-i="'+i+'" data-k="tP" value="'+s.tP+'"></label></div>';
+    }).join("");
+    $("legend").innerHTML=S.map(function(s,i){
+      return '<button data-i="'+i+'" aria-pressed="'+show[i]+'"><span class="sw" style="background:var('+s.v+')"></span>'+s.name+'</button>';
+    }).join("");
+  }
+
+  function render(){
+    var D=S.map(dist);
+    $("modv").textContent=(mod>=0?"+":"−")+Math.abs(mod);
+    var cats=[],d,startAt=view==="exact"?0:1;
+    for(d=startAt;d<=10;d++)cats.push(d);
+
+    function val(k,d){
+      var c=D[k].c,N=S[k].sides,tot=D[k].tot,n=0,j;
+      if(d>N)return {p:0,n:0};
+      if(view==="exact")n=c[d];
+      else for(j=d;j<=N;j++)n+=c[j];
+      return {p:n/tot*100,n:n};
+    }
+    var max=0;
+    cats.forEach(function(d){S.forEach(function(s,k){if(show[k])max=Math.max(max,val(k,d).p)})});
+    var step=max<=20?5:10;
+    var ymax=Math.min(100,Math.max(step,Math.ceil((max+4)/step)*step));
+
+    var W=720,H=380,L=46,R=10,T=14,B=48,pw=W-L-R,ph=H-T-B,gw=pw/cats.length;
+    var vis=[];show.forEach(function(x,k){if(x)vis.push(k)});
+    var bw=gw*(vis.length===1?0.5:0.36),gap=2;
+    var out='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Bar chart of damage probabilities">';
+    for(var g=0;g<=ymax;g+=step){
+      var y=T+ph-g/ymax*ph;
+      out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="var(--grid)"/>'+
+           '<text x="'+(L-6)+'" y="'+(y+4)+'" text-anchor="end">'+g+'%</text>';
+    }
+    cats.forEach(function(d,ci){
+      var x0=L+ci*gw,total=vis.length*bw+(vis.length-1)*gap,off=(gw-total)/2;
+      vis.forEach(function(k,vi){
+        var v=val(k,d),h=v.p/ymax*ph,x=x0+off+vi*(bw+gap),y=T+ph-h;
+        out+='<rect class="bar" x="'+x+'" y="'+y+'" width="'+bw+'" height="'+Math.max(h,0)+'" rx="2" fill="var('+S[k].v+')" data-k="'+k+'" data-d="'+d+'" data-p="'+v.p+'" data-n="'+v.n+'"/>';
+        if(v.p>0)out+='<text class="val" x="'+(x+bw/2)+'" y="'+(y-3)+'" text-anchor="middle">'+pct(v.p)+'</text>';
+      });
+      out+='<text class="ax" x="'+(x0+gw/2)+'" y="'+(T+ph+17)+'" text-anchor="middle">'+(view==="exact"?d:d+"+")+'</text>';
+    });
+    out+='<text x="'+(L+pw/2)+'" y="'+(H-8)+'" text-anchor="middle" class="ax">'+(view==="exact"?"Damage dealt":"Damage dealt (N or more)")+'</text></svg>';
+    var tip=$("tip");
+    $("chart").innerHTML=out;
+    $("chart").appendChild(tip);
+
+    $("stats").innerHTML=S.map(function(s,k){
+      var x=D[k],tot=x.tot;
+      return '<div class="card stat" style="border-top-color:var('+s.v+')"><h2>'+s.name+'</h2>'+
+        '<div class="tier"><span style="width:'+x.f/tot*100+'%;background:var(--fail)"></span><span style="width:'+x.p/tot*100+'%;background:var('+s.v+');opacity:.55"></span><span style="width:'+x.u/tot*100+'%;background:var('+s.v+')"></span></div>'+
+        '<div class="tl"><span>Fail '+pct(x.f/tot*100)+'%</span><span>Partial '+pct(x.p/tot*100)+'%</span><span>Success '+pct(x.u/tot*100)+'%</span></div>'+
+        '<dl><dt>Average damage per attack</dt><dd>'+x.avg.toFixed(2)+'</dd>'+
+        '<dt>Average damage on a hit</dt><dd>'+x.avgHit.toFixed(2)+'</dd>'+
+        '<dt>Chance to deal any damage</dt><dd>'+pct((x.p+x.u)/tot*100)+'%</dd>'+
+        '<dt>Possible rolls</dt><dd>'+tot+'</dd></dl></div>';
+    }).join("");
+  }
+
+  var chart=$("chart");
+  function tipFor(e){
+    var r=e.target.closest&&e.target.closest("[data-k]"),tip=$("tip");
+    if(!r){tip.style.display="none";return}
+    var k=+r.dataset.k,d=+r.dataset.d,p=+r.dataset.p,n=+r.dataset.n,tot=S[k].sides*S[k].sides;
+    var what=view==="exact"?(d===0?"deals no damage":"deals exactly "+d):"deals "+d+" or more";
+    tip.innerHTML="<b>"+S[k].name+"</b><br>"+pct(p)+"% chance to "+what.replace("deals","deal")+"<br>"+n+" of "+tot+" rolls";
+    tip.style.display="block";
+    var cr=chart.getBoundingClientRect(),x=e.clientX-cr.left,y=e.clientY-cr.top;
+    var tw=tip.offsetWidth;
+    tip.style.left=Math.max(0,Math.min(cr.width-tw,x-tw/2))+"px";
+    tip.style.top=Math.max(0,y-tip.offsetHeight-14)+"px";
+  }
+  chart.addEventListener("pointermove",tipFor);
+  chart.addEventListener("pointerdown",tipFor);
+  chart.addEventListener("pointerleave",function(){$("tip").style.display="none"});
+
+  $("mod").addEventListener("input",function(e){mod=+e.target.value;render()});
+  $("v-exact").addEventListener("click",function(){setView("exact")});
+  $("v-cum").addEventListener("click",function(){setView("cum")});
+  function setView(v){view=v;$("v-exact").setAttribute("aria-pressed",v==="exact");$("v-cum").setAttribute("aria-pressed",v==="cum");render()}
+  $("cfg").addEventListener("input",function(e){
+    var t=e.target,v=parseInt(t.value,10);
+    if(isNaN(v))return;
+    S[+t.dataset.i][t.dataset.k]=v;render();
+  });
+  $("legend").addEventListener("click",function(e){
+    var b=e.target.closest("button");if(!b)return;
+    var i=+b.dataset.i;
+    if(show[i]&&!show[1-i])return;
+    show[i]=!show[i];b.setAttribute("aria-pressed",show[i]);render();
+  });
+  $("reset").addEventListener("click",function(){
+    S=JSON.parse(JSON.stringify(DEF));mod=0;show=[true,true];$("mod").value=0;view="exact";
+    $("v-exact").setAttribute("aria-pressed",true);$("v-cum").setAttribute("aria-pressed",false);
+    buildCfg();render();
+  });
+  buildCfg();render();
+})();
+</script>
+</body>
+</html>
